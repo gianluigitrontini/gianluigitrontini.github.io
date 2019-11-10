@@ -901,7 +901,7 @@ textarea.form-control {
 
 .bg-1b {
   position: absolute;
-  top: 1500px;
+  top: 1350px;
   z-index: -1;
   opacity: 0.1;
   left: 5%;
@@ -909,9 +909,9 @@ textarea.form-control {
   transform: rotate(120deg);
 }
 
-@media (max-width: 525px) {
+@media (max-width: 991px) {
   .bg-1b {
-    top: 1350px;
+    top: 1600px;
   }
 }
 
@@ -1047,3 +1047,12 @@ textarea.form-control {
   color: #007BFF;
   transition: color 0.2s ease;
 }
+
+#myLogo {
+  width: 100%;
+  max-width: 225px;
+}
+
+/* .navbar .container {
+  flex-wrap: nowrap;
+} */
