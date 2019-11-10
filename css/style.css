@@ -21,11 +21,11 @@ body {
   font-weight: 400;
   letter-spacing: 0.166667px;
   line-height: 1.7em;
-  color: #505050;
+  color: #404040;
 }
 
 p {
-  color: #505050;
+  color: #404040;
   ;
 }
 
@@ -102,16 +102,16 @@ h6,
   line-height: 14px;
   font-weight: 600;
   box-shadow: #999999 0px 0px 0px 0px;
+  outline: none;
 }
 
 .btn:focus {
-  outline: 0px;
-  border: 0px;
+  outline: none;
   box-shadow: none;
 }
 
 .btn-main {
-  background: #f44336;
+  background: #007BFF;
   color: #fff;
 }
 
@@ -120,13 +120,17 @@ h6,
   background: #000;
 }
 
+.btn-small {
+  padding: 10px;
+}
+
 .btn-black {
   background: #000;
   color: #fff;
 }
 
 .btn-black:hover {
-  background: #f44336;
+  background: #007BFF;
   color: #fff;
 }
 
@@ -183,7 +187,7 @@ a:hover {
   width: 40px;
   height: 2px;
   margin-left: -25px;
-  background: #f44336;
+  background: #007BFF;
 }
 
 @media (max-width: 575px) {
@@ -1033,4 +1037,13 @@ textarea.form-control {
 
 .footer-link {
   color: #505050;
+}
+
+.little-lighter {
+  color: rgb(70, 70, 70);
+}
+
+.little-lighter:hover {
+  color: #007BFF;
+  transition: color 0.2s ease;
 }
