@@ -1063,3 +1063,7 @@ textarea.form-control {
     padding-right: 8px;
   }
 }
+
+.shuffle-wrapper>.col-6 {
+  width: 50%;
+}
