@@ -1056,3 +1056,9 @@ textarea.form-control {
 /* .navbar .container {
   flex-wrap: nowrap;
 } */
+
+@media (max-width: 465px) {
+  .footer p {
+    font-size: 14px;
+  }
+}
