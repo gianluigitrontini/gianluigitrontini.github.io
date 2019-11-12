@@ -1056,14 +1056,3 @@ textarea.form-control {
 /* .navbar .container {
   flex-wrap: nowrap;
 } */
-
-@media (max-width: 575px) {
-  .row>[class*="col-"] {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-}
-
-.shuffle-wrapper>.col-6 {
-  width: 50%;
-}
