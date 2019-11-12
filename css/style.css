@@ -1057,6 +1057,10 @@ textarea.form-control {
   flex-wrap: nowrap;
 } */
 
+.fix-height {
+  height: 180px;
+}
+
 @media (max-width: 465px) {
   .footer p {
     font-size: 13px;
