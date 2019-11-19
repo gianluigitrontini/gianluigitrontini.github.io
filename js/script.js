@@ -28,10 +28,10 @@
     });
 
     $('.owl-carousel').owlCarousel({
-        items: 1,
+        items: 2,
         loop: true,
         autoplay: true,
-        dots: false,
+        dots: true,
         autoplayTimeout: 8000
     });
 
