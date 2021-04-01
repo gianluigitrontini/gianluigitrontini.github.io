@@ -1,0 +1,49 @@
+#projects {
+  .shuffle_pills-container {
+    margin: 2rem 0;
+    // text-align: center;
+    .pill {
+      color: black;
+      border-radius: 10rem;
+      padding: 0.15rem 1rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1.1px;
+      cursor: pointer;
+      user-select: none;
+      margin: 0 1rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    input {
+      display: none;
+    }
+    input:checked + .pill {
+      background-color: rgb(39, 165, 214);
+      color: white;
+    }
+  }
+
+  .select-container {
+    text-align: center;
+    select {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      width: 100%;
+      // I'm sorry about this one below
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
