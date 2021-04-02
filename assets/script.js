@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const hamburgerToggle = document.querySelector('#hamburger-toggle');
 const hamburgerIcon = document.querySelector('.animated-icon');
 const langDropdown = document.querySelectorAll('#language-selector');
@@ -74,16 +75,19 @@ const privacyPolicyText = `<div class="privacy-policy--container"><h3>Privacy Po
 
 privacyPolicyBtn.addEventListener('click', () => {
   modalContainer.classList.add('open');
+  body.style.overflowY = 'hidden';
   modalContent.innerHTML = privacyPolicyText;
 });
 closeModalBtn.addEventListener('click', () => {
   if (modalContainer.classList.contains('open')) {
     modalContainer.classList.remove('open');
+    body.style.overflowY = 'initial';
   }
 });
 modalContainer.addEventListener('click', () => {
   if (modalContainer.classList.contains('open')) {
     modalContainer.classList.remove('open');
+    body.style.overflowY = 'initial';
   }
 });
 modal.addEventListener('click', (e) => {
