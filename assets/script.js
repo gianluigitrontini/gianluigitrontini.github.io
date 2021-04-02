@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const header = document.querySelector('header');
 const hamburgerToggle = document.querySelector('#hamburger-toggle');
 const hamburgerIcon = document.querySelector('.animated-icon');
 const langDropdown = document.querySelectorAll('#language-selector');
@@ -104,7 +105,7 @@ links.forEach((link) => {
       .scrollIntoView({ behavior: 'smooth', block: 'center' });
     if (hamburgerIcon.classList.contains('open')) {
       hamburgerIcon.classList.remove('open');
-      hamburgerToggle.classList.remove('hamburger-fixed-mobile');
+      header.classList.remove('header-fixed-mobile');
     }
     if (mobileNav.classList.contains('show')) {
       mobileNav.classList.remove('show');
@@ -113,7 +114,7 @@ links.forEach((link) => {
 });
 
 hamburgerToggle.addEventListener('click', function () {
-  hamburgerToggle.classList.toggle('hamburger-fixed-mobile');
+  header.classList.toggle('header-fixed-mobile');
   hamburgerIcon.classList.toggle('open');
   mobileNav.classList.toggle('show');
 });
