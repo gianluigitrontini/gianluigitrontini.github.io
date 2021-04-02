@@ -349,7 +349,7 @@ select:focus {
 
 @media (max-width: 768px) {
   #logos .logo-container .brand-logos {
-    max-width: 150px;
+    max-width: 135px;
   }
 }
 
