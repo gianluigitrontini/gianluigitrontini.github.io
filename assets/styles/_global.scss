@@ -340,6 +340,7 @@ select {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   margin-top: 1rem;
   margin-bottom: 1rem;
   a,
