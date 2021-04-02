@@ -446,8 +446,8 @@ select:focus {
   right: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, rgba(0, 0, 0, 0.5)), color-stop(55%, rgba(0, 0, 0, 0.7)));
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.7) 55%);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(120%);
+          transform: translateY(120%);
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
