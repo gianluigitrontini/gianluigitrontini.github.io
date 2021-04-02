@@ -356,6 +356,7 @@ select {
     bottom: 0;
     left: 0;
     right: 0;
+    top: 0;
     background: linear-gradient(
       to bottom,
       transparent,
@@ -374,6 +375,7 @@ select {
     }
     p {
       font-family: 'Open Sans';
+      font-weight: 300;
       color: white;
       font-size: 0.875rem;
     }
@@ -390,10 +392,6 @@ select {
   &:hover {
     .shuffle--info-overlay {
       transform: translateY(0);
-    }
-    &:after {
-      transform: translateY(0);
-      z-index: 10;
     }
   }
   @media (max-width: 768px) {
