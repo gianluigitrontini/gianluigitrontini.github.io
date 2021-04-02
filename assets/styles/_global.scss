@@ -390,7 +390,6 @@ select {
   &:hover {
     .shuffle--info-overlay {
       transform: translateY(0);
-      z-index: 20;
     }
     &:after {
       transform: translateY(0);

@@ -480,7 +480,6 @@ select:focus {
 .shuffle-item:hover .shuffle--info-overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  z-index: 20;
 }
 
 .shuffle-item:hover:after {
