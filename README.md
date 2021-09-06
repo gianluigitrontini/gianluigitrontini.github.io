@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Gian's collection of UI Design / Development projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It has been recently converted from plain HTML / CSS / JS to React for better components organization and for being one of the most used library in 2021 - a technology I've used a lot in my projects.
 
-## Available Scripts
+## What can we find there?
 
-In the project directory, you can run:
+A simple header, a couple of sentences about me, a list of the most relevant projects I've built in the past couple of years and a contact form (powered by Formspree - a service for sending emails).
 
-### `yarn start`
+## Cool! But which projects are there, then?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **[Carousel Learning](https://www.carousel-learning.com/)**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> Carousel is an online tool that helps students to embed knowledge in their long-term memory.
 
-### `yarn test`
+| Technology      | Scope                          |
+| --------------- | ------------------------------ |
+| Figma           | _UI Design and Assets Editing_ |
+| Next.js         | _Landing Page_                 |
+| React           | _Front End_                    |
+| Tailwind & SCSS | _Styling_                      |
+| Symfony [^1]    | _Back End_ [^1]                |
+|                 |                                |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[^1]: I was not in charge of the back-end development; credit goes to [Daniel](https://github.com/xDaizu).
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Carousel was the biggest projects I've built while working with [Aircury](https://www.aircury.com/). This project was originally a spreadsheet pilot called the Retrieval Roulette developed by [Adam Boxer](https://twitter.com/adamboxer1).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After that, with a grant from Innovate UK, they've been able to take things to the next level, and build a program that will make a huge difference to student learning with minimal hassle for hardworking teachers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Unfortunately, I cannot show the source code of that project, and the contributions are not (and can't be) visible on my profile. However, you can ask me for a demo or find yourself everything you need on Carousel's [Youtube Channel](https://www.youtube.com/channel/UCYW4FlFhLfrK2T31Q0Aj4Lg)
 
-### `yarn eject`
+I started designing the interface based on some UX suggestions that were given me by the Ed-Tech expert [Joshua Perry](https://twitter.com/bringmoredata) and an initial idea of how they had in mind the interface could look like.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project was divided in 3 main sectors that had to be independently designed:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The **Landing Page**, to showcase the product to teachers and institutions.
+2. The **Teachers' Dashboard**, to manage quizzes, question banks and classes.
+3. The **Students' Quiz Area**, to practice (based on the spaced repetition principle - reflected in the UI as flipping cards) or to take quizzes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+After an initial draft of the Landing Page, we already started identifying the core visual identity for the whole application.
+The style of the buttons, the fonts choice, the colors and the shadows, were all contributing to the final version of the design system.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> _I'm still working on the description of the projects._
