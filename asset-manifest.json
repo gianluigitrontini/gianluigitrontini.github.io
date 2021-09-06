@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cbbc12bc.chunk.css",
+    "main.js": "/static/js/main.e25d2acd.chunk.js",
+    "main.js.map": "/static/js/main.e25d2acd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a29335d3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a29335d3.js.map",
+    "static/js/2.99262960.chunk.js": "/static/js/2.99262960.chunk.js",
+    "static/js/2.99262960.chunk.js.map": "/static/js/2.99262960.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.cbbc12bc.chunk.css.map": "/static/css/main.cbbc12bc.chunk.css.map",
+    "static/js/2.99262960.chunk.js.LICENSE.txt": "/static/js/2.99262960.chunk.js.LICENSE.txt",
+    "static/media/aircury-bw.292d20b8.png": "/static/media/aircury-bw.292d20b8.png",
+    "static/media/aircury-logo.ee92aab6.png": "/static/media/aircury-logo.ee92aab6.png",
+    "static/media/animated-logo.b44be572.gif": "/static/media/animated-logo.b44be572.gif",
+    "static/media/besocia-banner.0d41ca70.png": "/static/media/besocia-banner.0d41ca70.png",
+    "static/media/carousel-banner-2.5e3b48cf.png": "/static/media/carousel-banner-2.5e3b48cf.png",
+    "static/media/carousel-bw.b50ca971.png": "/static/media/carousel-bw.b50ca971.png",
+    "static/media/carousel-logo.cf04db4a.png": "/static/media/carousel-logo.cf04db4a.png",
+    "static/media/connector-banner.977bed6b.png": "/static/media/connector-banner.977bed6b.png",
+    "static/media/entrelibros-banner.2b6c870b.png": "/static/media/entrelibros-banner.2b6c870b.png",
+    "static/media/profileImage.96bb4620.jpg": "/static/media/profileImage.96bb4620.jpg",
+    "static/media/rise-rosa-rage-banner.77bea643.png": "/static/media/rise-rosa-rage-banner.77bea643.png",
+    "static/media/rise-rosa-rage-logo.1ee06937.png": "/static/media/rise-rosa-rage-logo.1ee06937.png",
+    "static/media/templates-banner.ec8a9e18.png": "/static/media/templates-banner.ec8a9e18.png",
+    "static/media/verify-banner.81015a68.png": "/static/media/verify-banner.81015a68.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a29335d3.js",
+    "static/js/2.99262960.chunk.js",
+    "static/css/main.cbbc12bc.chunk.css",
+    "static/js/main.e25d2acd.chunk.js"
+  ]
+}
