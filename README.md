@@ -12,16 +12,15 @@ A simple header, a couple of sentences about me, a list of the most relevant pro
 
 > Carousel is an online tool that helps students to embed knowledge in their long-term memory.
 
-| Technology      | Scope                          |
-| --------------- | ------------------------------ |
-| Figma           | _UI Design and Assets Editing_ |
-| Next.js         | _Landing Page_                 |
-| React           | _Front End_                    |
-| Tailwind & SCSS | _Styling_                      |
-| Symfony [^1]    | _Back End_ [^1]                |
-|                 |                                |
+| Technology           | Scope                          |
+| -------------------- | ------------------------------ |
+| Figma                | _UI Design and Assets Editing_ |
+| Next.js              | _Landing Page_                 |
+| React                | _Front End_                    |
+| Tailwind & SCSS      | _Styling_                      |
+| Symfony <sup>1</sup> | _Back End_ <sup>1</sup>        |
 
-[^1]: I was not in charge of the back-end development; credit goes to [Daniel](https://github.com/xDaizu).
+<sup>1</sup> I was not in charge of the back-end development; credit goes to [Daniel](https://github.com/xDaizu).
 
 ---
 
