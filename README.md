@@ -4,7 +4,8 @@
 
 ## Cool! Which projects are there, then?
 
-### **[Carousel Learning](https://www.carousel-learning.com/)**
+### **[Carousel Learning](https://www.carousel-learning.com/)**  
+[Read More](https://github.com/gianluigitrontini/carousel-learning/blob/main/README.md) about this project.  
 
 > Carousel is an online tool that helps students to embed knowledge in their long-term memory.
 
@@ -17,5 +18,5 @@
 | Symfony <sup>1</sup> | _Back End_ <sup>1</sup>        |
 
 <sup>1</sup> I was not in charge of the back-end development; credit goes to [Daniel](https://github.com/xDaizu).  
-[Read More](https://github.com/gianluigitrontini/carousel-learning/blob/main/README.md) about this project.
+
 > _I'm still working on the description of the projects._
