@@ -28,7 +28,7 @@ Carousel was the biggest projects I've built while working with [Aircury](https:
 
 After that, with a grant from Innovate UK, they've been able to take things to the next level, and build a program that will make a huge difference to student learning with minimal hassle for hardworking teachers.
 
-Unfortunately, I cannot show the source code of that project, and the contributions are not (and can't be) visible on my profile. However, you can ask me for a demo or find yourself everything you need on Carousel's [Youtube Channel](https://www.youtube.com/channel/UCYW4FlFhLfrK2T31Q0Aj4Lg)
+Unfortunately, I cannot show the source code of that project. However, you can ask me for a demo or find yourself everything you need on Carousel's [Youtube Channel](https://www.youtube.com/channel/UCYW4FlFhLfrK2T31Q0Aj4Lg)
 
 I started designing the interface based on some UX suggestions that were given me by the Ed-Tech expert [Joshua Perry](https://twitter.com/bringmoredata) and an initial idea of how they had in mind the interface could look like.
 
