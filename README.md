@@ -5,7 +5,7 @@
 ## Cool! Which projects are there, then?
 
 ### **[Carousel Learning](https://www.carousel-learning.com/)**  
-[Read More](https://github.com/gianluigitrontini/carousel-learning/blob/main/README.md) about this project.  
+More about this project [here](https://github.com/gianluigitrontini/carousel-learning/blob/main/README.md).  
 
 > Carousel is an online tool that helps students to embed knowledge in their long-term memory.
 
