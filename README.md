@@ -2,7 +2,7 @@
 
 > It has been recently converted from plain HTML / CSS / JS to React for better components organization and for being one of the most used library in 2021 - a technology I've used a lot in my projects.
 
-## Cool! Which projects are there, then?
+## Cool! Which projects are there?
 
 ### **[Carousel Learning](https://www.carousel-learning.com/)**  
 More about this project [here](https://github.com/gianluigitrontini/carousel-learning/blob/main/README.md).  
