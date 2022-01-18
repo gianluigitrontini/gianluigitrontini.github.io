@@ -46,5 +46,7 @@ A project used to display a huge vintage poster collection with the ability for 
 I was helped with the backend by my colleague, but had to make changes as the project was progressing and features were added. The owner had a very rough idea of what to include in the website - so part of my job was coming up with ideas, present them, create the initial designs (wireframes and prototypes of the pages + assets design) and code the frontend.
 
 => Website design and ideation of features
+
 => Assets Design
+
 => Frontend development
