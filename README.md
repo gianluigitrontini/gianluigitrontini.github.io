@@ -31,7 +31,7 @@ It’s divided in two parts. A dashboard for teachers where they can manage clas
 
 => UI Development for teachers and students.
 
-### School Verify & Connector
+### [School Verify](https://www.aircury.com/verify) & [Connector](https://www.aircury.com/connector)
 
 Aircury’s own products.
 There was a need to modernize their product branding and creating logos and simple landing pages to display on their website.
@@ -42,7 +42,7 @@ The process consisted of gathering all the informations about the products, crea
 
 => Landing pages design and development
 
-### RiseRosaRage
+### RiseRosaRage - *work in progress*
 
 A project used to display a huge vintage poster collection with the ability for the owner to autonomously upload every piece, add them to custom collections, create blog posts. It also featured a dynamic map displaying the orginal location and informations about the pieces in a selected collection.
 
