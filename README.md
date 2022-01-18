@@ -31,6 +31,8 @@ It’s divided in two parts. A dashboard for teachers where they can manage clas
 
 => UI Development for teachers and students.
 
+---
+
 ### [School Verify](https://www.aircury.com/verify) & [Connector](https://www.aircury.com/connector)
 
 Aircury’s own products.
@@ -41,6 +43,8 @@ The process consisted of gathering all the informations about the products, crea
 => Logo design + Illustrations
 
 => Landing pages design and development
+
+---
 
 ### RiseRosaRage - *work in progress*
 
