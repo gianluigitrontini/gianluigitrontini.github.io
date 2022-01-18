@@ -26,7 +26,9 @@ This project was funded by a UK Government grant and was based on the previous w
 It’s divided in two parts. A dashboard for teachers where they can manage classes, question banks and creating quizzes and a quiz + revision section for students integrating the concept of spaced repetition.
 
 => Logo design + Branding
+
 => Landing page
+
 => UI Development for teachers and students.
 
 ### School Verify & Connector
@@ -37,6 +39,7 @@ There was a need to modernize their product branding and creating logos and simp
 The process consisted of gathering all the informations about the products, creating the logos and designing illustrations (including animations as it was the only requirement apart from keeping Aircury’s branding) and finally upload everything on the actual website which was built on top of Symfony - a PHP framework - which required further research from my side.
 
 => Logo design + Illustrations
+
 => Landing pages design and development
 
 ### RiseRosaRage
