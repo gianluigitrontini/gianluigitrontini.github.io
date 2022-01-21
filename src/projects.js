@@ -1,4 +1,4 @@
-import Carousel from './assets/images/projects/carousel-banner-2.png';
+import Carousel from './assets/images/projects/carousel-banner.png';
 import CarouselLogo from './assets/images/projects/logos/carousel-logo.png';
 import Entrelibros from './assets/images/projects/entrelibros-banner.png';
 import EntrelibrosLogo from './assets/images/projects/logos/entrelibros-logo.png';
@@ -7,6 +7,8 @@ import RiseRosaRageLogo from './assets/images/projects/logos/rise-rosa-rage-logo
 import Besocia from './assets/images/projects/besocia-banner.png';
 import Templates from './assets/images/projects/templates-banner.png';
 import Aircury from './assets/images/projects/logos/aircury-logo.png';
+import ConnectorLogo from './assets/images/projects/logos/connector-logo.png';
+import VerifyLogo from './assets/images/projects/logos/verify-logo.png';
 import Connector from './assets/images/projects/connector-banner.png';
 import Verify from './assets/images/projects/verify-banner.png';
 
@@ -45,7 +47,7 @@ const projects = [
     description:
       'Make copies of source datasets and lift and shift that data into your own environment, with zero hassle and zero development time for you!',
     image: Connector,
-    logo: Aircury,
+    logo: ConnectorLogo,
     status: 'active',
     longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
@@ -55,7 +57,7 @@ const projects = [
     description:
       "Aircury's school picker offers a fast and easy way for a user to select any English or Welsh school so that you can embed those details accurately in your product's database.",
     image: Verify,
-    logo: Aircury,
+    logo: VerifyLogo,
     status: 'active',
     longDescription: `<p>Long description of projects is still in progress.</p>`,
   },

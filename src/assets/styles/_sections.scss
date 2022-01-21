@@ -1,0 +1,101 @@
+#about .title::before {
+  content: 'About';
+}
+#contact .title::before {
+  content: 'Contacts';
+}
+#projects .title::before {
+  content: 'Projects';
+}
+
+#hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .profile-picture {
+    border-radius: 2px;
+    max-width: 200px;
+    margin-right: 1.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    opacity: 0.2;
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    transform: translateY(-35%);
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    @media (max-width: 768px) {
+      font-size: 2.25rem;
+    }
+    span {
+      font-weight: 600;
+    }
+    .code {
+      white-space: nowrap;
+    }
+    small {
+      background: linear-gradient(90deg, #19ffc4, #7e19ff, #ff196e, #0eafff);
+      background-size: 800% 800%;
+      -webkit-animation: gradient 10s ease-in-out infinite;
+      -moz-animation: gradient 10s ease-in-out infinite;
+      animation: gradient 10s ease-in-out infinite;
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent !important;
+      font-weight: 800 !important;
+    }
+  }
+}
+
+#about {
+  height: 70vh;
+  position: relative;
+  .container {
+    z-index: 10;
+  }
+  span.gradient-text {
+    &.react {
+      background: linear-gradient(135deg, #38a5c4, #61dafb);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    &.symfony {
+      background: linear-gradient(135deg, #bacf29, #71b236);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    color: transparent !important;
+    font-weight: 800 !important;
+  }
+
+  &::after {
+    content: '';
+    z-index: 0;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: bottom right;
+    opacity: 0.25;
+    @screen lg {
+      opacity: 1;
+    }
+  }
+}
