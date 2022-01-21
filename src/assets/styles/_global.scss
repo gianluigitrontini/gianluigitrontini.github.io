@@ -52,11 +52,11 @@ img {
 }
 
 section {
-  @apply py-12;
+  @apply py-16;
 }
 
 section .title {
-  @apply my-32;
+  @apply mb-24;
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   font-weight: 500;
@@ -186,7 +186,7 @@ span.bold {
   font-weight: 600;
 }
 .technologies {
-  @apply grid grid-cols-3 lg:grid-cols-6 justify-items-center gap-4;
+  @apply grid grid-cols-4 lg:grid-cols-8 justify-items-center items-center gap-4;
   img {
     max-width: 60px;
     transition: all 0.3s ease-in-out;

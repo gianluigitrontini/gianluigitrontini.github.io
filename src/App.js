@@ -1,13 +1,14 @@
-import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main/Main";
+import './App.css';
+import 'react-tippy/dist/tippy.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer';
+import Main from './components/Main/Main';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
-      <Main/>
+      <Main />
       <Footer />
     </div>
   );

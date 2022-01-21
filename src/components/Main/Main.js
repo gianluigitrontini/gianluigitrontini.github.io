@@ -1,7 +1,5 @@
 import React from 'react';
-
-import AircuryLogo from '../../assets/images/aircury-bw.png';
-import CarouselLogo from '../../assets/images/carousel-bw.png';
+import { Tooltip } from 'react-tippy';
 import ProfilePicture from '../../assets/images/profileImage.jpg';
 import Project from '../Projects/Project';
 
@@ -16,16 +14,20 @@ const technologiesIcons = [
     url: '/images/icons/figma.png',
   },
   {
-    name: 'TailwindCss',
-    url: '/images/icons/tailwindcss.png',
-  },
-  {
-    name: 'Html5',
+    name: 'HTML',
     url: '/images/icons/html5.png',
   },
   {
-    name: 'Css',
+    name: 'CSS',
     url: '/images/icons/css3.png',
+  },
+  {
+    name: 'SCSS',
+    url: '/images/icons/sass.png',
+  },
+  {
+    name: 'Tailwind',
+    url: '/images/icons/tailwindcss.png',
   },
   {
     name: 'Javascript',
@@ -34,6 +36,10 @@ const technologiesIcons = [
   {
     name: 'React',
     url: '/images/icons/react.png',
+  },
+  {
+    name: 'NextJS',
+    url: '/images/icons/nextjs.png',
   },
 ];
 
@@ -61,22 +67,8 @@ function Main() {
         </h1>
       </Section>
 
-      {/* <Section id='logos' title='Trusted by' isSecondary>
-        <div className='logo-container'>
-          <a href='http://www.aircury.com/' rel='noreferrer' target='_blank'>
-            <img src={AircuryLogo} alt='Aircury' className='brand-logos' />
-          </a>
-          <a
-            href='http://www.carousel-learning.com/'
-            rel='noreferrer'
-            target='_blank'>
-            <img src={CarouselLogo} alt='Carousel' className='brand-logos' />
-          </a>
-        </div>
-      </Section> */}
-
       <Section id='about' className='flex items-center'>
-        <div className='w-full lg:w-1/2 text-2xl flex flex-col gap-8'>
+        <div className='w-full lg:w-1/2 text-xl flex flex-col gap-8'>
           <p className='text-left'>
             I can count ~2 years of professional experience designing &amp;
             developing &nbsp;
@@ -85,24 +77,30 @@ function Main() {
             working on personal projects.
           </p>
           <p className='text-left'>
-            However, I'm used to work over&nbsp;
+            I'm used to work over&nbsp;
             <span className='gradient-text react'>React</span>&nbsp; and&nbsp;
             <span className='gradient-text symfony'>Symfony</span>&nbsp;
             projects, crafting interfaces for amazing applications in the
             ed-tech field.
           </p>
-
-          <div className='technologies '>
-            {technologiesIcons.map((icon, index) => (
-              <img
-                key={`technology-icon--${index}`}
-                src={icon.url}
-                alt={icon.name}
-              />
-            ))}
-          </div>
+          <p className='text-left'>
+            I've also spent many hours practicing Node.js and MongoDB - getting
+            to a point where I'm able to create simple{' '}
+            <span className='bold'>full-stack </span>applications.
+          </p>
         </div>
       </Section>
+      <div className='technologies my-16'>
+        {technologiesIcons.map((icon, index) => (
+          <Tooltip title={icon.name} position='bottom'>
+            <img
+              key={`technology-icon--${index}`}
+              src={icon.url}
+              alt={icon.name}
+            />
+          </Tooltip>
+        ))}
+      </div>
 
       <Section id='projects' title='Projects'>
         <div className='projects--wrapper'>
