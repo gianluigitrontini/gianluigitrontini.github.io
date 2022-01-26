@@ -14,10 +14,7 @@ More about this project [here](https://github.com/gianluigitrontini/carousel-lea
 | Figma                | _UI Design and Assets Editing_ |
 | Next.js              | _Landing Page_                 |
 | React                | _Front End_                    |
-| Tailwind & SCSS      | _Styling_                      |
-| Symfony <sup>1</sup> | _Back End_ <sup>1</sup>        |
-
-<sup>1</sup> I was not in charge of the back-end development; credit goes to [Daniel](https://github.com/xDaizu).  
+| Tailwind & SCSS      | _Styling_                      | 
 
 My main project with Aircury has been Carousel Learning. I was in charge of the whole design and development of the UI - initially assisted by other more experienced developers until I was able to autonomously work on the codebase.
 
