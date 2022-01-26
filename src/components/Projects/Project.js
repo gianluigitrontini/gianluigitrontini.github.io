@@ -1,24 +1,16 @@
-import React, {useState} from "react";
-import Modal from "../Main/Modal";
+import React from 'react';
 
-import Status from "./Status";
+import Status from './Status';
 
-function Project({ image, title, description, status, project }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const closeModal = () => {
-    setIsOpen(false)
-  }
-
+function Project({ image, title, description, status }) {
   return (
-    <div className="projects--item" onClick={() => setIsOpen(true)}>
+    <div className='projects--item'>
       <Status status={status} />
       <img src={image && image} alt={title} />
-      <button className="projects--info-overlay">
-        <h3 className="project--title">{title}</h3>
-        <p className="project--description">{description}</p>
+      <button className='projects--info-overlay'>
+        <h3 className='project--title font-bold'>{title}</h3>
+        <p className='project--description'>{description}</p>
       </button>
-      <Modal isOpen={isOpen} closeModal={closeModal} project={project} />
     </div>
   );
 }

@@ -4,7 +4,6 @@
     @apply flex;
     .contact--form-box {
       @apply mx-4;
-      border-radius: 15px;
       &:first-child {
         margin-left: 0;
       }
@@ -50,7 +49,6 @@
   }
   input,
   textarea {
-    border-radius: 5px;
     border: 1px solid #7d7d7d;
     padding: 0.5rem 0.75rem;
     padding-top: 1rem;

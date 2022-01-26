@@ -1,9 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-.font-body {
-  font-family: 'Open Sans', sans-serif;
+@font-face {
+  font-family: 'Graphik Regular';
+  src: url('./fonts/Graphik-Regular.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Graphik Light';
+  src: url('./fonts/Graphik-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Graphik Medium';
+  src: url('./fonts/Graphik-Medium.woff2') format('woff2');
+}
+.font-body {
+  font-family: 'Graphik Regular', sans-serif;
+}
+.font-bold {
+  font-family: 'Graphik Medium', sans-serif !important;
+  font-weight: initial;
+}
+.font-light {
+  font-family: 'Graphik Light', sans-serif !important;
+  font-weight: initial;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +35,9 @@
 }
 
 body {
-  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Graphik Regular', 'Rubik', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -57,7 +80,6 @@ section {
 
 section .title {
   @apply mb-24;
-  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   font-weight: 500;
   position: relative;
@@ -82,6 +104,14 @@ section .title {
   margin-right: auto;
   margin-left: auto;
   max-width: 1320px;
+}
+.container.sm {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
 }
 
 footer {
@@ -181,6 +211,12 @@ button {
     text-decoration: underline !important;
   }
 }
+.button {
+  @apply bg-black border-2 border-black py-4 px-6 text-white;
+}
+.button.btn-outline {
+  @apply bg-white border-2 border-black py-4 px-6 text-black;
+}
 
 span.bold {
   font-weight: 600;
@@ -205,4 +241,41 @@ span.bold {
   height: 0.1rem;
   // background: linear-gradient(90deg, #19ffc4, #7e19ff, #ff196e, #0eafff);
   background: linear-gradient(45deg, #19ffc4, #7e19ff);
+}
+
+.previous-next-gradient {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 40%);
+}
+.close-animation-wrapper {
+  transition: color 0.5s ease;
+  transition-delay: 0.25s;
+}
+.close-animation-wrapper:hover .close-animation {
+  animation: close-gradient 0.75s ease-in-out;
+}
+.close-animation {
+  @apply w-2 h-2 rounded-full;
+  background: linear-gradient(45deg, #19ffc4, #7e19ff);
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  content: '';
+}
+
+@keyframes close-gradient {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(12);
+    opacity: 0;
+  }
 }

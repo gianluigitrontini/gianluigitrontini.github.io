@@ -3,45 +3,11 @@ import { Tooltip } from 'react-tippy';
 import ProfilePicture from '../../assets/images/profileImage.jpg';
 import Project from '../Projects/Project';
 
-import projects from '../../projects';
+import { projects, technologies } from '../../data';
 import Section from '../Layout/Section';
 import ContactForm from './Contact/ContactForm';
 import BlockWithIcon from './Contact/BlockWithIcon';
-
-const technologiesIcons = [
-  {
-    name: 'Figma',
-    url: '/images/icons/figma.png',
-  },
-  {
-    name: 'HTML',
-    url: '/images/icons/html5.png',
-  },
-  {
-    name: 'CSS',
-    url: '/images/icons/css3.png',
-  },
-  {
-    name: 'SCSS',
-    url: '/images/icons/sass.png',
-  },
-  {
-    name: 'Tailwind',
-    url: '/images/icons/tailwindcss.png',
-  },
-  {
-    name: 'Javascript',
-    url: '/images/icons/javascript.png',
-  },
-  {
-    name: 'React',
-    url: '/images/icons/react.png',
-  },
-  {
-    name: 'NextJS',
-    url: '/images/icons/nextjs.png',
-  },
-];
+import { Link } from 'react-router-dom';
 
 function Main() {
   return (
@@ -60,9 +26,9 @@ function Main() {
           &mdash; a&nbsp;<span>UI Designer&nbsp;</span>
           who loves to&nbsp;
           <span className='code'>
-            <small>&lt;&nbsp;</small>
+            <small className='font-bold'>&lt;&nbsp;</small>
             code
-            <small>&nbsp;/&gt;</small>
+            <small className='font-bold'>&nbsp;/&gt;</small>
           </span>
         </h1>
       </Section>
@@ -71,15 +37,15 @@ function Main() {
         <div className='w-full lg:w-1/2 text-xl flex flex-col gap-8'>
           <p className='text-left'>
             I can count ~2 years of professional experience designing &amp;
-            developing &nbsp;
-            <span className='bold'>websites</span> and&nbsp;
-            <span className='bold'>web applications</span> &mdash; and even more
-            working on personal projects.
+            developing
+            <span className='bold'> websites </span> and
+            <span className='bold'> web applications </span> &mdash; and even
+            more working on personal projects.
           </p>
           <p className='text-left'>
-            I'm used to work over&nbsp;
-            <span className='gradient-text react'>React</span>&nbsp; and&nbsp;
-            <span className='gradient-text symfony'>Symfony</span>&nbsp;
+            I'm used to work over
+            <span className='gradient-text react font-bold'> React</span> and
+            <span className='gradient-text symfony font-bold'> Symfony </span>
             projects, crafting interfaces for amazing applications in the
             ed-tech field.
           </p>
@@ -91,7 +57,7 @@ function Main() {
         </div>
       </Section>
       <div className='technologies my-16'>
-        {technologiesIcons.map((icon, index) => (
+        {technologies.map((icon, index) => (
           <Tooltip title={icon.name} position='bottom'>
             <img
               key={`technology-icon--${index}`}
@@ -105,14 +71,16 @@ function Main() {
       <Section id='projects' title='Projects'>
         <div className='projects--wrapper'>
           {projects.map((prj) => (
-            <Project
-              project={prj}
-              key={`project-${prj.name}`}
-              image={prj.image}
-              title={prj.name}
-              description={prj.description}
-              status={prj.status}
-            />
+            <Link to={`projects/${prj.slug}`}>
+              <Project
+                project={prj}
+                key={`project-${prj.name}`}
+                image={prj.image}
+                title={prj.name}
+                description={prj.description}
+                status={prj.status}
+              />
+            </Link>
           ))}
         </div>
       </Section>
