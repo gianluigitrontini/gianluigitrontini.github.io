@@ -6,7 +6,7 @@ function ContactForm() {
       action='https://formspree.io/f/xzbbqvry'
       method='POST'
       id='contact_form'
-      className='gap-8'>
+      className='gap-4'>
       <div className='form--row flex flex-col lg:flex-row gap-8'>
         <div className='input--group'>
           <label htmlFor='contact_name'>Name</label>
@@ -39,6 +39,10 @@ function ContactForm() {
             required></textarea>
         </div>
       </div>
+      <small className='text-left'>
+        * when clicking the send button you will be redirected to a 3rd party
+        email service.
+      </small>
       <button
         type='submit'
         id='contact_send'

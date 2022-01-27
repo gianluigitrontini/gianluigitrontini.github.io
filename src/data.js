@@ -76,7 +76,8 @@ const projects = [
     slug: 'danilo-web',
     repoName: 'danilo-barzaghini-web',
     linkToProject: 'https://gianluigitrontini.github.io/danilo-barzaghini-web/',
-    description: "Danilo Barzaghini's personal website - project from Fiverr.",
+    description:
+      "Danilo Barzaghini's multi-language personal website - project from Fiverr.",
     image: DaniloWeb,
     status: 'active',
     longDescription: `<p>Long description of projects is still in progress.</p>`,
