@@ -38,7 +38,7 @@ function Project2() {
         : setProjectDescription({
             description: null,
             error:
-              'There may be a problem related to Github that does not allow us to retrieve the description. Please, try again later or visit Github.',
+              'There may be a problem related to Github that does not allow to retrieve the description. Please, try again later or visit Github.',
           })
     );
   };
@@ -107,7 +107,7 @@ function Project2() {
                 id='projects-description'
                 className='text-left py-4 lg:py-16'>
                 {projectDescription.error && (
-                  <div className='bg-red-100 p-4'>
+                  <div className='bg-red-100 border border-red-200 rounded-sm p-4'>
                     {projectDescription.error}
                   </div>
                 )}

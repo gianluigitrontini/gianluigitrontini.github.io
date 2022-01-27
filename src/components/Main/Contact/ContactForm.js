@@ -46,7 +46,7 @@ function ContactForm() {
       <button
         type='submit'
         id='contact_send'
-        className='bg-black py-2 px-4 text-white'>
+        className='send-button bg-black py-2 px-4 text-white'>
         Send →
       </button>
     </form>

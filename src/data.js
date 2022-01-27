@@ -9,8 +9,9 @@ import VerifyLogo from './assets/images/projects/logos/verify-logo.png';
 import Connector from './assets/images/projects/connector-banner.png';
 import Verify from './assets/images/projects/verify-banner.png';
 import DaniloWeb from './assets/images/projects/danilo-web-banner.png';
-import QuietGuyWeb from './assets/images/projects/quietguy-web-banner.png';
+import QuietGuyWeb from './assets/images/projects/thequietguy-banner.png';
 import InstagramClone from './assets/images/projects/instagram-clone-banner.png';
+import Temporary from './assets/images/projects/temporary-banner.png';
 
 const projects = [
   {
@@ -22,7 +23,6 @@ const projects = [
     image: Carousel,
     logo: CarouselLogo,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
     linkToProject: 'https://carousel-learning.com',
   },
   {
@@ -34,7 +34,6 @@ const projects = [
     image: Entrelibros,
     logo: EntrelibrosLogo,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
     linkToProject: 'https://entrelibros.net',
   },
   {
@@ -45,7 +44,6 @@ const projects = [
     image: RiseRosaRage,
     logo: RiseRosaRageLogo,
     status: 'inProgress',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'Aircury Connector',
@@ -57,7 +55,6 @@ const projects = [
     image: Connector,
     logo: ConnectorLogo,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'Aircury School Verify',
@@ -69,7 +66,6 @@ const projects = [
     image: Verify,
     logo: VerifyLogo,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'Danilo Barzaghini - Website',
@@ -80,7 +76,6 @@ const projects = [
       "Danilo Barzaghini's multi-language personal website - project from Fiverr.",
     image: DaniloWeb,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'The Quiet Guy - Portfolio',
@@ -90,7 +85,6 @@ const projects = [
     description: "TheQuietGuy's portfolio website - project from Fiverr.",
     image: QuietGuyWeb,
     status: 'active',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'Instagram Clone',
@@ -101,7 +95,6 @@ const projects = [
     description: 'Instagram clone built with React Native and Firebase.',
     image: InstagramClone,
     status: 'demo',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'ECommerce API',
@@ -110,10 +103,10 @@ const projects = [
     linkToProject:
       'https://github.com/gianluigitrontini/basic-ecommerce_react-node-mongodb',
     description:
-      'Simple implementation of an ecommerce functionality with minor UI styling. Add To Cart functionality using Redux and products API built with Node.Js and a local MongoDB database.',
-    image: QuietGuyWeb,
+      'Simple implementation of an ecommerce store with minor UI styling. Authentication, Cart functionality using Redux and products API built with Node.js and MongoDB.',
+    image: Temporary,
+    noCover: true,
     status: 'demo',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
   },
   {
     name: 'Social Network',
@@ -123,9 +116,9 @@ const projects = [
       'https://github.com/gianluigitrontini/social-network_react-mongodb',
     description:
       'A kind of Facebook but for University. Just like Facebook was, but in 2021. React + Node + MongoDB.',
-    image: QuietGuyWeb,
-    status: 'demo',
-    longDescription: `<p>Long description of projects is still in progress.</p>`,
+    image: Temporary,
+    noCover: true,
+    status: 'inProgress',
   },
 ];
 

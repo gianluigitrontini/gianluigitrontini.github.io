@@ -72,14 +72,7 @@ function Main() {
         <div className='projects--wrapper'>
           {projects.map((prj) => (
             <Link to={`projects/${prj.slug}`}>
-              <Project
-                project={prj}
-                key={`project-${prj.name}`}
-                image={prj.image}
-                title={prj.name}
-                description={prj.description}
-                status={prj.status}
-              />
+              <Project project={prj} key={`project-${prj.name}`} />
             </Link>
           ))}
         </div>
@@ -95,18 +88,24 @@ function Main() {
               <BlockWithIcon icon='location' text='Monteprandone, Italy' />
 
               <BlockWithIcon icon='mail' text='gianluigitrontini@gmail.com' />
-              <span className='subtitle text-left mx-auto'>Find more on</span>
+              <span className='subtitle text-left mx-auto mb-4'>
+                Find more on
+              </span>
               <div className='social--container gap-6'>
-                <BlockWithIcon
-                  icon='github'
-                  url='https://github.com/gianluigitrontini'
-                  text='Github'
-                />
-                <BlockWithIcon
-                  icon='linkedin'
-                  url='https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/'
-                  text='Linkedin'
-                />
+                <button className='bg-white border-2 border-black px-6 hover:bg-black hover:text-white'>
+                  <BlockWithIcon
+                    icon='github'
+                    url='https://github.com/gianluigitrontini'
+                    text='Github'
+                  />
+                </button>
+                <button className='bg-white border-2 border-black px-6 hover:bg-black hover:text-white'>
+                  <BlockWithIcon
+                    icon='linkedin'
+                    url='https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/'
+                    text='Linkedin'
+                  />
+                </button>
               </div>
             </div>
           </div>
