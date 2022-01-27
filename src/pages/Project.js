@@ -102,13 +102,15 @@ function Project2() {
                 <CloseIcon />
               </span>
             </HashLink>
-            <main className=''>
+            <main className='lg:min-h-[100vh] pb-64 lg:pb-4 lg:flex'>
               <section
                 id='projects-description'
                 className='text-left py-4 lg:py-16'>
                 {projectDescription.error && (
-                  <div className='bg-red-100 border border-red-200 rounded-sm p-4'>
-                    {projectDescription.error}
+                  <div className='flex justify-center items-center h-full'>
+                    <div className='bg-red-100 border border-red-200 rounded-sm p-4 '>
+                      {projectDescription.error}
+                    </div>
                   </div>
                 )}
                 {projectDescription.description && (
@@ -121,8 +123,8 @@ function Project2() {
           </div>
         </div>
 
-        <div className='lg:w-1/3 lg:fixed right-0 top-0 bottom-0 flex flex-col'>
-          <div className='flex-1 bg-gray-50 flex flex-col justify-between p-4'>
+        <div className='lg:w-1/3 fixed left-0 lg:left-auto right-0 bottom-0 lg:top-0  flex flex-col'>
+          <div className='flex-1 bg-gray-50 flex flex-col justify-between p-4 previous-next-gradient'>
             <div className='hidden lg:flex flex-1 flex-col gap-8'>
               {project.logo && (
                 <img
@@ -149,7 +151,8 @@ function Project2() {
                 </p>
               </div>
             </div>
-            <div className='w-full flex flex-col items-center gap-4 pt-12 previous-next-gradient'>
+
+            <div className='w-full flex flex-col items-center gap-4 pt-12 '>
               <Link to={`/projects/${previousProject.slug}`} className='w-full'>
                 <button
                   className='button btn-outline w-full'

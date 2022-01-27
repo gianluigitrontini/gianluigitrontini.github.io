@@ -249,8 +249,11 @@ span.bold {
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
-    #f9fafb 40%
+    #f9fafb 20%
   );
+  @screen lg {
+    @apply bg-gray-50;
+  }
 }
 .close-animation-wrapper {
   transition: color 0.5s ease;
