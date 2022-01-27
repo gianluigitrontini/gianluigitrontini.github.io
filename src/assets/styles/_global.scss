@@ -107,11 +107,13 @@ section .title {
 }
 .container.sm {
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
   max-width: 800px;
+
+  @screen lg {
+    @apply px-12;
+  }
 }
 
 footer {
@@ -244,7 +246,11 @@ span.bold {
 }
 
 .previous-next-gradient {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 40%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #f9fafb 40%
+  );
 }
 .close-animation-wrapper {
   transition: color 0.5s ease;
