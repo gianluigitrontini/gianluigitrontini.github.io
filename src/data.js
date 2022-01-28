@@ -11,6 +11,7 @@ import Verify from './assets/images/projects/verify-banner.png';
 import DaniloWeb from './assets/images/projects/danilo-web-banner.png';
 import QuietGuyWeb from './assets/images/projects/thequietguy-banner.png';
 import InstagramClone from './assets/images/projects/instagram-clone-banner.png';
+import Bakkano from './assets/images/projects/bakkano-banner.jpg';
 import Temporary from './assets/images/projects/temporary-banner.png';
 
 const projects = [
@@ -127,8 +128,7 @@ const projects = [
     linkToProject: 'https://github.com/gianluigitrontini/bakkano/',
     description:
       'A landing page for selling their Pinsa products to food businesses.',
-    image: Temporary,
-    noCover: true,
+    image: Bakkano,
     status: 'inProgress',
   },
   {
