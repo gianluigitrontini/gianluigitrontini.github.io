@@ -141,4 +141,8 @@ a {
   blockquote {
     @apply italic bg-gray-50 py-2 px-4;
   }
+
+  img {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
 }
