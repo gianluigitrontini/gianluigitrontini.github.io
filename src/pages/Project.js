@@ -24,26 +24,25 @@ function Project2() {
   const previousProject =
     projects[currentProjectIndex - 1] ?? projects[projects.length - 1];
 
-  const getMarkDownDescription = () => {
-    fetch(
-      `https://raw.githubusercontent.com/gianluigitrontini/${project.repoName}/master/README.md`
-    ).then((response) =>
-      response.status === 200
-        ? response.text().then((data) =>
-            setProjectDescription({
-              description: data,
-              error: null,
-            })
-          )
-        : setProjectDescription({
-            description: null,
-            error:
-              'There may be a problem related to Github that does not allow to retrieve the description. Please, try again later or visit Github.',
-          })
-    );
-  };
-
   useEffect(() => {
+    const getMarkDownDescription = () => {
+      fetch(
+        `https://raw.githubusercontent.com/gianluigitrontini/${project.repoName}/master/README.md`
+      ).then((response) =>
+        response.status === 200
+          ? response.text().then((data) =>
+              setProjectDescription({
+                description: data,
+                error: null,
+              })
+            )
+          : setProjectDescription({
+              description: null,
+              error:
+                'There may be a problem related to Github that does not allow to retrieve the description. Please, try again later or visit Github.',
+            })
+      );
+    };
     if (project) {
       getMarkDownDescription();
     }
@@ -89,23 +88,28 @@ function Project2() {
             <p className=' font-body text-gray-500'>{project.description}</p>
           </div>
         </div>
+
+        {/* Content Block */}
         <div className='lg:w-2/3 h-full overflow-auto lg:mr-[33%]'>
           <div className='container sm'>
             <div
               className='fixed top-0 left-0 right-0 z-10 h-1 bg-blue-200'
               style={{ width: `${readingBarWidth}%` }}></div>
+
             <HashLink
               to={'/#projects'}
-              className='hidden lg:block lg:fixed top-4 left-4'>
+              className='hidden lg:block lg:fixed top-8 left-4'>
               <span className='close-animation-wrapper hover:text-[#38a7ca]'>
                 <span className='close-animation '></span>
                 <CloseIcon />
               </span>
             </HashLink>
-            <main className='lg:min-h-[100vh] pb-64 lg:pb-4 lg:flex'>
+
+            {/* Project Content */}
+            <main className='lg:min-h-[100vh] pb-64 pt-4 lg:pb-4 lg:flex'>
               <section
                 id='projects-description'
-                className='text-left py-4 lg:py-16'>
+                className='text-left py-4 w-full'>
                 {projectDescription.error && (
                   <div className='flex justify-center items-center h-full'>
                     <div className='bg-red-100 border border-red-200 rounded-sm p-4 '>
@@ -124,8 +128,8 @@ function Project2() {
         </div>
 
         <div className='lg:w-1/3 fixed left-0 lg:left-auto right-0 bottom-0 lg:top-0  flex flex-col'>
-          <div className='flex-1 bg-gray-50 flex flex-col justify-between p-4 previous-next-gradient'>
-            <div className='hidden lg:flex flex-1 flex-col gap-8'>
+          <div className='flex-1 bg-gray-50 flex flex-col justify-between p-4 lg:pt-8 previous-next-gradient'>
+            <div className='hidden lg:flex flex-1 flex-col gap-4'>
               {project.logo && (
                 <img
                   src={project.logo}
