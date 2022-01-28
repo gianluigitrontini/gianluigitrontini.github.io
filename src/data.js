@@ -48,7 +48,7 @@ const projects = [
   {
     name: 'Aircury Connector',
     slug: 'connector',
-    repoName: 'connector',
+    repoName: 'connector-verify',
     linkToProject: 'https://www.aircury.com/connector',
     description:
       'Make copies of source datasets and lift and shift that data into your own environment, with zero hassle and zero development time for you!',
@@ -59,7 +59,7 @@ const projects = [
   {
     name: 'Aircury School Verify',
     slug: 'verify',
-    repoName: 'verify',
+    repoName: 'connector-verify',
     linkToProject: 'https://www.aircury.com/verify',
     description:
       "Aircury's school picker offers a fast and easy way for a user to select any English or Welsh school so that you can embed those details accurately in your product's database.",
@@ -116,6 +116,28 @@ const projects = [
       'https://github.com/gianluigitrontini/social-network_react-mongodb',
     description:
       'A kind of Facebook but for University. Just like Facebook was, but in 2021. React + Node + MongoDB.',
+    image: Temporary,
+    noCover: true,
+    status: 'inProgress',
+  },
+  {
+    name: 'Bakkano',
+    slug: 'bakkano-landing-page',
+    repoName: 'bakkano',
+    linkToProject: 'https://github.com/gianluigitrontini/bakkano/',
+    description:
+      'A landing page for selling their Pinsa products to food businesses.',
+    image: Temporary,
+    noCover: true,
+    status: 'inProgress',
+  },
+  {
+    name: 'Escape Passport',
+    slug: 'escape-passport',
+    repoName: 'escape-passport',
+    linkToProject: 'https://github.com/gianluigitrontini',
+    description:
+      "An Escape Rooms platform to find all kind of rooms and an integration with owner to create their own room's pages",
     image: Temporary,
     noCover: true,
     status: 'inProgress',
