@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f33c77dc.css",
-    "main.js": "/static/js/main.a2b53523.js",
+    "main.js": "/static/js/main.7961e2de.js",
     "static/media/animated-logo.gif": "/static/media/animated-logo.b44be5723018a93a08ac.gif",
     "static/media/rise-rosa-rage-logo.png": "/static/media/rise-rosa-rage-logo.1ee069376d3a2ce3c35c.png",
     "static/media/about-background.jpg": "/static/media/about-background.366a08f7b57d3c0eb145.jpg",
@@ -23,10 +23,10 @@
     "static/media/verify-logo.png": "/static/media/verify-logo.977d536252341240bdfe.png",
     "index.html": "/index.html",
     "main.f33c77dc.css.map": "/static/css/main.f33c77dc.css.map",
-    "main.a2b53523.js.map": "/static/js/main.a2b53523.js.map"
+    "main.7961e2de.js.map": "/static/js/main.7961e2de.js.map"
   },
   "entrypoints": [
     "static/css/main.f33c77dc.css",
-    "static/js/main.a2b53523.js"
+    "static/js/main.7961e2de.js"
   ]
 }
