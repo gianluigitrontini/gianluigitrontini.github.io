@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.25bd94c4.css",
-    "main.js": "/static/js/main.7961e2de.js",
+    "main.js": "/static/js/main.504c6200.js",
     "static/media/animated-logo.gif": "/static/media/animated-logo.b44be5723018a93a08ac.gif",
     "static/media/rise-rosa-rage-logo.png": "/static/media/rise-rosa-rage-logo.1ee069376d3a2ce3c35c.png",
     "static/media/about-background.jpg": "/static/media/about-background.366a08f7b57d3c0eb145.jpg",
@@ -15,6 +15,7 @@
     "static/media/Graphik-Regular.woff2": "/static/media/Graphik-Regular.42a9b7733ff5f4bc9df8.woff2",
     "static/media/carousel-banner.png": "/static/media/carousel-banner.da64d01e5d4c9d0fe30e.png",
     "static/media/verify-banner.png": "/static/media/verify-banner.29325fcbf7fbe5dd9506.png",
+    "static/media/bakkano-banner.jpg": "/static/media/bakkano-banner.cfd169aaab2d943d8a65.jpg",
     "static/media/temporary-banner.png": "/static/media/temporary-banner.334943d78a467726da5e.png",
     "static/media/profileImage.jpg": "/static/media/profileImage.96bb4620a1ba37a7e38c.jpg",
     "static/media/carousel-logo.png": "/static/media/carousel-logo.cf04db4af01d5122ff87.png",
@@ -23,10 +24,10 @@
     "static/media/verify-logo.png": "/static/media/verify-logo.977d536252341240bdfe.png",
     "index.html": "/index.html",
     "main.25bd94c4.css.map": "/static/css/main.25bd94c4.css.map",
-    "main.7961e2de.js.map": "/static/js/main.7961e2de.js.map"
+    "main.504c6200.js.map": "/static/js/main.504c6200.js.map"
   },
   "entrypoints": [
     "static/css/main.25bd94c4.css",
-    "static/js/main.7961e2de.js"
+    "static/js/main.504c6200.js"
   ]
 }
