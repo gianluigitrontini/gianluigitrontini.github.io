@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import { CloseIcon, OpenLinkIcon } from '../components/utils/Icon';
 import { projects } from '../data';
 
-function Project2() {
+function Project() {
   let { id } = useParams();
   const filteredProject = projects.filter((project) => project.slug === id);
 
@@ -25,7 +25,7 @@ function Project2() {
     projects[currentProjectIndex - 1] ?? projects[projects.length - 1];
 
   useEffect(() => {
-    const getMarkDownDescription = () => {
+    const getGithubReadme = () => {
       fetch(
         `https://raw.githubusercontent.com/gianluigitrontini/${project.repoName}/master/README.md`
       ).then((response) =>
@@ -44,7 +44,7 @@ function Project2() {
       );
     };
     if (project) {
-      getMarkDownDescription();
+      getGithubReadme();
     }
   }, [project]);
 
@@ -61,50 +61,101 @@ function Project2() {
     });
   });
 
+  const MobileHeader = () => (
+    <div className='lg:hidden flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8'>
+      {project.logo && (
+        <img
+          src={project.logo}
+          className='mx-auto lg:ml-0 max-w-[12rem] h-20 object-contain'
+          alt=''
+        />
+      )}
+      <div className='text-left font-bold w-full'>
+        {project.linkToProject ? (
+          <a
+            href={project.linkToProject}
+            className='inline-flex items-center text-xl'
+            target='_blank'
+            rel='noreferrer'>
+            {project.name}
+            <OpenLinkIcon />
+          </a>
+        ) : (
+          <h3 className='text-xl'>{project.name}</h3>
+        )}
+        <p className=' font-body text-gray-500'>{project.description}</p>
+      </div>
+    </div>
+  );
+
+  const ReadingBar = () => (
+    <div
+      className='fixed top-0 left-0 right-0 z-10 h-1 bg-blue-200'
+      style={{ width: `${readingBarWidth}%` }}></div>
+  );
+
+  const CloseButton = ({ desktop, mobile }) => {
+    if (desktop) {
+      return (
+        <HashLink
+          to={'/#projects'}
+          className='hidden lg:block lg:fixed top-8 left-4'>
+          <span className='close-animation-wrapper hover:text-[#38a7ca]'>
+            <span className='close-animation '></span>
+            <CloseIcon />
+          </span>
+        </HashLink>
+      );
+    }
+    if (mobile) {
+      return (
+        <HashLink to={'/#projects'} className='block lg:hidden'>
+          <span className='my-4 block uppercase underline'>
+            Back to Homepage
+          </span>
+        </HashLink>
+      );
+    }
+  };
+
+  const Error = ({ children }) => (
+    <div className='bg-red-100 border border-red-200 rounded-sm p-4 '>
+      {children}
+    </div>
+  );
+
+  const ProjectsNavigation = () => (
+    <div className='w-full flex flex-col items-center gap-4 pt-12 '>
+      <Link to={`/projects/${previousProject.slug}`} className='w-full'>
+        <button
+          className='button btn-outline w-full'
+          onClick={() => setProject(previousProject)}>
+          &#8592; {previousProject.name}
+        </button>
+      </Link>
+
+      <Link to={`/projects/${nextProject.slug}`} className='w-full'>
+        <button
+          className='button w-full'
+          onClick={() => setProject(nextProject)}>
+          {nextProject.name} &#8594;
+        </button>
+      </Link>
+
+      <CloseButton mobile />
+    </div>
+  );
+
   if (project) {
     return (
       <section className='flex flex-col lg:flex-row p-0 overflow-hidden'>
-        <div className='lg:hidden flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8'>
-          {project.logo && (
-            <img
-              src={project.logo}
-              className='mx-auto lg:ml-0 max-w-[12rem] h-20 object-contain'
-              alt=''
-            />
-          )}
-          <div className='text-left font-bold w-full'>
-            {project.linkToProject ? (
-              <a
-                href={project.linkToProject}
-                className='inline-flex items-center text-xl'
-                target='_blank'
-                rel='noreferrer'>
-                {project.name}
-                <OpenLinkIcon />
-              </a>
-            ) : (
-              <h3 className='text-xl'>{project.name}</h3>
-            )}
-            <p className=' font-body text-gray-500'>{project.description}</p>
-          </div>
-        </div>
+        <MobileHeader />
 
         {/* Content Block */}
         <div className='lg:w-2/3 h-full overflow-auto lg:mr-[33%]'>
           <div className='container sm'>
-            <div
-              className='fixed top-0 left-0 right-0 z-10 h-1 bg-blue-200'
-              style={{ width: `${readingBarWidth}%` }}></div>
-
-            <HashLink
-              to={'/#projects'}
-              className='hidden lg:block lg:fixed top-8 left-4'>
-              <span className='close-animation-wrapper hover:text-[#38a7ca]'>
-                <span className='close-animation '></span>
-                <CloseIcon />
-              </span>
-            </HashLink>
-
+            <ReadingBar />
+            <CloseButton desktop />
             {/* Project Content */}
             <main className='lg:min-h-[100vh] pb-64 pt-4 lg:pb-4 lg:flex'>
               <section
@@ -112,9 +163,7 @@ function Project2() {
                 className='text-left py-4 w-full'>
                 {projectDescription.error && (
                   <div className='flex justify-center items-center h-full'>
-                    <div className='bg-red-100 border border-red-200 rounded-sm p-4 '>
-                      {projectDescription.error}
-                    </div>
+                    <Error>{projectDescription.error}</Error>
                   </div>
                 )}
                 {projectDescription.description && (
@@ -127,8 +176,8 @@ function Project2() {
           </div>
         </div>
 
-        <div className='lg:w-1/3 fixed left-0 lg:left-auto right-0 bottom-0 lg:top-0  flex flex-col'>
-          <div className='flex-1 bg-gray-50 flex flex-col justify-between p-4 lg:pt-8 previous-next-gradient'>
+        <div className='lg:w-1/3 flex flex-col fixed left-0 lg:left-auto right-0 bottom-0 lg:top-0'>
+          <div className='previous-next-gradient flex-1 flex flex-col justify-between bg-gray-50 p-4 lg:pt-8 '>
             <div className='hidden lg:flex flex-1 flex-col gap-4'>
               {project.logo && (
                 <img
@@ -137,6 +186,7 @@ function Project2() {
                   alt=''
                 />
               )}
+
               <div className='text-left font-bold w-full'>
                 {project.linkToProject ? (
                   <a
@@ -156,27 +206,7 @@ function Project2() {
               </div>
             </div>
 
-            <div className='w-full flex flex-col items-center gap-4 pt-12 '>
-              <Link to={`/projects/${previousProject.slug}`} className='w-full'>
-                <button
-                  className='button btn-outline w-full'
-                  onClick={() => setProject(previousProject)}>
-                  &#8592; {previousProject.name}
-                </button>
-              </Link>
-              <Link to={`/projects/${nextProject.slug}`} className='w-full'>
-                <button
-                  className='button w-full'
-                  onClick={() => setProject(nextProject)}>
-                  {nextProject.name} &#8594;
-                </button>
-              </Link>
-              <HashLink to={'/#projects'} className='block lg:hidden'>
-                <span className='my-4 block uppercase underline'>
-                  Back to Homepage
-                </span>
-              </HashLink>
-            </div>
+            <ProjectsNavigation />
           </div>
         </div>
       </section>
@@ -194,4 +224,4 @@ function Project2() {
     );
 }
 
-export default Project2;
+export default Project;
