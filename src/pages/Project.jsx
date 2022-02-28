@@ -199,11 +199,11 @@ function Project() {
   } else
     return (
       <div className="flex flex-col items-center justify-center h-screen">
-        <p className="text-xl">
+        <p className="text-xl text-center">
           404 <br /> The page cannot be found
         </p>
         <Link to={"/"}>
-          <button className="button my-4">Go to Homepage</button>
+          <button className="btn my-4">Go to Homepage</button>
         </Link>
       </div>
     );
