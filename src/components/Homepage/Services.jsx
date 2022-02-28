@@ -23,12 +23,16 @@ const Services = () => {
         </div>
         <img
           src={uiSideImage}
-          className="w-1/2 max-w-[36rem] -order-1 lg:order-2"
+          className="w-3/4 lg:w-1/2 max-w-[36rem] -order-1 lg:order-2"
           alt=""
         />
       </div>
       <div className="min-h-[40vh] my-8 flex flex-col lg:flex-row gap-8 items-center">
-        <img src={frontendSideImage} className="w-1/2 max-w-[36rem]" alt="" />
+        <img
+          src={frontendSideImage}
+          className="w-3/4 lg:w-1/2 max-w-[36rem]"
+          alt=""
+        />
 
         <div className="lg:ml-auto max-w-[42rem]">
           <h3 className="text-3xl font-bold mb-4">Frontend Development</h3>
@@ -64,7 +68,7 @@ const Services = () => {
         <img
           src={fullstackSideImage}
           alt=""
-          className="w-1/2 max-w-[36rem] -order-1 lg:order-2"
+          className="w-3/4 lg:w-1/2 max-w-[36rem] -order-1 lg:order-2"
         />
       </div>
     </Section>
