@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b810fafc.css",
-    "main.js": "/static/js/main.6b38bc44.js",
+    "main.css": "/static/css/main.a85b9ae8.css",
+    "main.js": "/static/js/main.90e858bc.js",
     "static/media/animated-logo.gif": "/static/media/animated-logo.b44be5723018a93a08ac.gif",
     "static/media/rise-rosa-rage-logo.png": "/static/media/rise-rosa-rage-logo.1ee069376d3a2ce3c35c.png",
     "static/media/about-background.jpg": "/static/media/about-background.366a08f7b57d3c0eb145.jpg",
@@ -26,11 +26,11 @@
     "static/media/connector-logo.png": "/static/media/connector-logo.906474235903fe71330a.png",
     "static/media/verify-logo.png": "/static/media/verify-logo.977d536252341240bdfe.png",
     "index.html": "/index.html",
-    "main.b810fafc.css.map": "/static/css/main.b810fafc.css.map",
-    "main.6b38bc44.js.map": "/static/js/main.6b38bc44.js.map"
+    "main.a85b9ae8.css.map": "/static/css/main.a85b9ae8.css.map",
+    "main.90e858bc.js.map": "/static/js/main.90e858bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.b810fafc.css",
-    "static/js/main.6b38bc44.js"
+    "static/css/main.a85b9ae8.css",
+    "static/js/main.90e858bc.js"
   ]
 }
