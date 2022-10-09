@@ -177,6 +177,14 @@ const technologies = [
     name: "NextJS",
     url: "/images/icons/nextjs.png",
   },
+  {
+    name: "Angular",
+    url: "/images/icons/angular.png",
+  },
+  {
+    name: "Ionic",
+    url: "/images/icons/ionic.png",
+  },  
 ];
 
 export { projects, technologies };

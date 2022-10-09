@@ -23,14 +23,14 @@ const Services = () => {
         </div>
         <img
           src={uiSideImage}
-          className="w-3/4 lg:w-1/2 max-w-[36rem] -order-1 lg:order-2"
+          className="w-3/4 lg:w-1/2 max-w-[24rem] mx-auto -order-1 lg:order-2"
           alt=""
         />
       </div>
       <div className="min-h-[40vh] my-8 flex flex-col lg:flex-row gap-8 items-center">
         <img
           src={frontendSideImage}
-          className="w-3/4 lg:w-1/2 max-w-[36rem]"
+          className="w-3/4 lg:w-1/2 max-w-[24rem] mx-auto"
           alt=""
         />
 
@@ -42,12 +42,6 @@ const Services = () => {
             code into reusable components - it also makes other developers'
             lives easier.
           </p>
-          <p>
-            I always prefer custom coded solutions, but sometimes people want to
-            keep using Wordpress for their simple website. In that case, there's
-            no issue in creating the layout using Elementor (or another custom
-            theme builder).
-          </p>
         </div>
       </div>
       <div className="min-h-[40vh] my-8 flex flex-col lg:flex-row gap-8 items-center">
@@ -58,17 +52,11 @@ const Services = () => {
             available to your users might arise. My preferred choice is to keep
             working with Javascript and develop simple Node.js + MongoDB APIs.
           </p>
-          <p>
-            However, it might happen that hosting providers do not support Node,
-            in that case I've had the chance to use Wordpress for managing all
-            the blog posts - making it easier to be edited by the end user - and
-            integrating them into a custom coded Frontend.
-          </p>
         </div>
         <img
           src={fullstackSideImage}
           alt=""
-          className="w-3/4 lg:w-1/2 max-w-[36rem] -order-1 lg:order-2"
+          className="w-3/4 lg:w-1/2 max-w-[24rem] mx-auto -order-1 lg:order-2"
         />
       </div>
     </Section>

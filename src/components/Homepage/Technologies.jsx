@@ -9,7 +9,7 @@ const Technologies = () => {
       {technologies.map((icon, i) => (
         <Tooltip key={i} title={icon.name} position="bottom">
           <img src={icon.url} alt={icon.name} />
-        </Tooltip>
+        </Tooltip>  
       ))}
     </div>
   );
