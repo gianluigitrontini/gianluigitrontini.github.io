@@ -1,5 +1,6 @@
-import "react-tippy/dist/tippy.css";
-import { Routes, Route } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "tippy.js/dist/tippy.css"; // optional
 import Homepage from "./pages/Homepage";
 import Project from "./pages/Project";
 

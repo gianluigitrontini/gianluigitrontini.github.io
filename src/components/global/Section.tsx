@@ -1,6 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-function Section({ children, id, className, title, isSecondary }) {
+function Section({
+  children,
+  id,
+  className,
+  title,
+  isSecondary,
+}: {
+  children: ReactNode;
+  id?: string;
+  className?: string;
+  title?: string;
+  isSecondary?: boolean;
+}) {
   return (
     <section id={id} className={` ${className ? className : ""}`}>
       <div className="container">

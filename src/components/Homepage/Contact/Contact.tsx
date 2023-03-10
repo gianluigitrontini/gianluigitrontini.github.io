@@ -21,7 +21,7 @@ const Contact = () => {
           <div className="mx-auto lg:w-[325px] text-center">
             <BlockWithIcon
               icon={<LocationIcon />}
-              text="Monteprandone, Italy"
+              text="San Benedetto del Tronto, Italy"
             />
 
             <BlockWithIcon

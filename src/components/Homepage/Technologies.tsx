@@ -1,15 +1,14 @@
 import React from "react";
+import Tippy from "@tippyjs/react";
 import { technologies } from "../../data";
-
-import { Tooltip } from "react-tippy";
 
 const Technologies = () => {
   return (
     <div className="technologies my-16">
       {technologies.map((icon, i) => (
-        <Tooltip key={i} title={icon.name} position="bottom">
+        <Tippy key={i} content={icon.name} placement="top">
           <img src={icon.url} alt={icon.name} />
-        </Tooltip>  
+        </Tippy>
       ))}
     </div>
   );

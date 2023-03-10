@@ -16,7 +16,7 @@ function Homepage() {
       <Hero />
       <About />
       <Technologies />
-      <Services />
+      {/* <Services /> */}
       <Projects />
       {/* <div className="container my-32 line-gradient"></div> */}
       <Contact />

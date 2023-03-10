@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -9,15 +9,24 @@ import { CloseIcon, OpenLinkIcon } from "../components/utils/Icon";
 import { projects } from "../data";
 import useWindowSize from "../hooks/useWindowSize";
 
+export interface ProjectDescription {
+  description: string;
+  error: string | null;
+}
+
 function Project() {
   let { id } = useParams();
   const size = useWindowSize();
-  const filteredProject = projects.filter((project) => project.slug === id);
 
-  const [project, setProject] = useState(...filteredProject);
-  const [projectDescription, setProjectDescription] = useState({
-    description: null,
-    error: null,
+  const filteredProject = projects.find((project) => project.slug === id);
+  const [project, setProject] = useState(filteredProject);
+
+  const [projectDescription, setProjectDescription] = useState<{
+    description: string | null;
+    error: string | null;
+  }>({
+    description: "",
+    error: "",
   });
 
   const currentProjectIndex = projects.findIndex((prj) => prj.slug === id);
@@ -28,7 +37,7 @@ function Project() {
   useEffect(() => {
     const getGithubReadme = () => {
       fetch(
-        `https://raw.githubusercontent.com/gianluigitrontini/${project.repoName}/master/README.md`
+        `https://raw.githubusercontent.com/gianluigitrontini/${project?.repoName}/master/README.md`
       ).then((response) =>
         response.status === 200
           ? response.text().then((data) =>
@@ -51,34 +60,36 @@ function Project() {
 
   const MobileHeader = () => (
     <div className="flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8">
-      {project.logo && (
-        <img
-          src={project.logo}
-          className="mx-auto max-w-[12rem] h-20 object-contain"
-          alt=""
-        />
+      {project && (
+        <>
+          project.logo && (
+          <img
+            src={project.logo}
+            className="mx-auto max-w-[12rem] h-20 object-contain"
+            alt=""
+          />
+          )
+          <div className="text-left font-bold w-full">
+            project.linkToProject ? (
+            <a
+              href={project.linkToProject}
+              className="inline-flex items-center text-xl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {project.name}
+              <OpenLinkIcon />
+            </a>
+            ) : (<h3 className="text-xl">{project.name}</h3>)
+            <p className=" font-body text-gray-500">{project.description}</p>
+          </div>
+        </>
       )}
-      <div className="text-left font-bold w-full">
-        {project.linkToProject ? (
-          <a
-            href={project.linkToProject}
-            className="inline-flex items-center text-xl"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {project.name}
-            <OpenLinkIcon />
-          </a>
-        ) : (
-          <h3 className="text-xl">{project.name}</h3>
-        )}
-        <p className=" font-body text-gray-500">{project.description}</p>
-      </div>
     </div>
   );
 
   const CloseButton = () => {
-    if (size.width >= 1024) {
+    if (size.width! >= 1024) {
       return (
         <HashLink
           to={"/#projects"}
@@ -101,7 +112,7 @@ function Project() {
     }
   };
 
-  const Error = ({ children }) => (
+  const Error = ({ children }: { children: ReactNode }) => (
     <div className="bg-red-100 border border-red-200 rounded-sm p-4 ">
       {children}
     </div>
@@ -123,19 +134,19 @@ function Project() {
           {nextProject.name} &#8594;
         </button>
       </Link>
-      {size.width < 1024 && <CloseButton />}
+      {size.width! < 1024 && <CloseButton />}
     </div>
   );
 
   if (project) {
     return (
       <section className="flex flex-col lg:flex-row p-0 overflow-hidden">
-        {size.width < 1024 && <MobileHeader />}
+        {size.width! < 1024 && <MobileHeader />}
 
         {/* Content Block */}
         <div className="lg:w-2/3 h-full overflow-auto lg:mr-[33%]">
           <div className="container sm">
-            {size.width >= 1024 && <CloseButton />}
+            {size.width! >= 1024 && <CloseButton />}
 
             {/* Project Content */}
             <main className="lg:min-h-[100vh] pb-64 pt-4 lg:pb-4 lg:flex">
@@ -160,7 +171,7 @@ function Project() {
 
         <div className="lg:w-1/3 flex flex-col fixed left-0 lg:left-auto right-0 bottom-0 lg:top-0">
           <div className="previous-next-gradient flex-1 flex flex-col justify-between bg-gray-50 p-4 lg:pt-8 ">
-            {size.width >= 1024 && (
+            {size.width! >= 1024 && (
               <div className="flex flex-col flex-1 gap-4">
                 {project.logo && (
                   <img

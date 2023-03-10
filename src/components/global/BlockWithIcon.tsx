@@ -1,6 +1,14 @@
 import React from "react";
 
-function BlockWithIcon({ icon, text, url }) {
+function BlockWithIcon({
+  icon,
+  text,
+  url,
+}: {
+  icon: any;
+  text: string;
+  url?: string;
+}) {
   return (
     <div className="block--icon gap-4">
       {url ? (

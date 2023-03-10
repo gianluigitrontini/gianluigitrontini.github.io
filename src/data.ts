@@ -20,11 +20,13 @@ const projects = [
     slug: "carousel-learning",
     repoName: "carousel-learning",
     description:
-      "Carousel is an online tool that helps students to embed knowledge in their long-term memory.",
+      "Carousel is an online tool that helps students to embed knowledge in their long-term memory. Developed with Aircury.",
     image: Carousel,
     logo: CarouselLogo,
     status: "Active",
     linkToProject: "https://carousel-learning.com",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "EntreLibros",
@@ -36,15 +38,21 @@ const projects = [
     logo: EntrelibrosLogo,
     status: "Active",
     linkToProject: "https://entrelibros.net",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "RiseRosaRage",
     slug: "rise-rosa-rage",
     repoName: "rise-rosa-rage",
-    description: "Global Socio-Political & Solidarity Graphics since the 60s.",
+    description:
+      "Global Socio-Political & Solidarity Graphics since the 60s. Developed with Aircury.",
+    linkToProject: "",
     image: RiseRosaRage,
     logo: RiseRosaRageLogo,
     status: "In Progress",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "Aircury Connector",
@@ -56,6 +64,8 @@ const projects = [
     image: Connector,
     logo: ConnectorLogo,
     status: "Active",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "Aircury School Verify",
@@ -67,6 +77,8 @@ const projects = [
     image: Verify,
     logo: VerifyLogo,
     status: "Active",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "Danilo Barzaghini - Website",
@@ -74,18 +86,22 @@ const projects = [
     repoName: "danilo-barzaghini-web",
     linkToProject: "https://gianluigitrontini.github.io/danilo-barzaghini-web/",
     description:
-      "Danilo Barzaghini's multi-language personal website - project from Fiverr.",
+      "Danilo Barzaghini's multi-language personal website. Project from Fiverr.",
     image: DaniloWeb,
-    status: "Active",
+    status: "Demo",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "The Quiet Guy - Portfolio",
     slug: "quietguy-web",
     repoName: "thequietguy-web",
     linkToProject: "https://gianluigitrontini.github.io/thequietguy-web/",
-    description: "TheQuietGuy's portfolio website - project from Fiverr.",
+    description: "TheQuietGuy's portfolio website. Project from Fiverr.",
     image: QuietGuyWeb,
     status: "Active",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "Instagram Clone",
@@ -96,6 +112,8 @@ const projects = [
     description: "Instagram clone built with React Native and Firebase.",
     image: InstagramClone,
     status: "Demo",
+    hidden: true,
+    hasCoverImage: true,
   },
   {
     name: "ECommerce API",
@@ -106,8 +124,9 @@ const projects = [
     description:
       "Simple implementation of an ecommerce store with minor UI styling. Authentication, Cart functionality using Redux and products API built with Node.js and MongoDB.",
     image: Temporary,
-    noCover: true,
     status: "Demo",
+    hidden: true,
+    hasCoverImage: false,
   },
   {
     name: "Social Network",
@@ -118,8 +137,9 @@ const projects = [
     description:
       "A kind of Facebook but for University. Just like Facebook was, but in 2021. React + Node + MongoDB.",
     image: Temporary,
-    noCover: true,
     status: "In Progress",
+    hidden: true,
+    hasCoverImage: false,
   },
   {
     name: "Bakkano",
@@ -127,20 +147,58 @@ const projects = [
     repoName: "bakkano",
     linkToProject: "https://github.com/gianluigitrontini/bakkano/",
     description:
-      "A landing page for selling their Pinsa products to food businesses.",
+      "A landing page for selling Pinsa products to food businesses.",
     image: Bakkano,
     status: "In Progress",
+    hasCoverImage: true,
+    hidden: false
   },
   {
     name: "Escape Passport",
     slug: "escape-passport",
     repoName: "escape-passport",
     linkToProject: "https://github.com/gianluigitrontini",
-    description:
-      "An Escape Rooms platform to find all kind of rooms and an integration with owner to create their own room's pages",
+    description: "An Escape Rooms search web app.",
     image: Temporary,
-    noCover: true,
     status: "In Progress",
+    hasCoverImage: false,
+    hidden: false
+  },
+  {
+    name: "Promozione della Salute - ASL TO3",
+    slug: "promozione-della-salute",
+    repoName: "promozione-della-salute",
+    linkToProject: "https://github.com/gianluigitrontini",
+    description:
+      "A platform for promoting healthy habits developed with the ASL TO3 (Piemonte). Developed with NBS.",
+    image: Temporary,
+    status: "Active",
+    hasCoverImage: false,
+    hidden: false
+  },
+  {
+    name: "Smart4...",
+    slug: "smart-4-apps",
+    repoName: "",
+    linkToProject: "https://github.com/gianluigitrontini",
+    description:
+      "Mobile apps suite for medical professionals. Smart4Med, Smart4Care, Smart4Hospital. Code updates & redesign. Developed with NBS.",
+    image: Temporary,
+    status: "Active",
+    hasCoverImage: false,
+    hidden: false
+  },
+  {
+    name: "Formazione ECM",
+    slug: "ecm-apps",
+    repoName: "",
+    linkToProject: "https://github.com/gianluigitrontini",
+    description:
+      "Mobile app for medical professionals. Active in Veneto, Piemonte, Sardegna, Valle d'Aosta regions & the province of Trento. Code updates & redesign. Developed with NBS.",
+    image: Temporary,
+    status: "Active",
+    hasCoverImage: false,
+    hidden: false
   },
 ];
 
@@ -170,6 +228,10 @@ const technologies = [
     url: "/images/icons/javascript.png",
   },
   {
+    name: "Typescript",
+    url: "/images/icons/typescript.png",
+  },
+  {
     name: "React",
     url: "/images/icons/react.png",
   },
@@ -182,9 +244,13 @@ const technologies = [
     url: "/images/icons/angular.png",
   },
   {
+    name: "RxJS",
+    url: "/images/icons/rxjs.png",
+  },
+  {
     name: "Ionic",
     url: "/images/icons/ionic.png",
-  },  
+  },
 ];
 
 export { projects, technologies };

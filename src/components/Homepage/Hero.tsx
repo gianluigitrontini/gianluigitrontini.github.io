@@ -15,13 +15,13 @@ const Hero = () => {
             alt="The Designer and Developer"
           />
         </span>
-        &mdash; a&nbsp;<span>UI Designer&nbsp;</span>
-        who loves to&nbsp;
+        &mdash; a&nbsp;
         <span className="code">
           <small className="font-bold">&lt;&nbsp;</small>
-          code
+          Frontend Developer
           <small className="font-bold">&nbsp;/&gt;</small>
         </span>
+        &nbsp;that cares about usability.
       </h1>
     </Section>
   );

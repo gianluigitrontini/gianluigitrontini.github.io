@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import AnimatedLogo from "../../../assets/images/animated-logo.gif";
-import { HamburgerIcon } from "../../utils/Icon";
+import { useEffect, useState } from "react";
 import useWindowSize from "../../../hooks/useWindowSize";
+import { HamburgerIcon } from "../../utils/Icon";
 
 import { Link } from "react-scroll";
 
@@ -11,9 +10,10 @@ function Header() {
 
   useEffect(() => {
     const body = document.querySelector("body");
+
     isHamburgerOpen
-      ? body.classList.add("overflow-y-hidden")
-      : body.classList.remove("overflow-y-hidden");
+      ? body?.classList.add("overflow-y-hidden")
+      : body?.classList.remove("overflow-y-hidden");
   }, [isHamburgerOpen]);
 
   const navigation = [
@@ -102,10 +102,10 @@ function Header() {
       <div className="container">
         <div className="flex items-center justify-between w-full">
           <div className="logo-box">
-            <img className="logo" src={AnimatedLogo} alt="" />
+            <img className="logo" src="images/animated-logo.gif" alt="" />
           </div>
 
-          {size.width >= 1024 ? <DesktopNav /> : <MobileNav />}
+          {size && size.width! >= 1024 ? <DesktopNav /> : <MobileNav />}
         </div>
       </div>
     </header>

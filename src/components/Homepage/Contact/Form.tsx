@@ -34,7 +34,6 @@ const Form = () => {
           <label htmlFor="contact_message">Message</label>
           <textarea
             id="contact_message"
-            type="text"
             name="Message"
             placeholder="Your Message"
             required

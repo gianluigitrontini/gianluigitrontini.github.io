@@ -1,11 +1,11 @@
 #about .title::before {
-  content: 'About';
+  content: "About";
 }
 #contact .title::before {
-  content: 'Contacts';
+  content: "Contacts";
 }
 #projects .title::before {
-  content: 'Projects';
+  content: "Projects";
 }
 
 #hero {
@@ -65,12 +65,12 @@
   }
   span.gradient-text {
     &.react {
-      background: linear-gradient(135deg, #38a5c4, #61dafb);
+      background: linear-gradient(135deg, #38a5c4, #1291b4);
       background-clip: text;
       -webkit-background-clip: text;
     }
-    &.symfony {
-      background: linear-gradient(135deg, #bacf29, #71b236);
+    &.angular {
+      background: linear-gradient(135deg, #f85822, #e83636);
 
       background-clip: text;
       -webkit-background-clip: text;
@@ -81,7 +81,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     z-index: 0;
     width: 100%;
     min-height: 70vh;
@@ -90,12 +90,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('/assets/images/about-background.jpg');
+    background-image: url("/assets/images/about-background.jpg");
     background-size: cover;
     background-position: bottom right;
     opacity: 0.15;
     @screen lg {
-      opacity: 1;
+      opacity: 0.15;
     }
   }
 }

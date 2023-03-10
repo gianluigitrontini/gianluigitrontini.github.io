@@ -1,11 +1,12 @@
 import React from "react";
+import { ProjectInterface } from "./Projects";
 import Status from "./Status";
 
-function Project({ project }) {
+function Project({ project }: { project: ProjectInterface }) {
   return (
     <div className="projects--item">
       <Status status={project.status} />
-      {project.noCover && (
+      {!project.hasCoverImage && (
         <h3 className="absolute top-[50%] left-[50%] text-center transform translate-y-[-50%] translate-x-[-50%] text-3xl text-black opacity-30 font-bold tracking-wider">
           {project.name}
         </h3>
