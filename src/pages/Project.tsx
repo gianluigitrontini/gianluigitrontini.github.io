@@ -35,24 +35,25 @@ function Project() {
     projects[currentProjectIndex - 1] ?? projects[projects.length - 1];
 
   useEffect(() => {
-    const getGithubReadme = () => {
-      fetch(
-        `https://raw.githubusercontent.com/gianluigitrontini/${project?.repoName}/master/README.md`
-      ).then((response) =>
-        response.status === 200
-          ? response.text().then((data) =>
-              setProjectDescription({
-                description: data,
-                error: null,
-              })
-            )
-          : setProjectDescription({
-              description: null,
-              error:
-                "There may be a problem related to Github that does not allow to retrieve the description. Please, try again later or visit Github.",
-            })
+    const getGithubReadme = async () => {
+      const res = await fetch(
+        `https://raw.githubusercontent.com/gianluigitrontini/progetti-portfolio/main/${project?.repoName}/README.md`
       );
+      if (res.status === 200) {
+        const resText = await res.text();
+        setProjectDescription({
+          description: resText,
+          error: null,
+        });
+      } else {
+        setProjectDescription({
+          description: null,
+          error:
+            "There may be a problem related to Github that does not allow to retrieve the description. Please, try again later or visit Github.",
+        });
+      }
     };
+
     if (project) {
       getGithubReadme();
     }
@@ -62,25 +63,28 @@ function Project() {
     <div className="flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8">
       {project && (
         <>
-          project.logo && (
-          <img
-            src={project.logo}
-            className="mx-auto max-w-[12rem] h-20 object-contain"
-            alt=""
-          />
-          )
+          {project.logo && (
+            <img
+              src={project.logo}
+              className="mx-auto max-w-[12rem] h-20 object-contain"
+              alt=""
+            />
+          )}
+
           <div className="text-left font-bold w-full">
-            project.linkToProject ? (
-            <a
-              href={project.linkToProject}
-              className="inline-flex items-center text-xl"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {project.name}
-              <OpenLinkIcon />
-            </a>
-            ) : (<h3 className="text-xl">{project.name}</h3>)
+            {project.linkToProject ? (
+              <a
+                href={project.linkToProject}
+                className="inline-flex items-center text-xl"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {project.name}
+                <OpenLinkIcon />
+              </a>
+            ) : (
+              <h3 className="text-xl">{project.name}</h3>
+            )}
             <p className=" font-body text-gray-500">{project.description}</p>
           </div>
         </>
