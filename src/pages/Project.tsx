@@ -8,13 +8,107 @@ import remarkGfm from "remark-gfm";
 import { CloseIcon, OpenLinkIcon } from "../components/utils/Icon";
 import { projects } from "../data";
 import useWindowSize from "../hooks/useWindowSize";
+import { ProjectInterface } from "../components/Homepage/Projects/Projects";
 
 export interface ProjectDescription {
   description: string;
   error: string | null;
 }
 
-function Project() {
+const MobileHeader = ({ project }: { project: ProjectInterface }) => (
+  <div className="flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8">
+    {project && (
+      <>
+        {project.logo && (
+          <img
+            src={project.logo}
+            className="mx-auto max-w-[12rem] h-20 object-contain"
+            alt=""
+          />
+        )}
+
+        <div className="text-left font-bold w-full">
+          {project.linkToProject ? (
+            <a
+              href={project.linkToProject}
+              className="inline-flex items-center text-xl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {project.name}
+              <OpenLinkIcon />
+            </a>
+          ) : (
+            <h3 className="text-xl">{project.name}</h3>
+          )}
+          <p className=" font-body text-gray-500">{project.description}</p>
+        </div>
+      </>
+    )}
+  </div>
+);
+
+const CloseButton = (props: { size: { width: number | undefined } }) => {
+  if (props.size?.width! >= 1024) {
+    return (
+      <HashLink
+        to={"/#projects"}
+        className="hidden lg:block lg:fixed top-8 left-4"
+      >
+        <span className="close-animation-wrapper hover:text-[#38a7ca]">
+          <span className="close-animation "></span>
+          <CloseIcon />
+        </span>
+      </HashLink>
+    );
+  } else {
+    return (
+      <HashLink to={"/#projects"} className="block lg:hidden">
+        <span className="my-4 block uppercase underline">Back to Homepage</span>
+      </HashLink>
+    );
+  }
+};
+
+const Error = ({ children }: { children: ReactNode }) => (
+  <div className="bg-red-100 border border-red-200 rounded-sm p-4 ">
+    {children}
+  </div>
+);
+
+const Navigation = ({
+  previousProject,
+  nextProject,
+  setProject,
+}: {
+  previousProject: ProjectInterface;
+  nextProject: ProjectInterface;
+  setProject: any;
+}) => {
+  const size = useWindowSize();
+
+  return (
+    <div className="w-full flex flex-col items-center gap-4 pt-12 ">
+      <Link to={`/projects/${previousProject.slug}`} className="w-full">
+        <button
+          className="btn btn-outline w-full"
+          onClick={() => setProject(previousProject)}
+        >
+          &#8592; {previousProject.name}
+        </button>
+      </Link>
+
+      <Link to={`/projects/${nextProject.slug}`} className="w-full">
+        <button className="btn w-full" onClick={() => setProject(nextProject)}>
+          {nextProject.name} &#8594;
+        </button>
+      </Link>
+      {size.width! < 1024 && <CloseButton size={size} />}
+    </div>
+  );
+};
+
+const Project = () => {
   let { id } = useParams();
   const size = useWindowSize();
 
@@ -59,98 +153,15 @@ function Project() {
     }
   }, [project]);
 
-  const MobileHeader = () => (
-    <div className="flex flex-col gap-8 bg-gray-50 mb-4 px-4 py-8">
-      {project && (
-        <>
-          {project.logo && (
-            <img
-              src={project.logo}
-              className="mx-auto max-w-[12rem] h-20 object-contain"
-              alt=""
-            />
-          )}
-
-          <div className="text-left font-bold w-full">
-            {project.linkToProject ? (
-              <a
-                href={project.linkToProject}
-                className="inline-flex items-center text-xl"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {project.name}
-                <OpenLinkIcon />
-              </a>
-            ) : (
-              <h3 className="text-xl">{project.name}</h3>
-            )}
-            <p className=" font-body text-gray-500">{project.description}</p>
-          </div>
-        </>
-      )}
-    </div>
-  );
-
-  const CloseButton = () => {
-    if (size.width! >= 1024) {
-      return (
-        <HashLink
-          to={"/#projects"}
-          className="hidden lg:block lg:fixed top-8 left-4"
-        >
-          <span className="close-animation-wrapper hover:text-[#38a7ca]">
-            <span className="close-animation "></span>
-            <CloseIcon />
-          </span>
-        </HashLink>
-      );
-    } else {
-      return (
-        <HashLink to={"/#projects"} className="block lg:hidden">
-          <span className="my-4 block uppercase underline">
-            Back to Homepage
-          </span>
-        </HashLink>
-      );
-    }
-  };
-
-  const Error = ({ children }: { children: ReactNode }) => (
-    <div className="bg-red-100 border border-red-200 rounded-sm p-4 ">
-      {children}
-    </div>
-  );
-
-  const Navigation = () => (
-    <div className="w-full flex flex-col items-center gap-4 pt-12 ">
-      <Link to={`/projects/${previousProject.slug}`} className="w-full">
-        <button
-          className="btn btn-outline w-full"
-          onClick={() => setProject(previousProject)}
-        >
-          &#8592; {previousProject.name}
-        </button>
-      </Link>
-
-      <Link to={`/projects/${nextProject.slug}`} className="w-full">
-        <button className="btn w-full" onClick={() => setProject(nextProject)}>
-          {nextProject.name} &#8594;
-        </button>
-      </Link>
-      {size.width! < 1024 && <CloseButton />}
-    </div>
-  );
-
   if (project) {
     return (
       <section className="flex flex-col lg:flex-row p-0 overflow-hidden">
-        {size.width! < 1024 && <MobileHeader />}
+        {size.width! < 1024 && <MobileHeader project={project} />}
 
         {/* Content Block */}
         <div className="lg:w-2/3 h-full overflow-auto lg:mr-[33%]">
           <div className="container sm">
-            {size.width! >= 1024 && <CloseButton />}
+            {size.width! >= 1024 && <CloseButton size={size} />}
 
             {/* Project Content */}
             <main className="lg:min-h-[100vh] pb-64 pt-4 lg:pb-4 lg:flex">
@@ -206,7 +217,11 @@ function Project() {
               </div>
             )}
 
-            <Navigation />
+            <Navigation
+              previousProject={previousProject}
+              nextProject={nextProject}
+              setProject={setProject}
+            />
           </div>
         </div>
       </section>
@@ -222,6 +237,6 @@ function Project() {
         </Link>
       </div>
     );
-}
+};
 
 export default Project;
