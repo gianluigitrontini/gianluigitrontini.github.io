@@ -57,7 +57,7 @@ const projects = [
   {
     name: "Aircury Connector",
     slug: "connector",
-    repoName: "connector-verify",
+    repoName: "aircury-connector",
     linkToProject: "https://www.aircury.com/connector",
     description:
       "Make copies of source datasets and lift and shift that data into your own environment, with zero hassle and zero development time for you!",
@@ -70,7 +70,7 @@ const projects = [
   {
     name: "Aircury School Verify",
     slug: "verify",
-    repoName: "connector-verify",
+    repoName: "aircury-school-verify",
     linkToProject: "https://www.aircury.com/verify",
     description:
       "Aircury's school picker offers a fast and easy way for a user to select any English or Welsh school so that you can embed those details accurately in your product's database.",
@@ -178,8 +178,8 @@ const projects = [
   },
   {
     name: "Smart4...",
-    slug: "smart-4-apps",
-    repoName: "",
+    slug: "smart-4-suite",
+    repoName: "smart-4-suite",
     linkToProject: "https://github.com/gianluigitrontini",
     description:
       "Mobile apps suite for medical professionals. Smart4Med, Smart4Care, Smart4Hospital. Code updates & redesign. Developed with NBS.",
@@ -190,8 +190,8 @@ const projects = [
   },
   {
     name: "Formazione ECM",
-    slug: "ecm-apps",
-    repoName: "",
+    slug: "formazione-ecm",
+    repoName: "formazione-ecm",
     linkToProject: "https://github.com/gianluigitrontini",
     description:
       "Mobile app for medical professionals. Active in Veneto, Piemonte, Sardegna, Valle d'Aosta regions & the province of Trento. Code updates & redesign. Developed with NBS.",
