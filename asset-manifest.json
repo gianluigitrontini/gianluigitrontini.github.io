@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c307e991.css",
-    "main.js": "/static/js/main.34b5c4c1.js",
+    "main.js": "/static/js/main.afbfdecb.js",
     "static/media/rise-rosa-rage-logo.png": "/static/media/rise-rosa-rage-logo.1ee069376d3a2ce3c35c.png",
     "static/media/about-background.jpg": "/static/media/about-background.366a08f7b57d3c0eb145.jpg",
     "static/media/danilo-web-banner.png": "/static/media/danilo-web-banner.848faedfebc8a22ca034.png",
@@ -23,10 +23,10 @@
     "static/media/verify-logo.png": "/static/media/verify-logo.977d536252341240bdfe.png",
     "index.html": "/index.html",
     "main.c307e991.css.map": "/static/css/main.c307e991.css.map",
-    "main.34b5c4c1.js.map": "/static/js/main.34b5c4c1.js.map"
+    "main.afbfdecb.js.map": "/static/js/main.afbfdecb.js.map"
   },
   "entrypoints": [
     "static/css/main.c307e991.css",
-    "static/js/main.34b5c4c1.js"
+    "static/js/main.afbfdecb.js"
   ]
 }
