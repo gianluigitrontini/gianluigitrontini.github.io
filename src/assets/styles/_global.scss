@@ -213,7 +213,7 @@ span.bold {
 }
 
 .technologies {
-  @apply grid grid-cols-4 lg:grid-cols-8 justify-items-center items-center gap-4;
+  // @apply grid grid-cols-4 lg:grid-cols-8 justify-items-center gap-4;
   img {
     max-width: 60px;
     transition: all 0.3s ease-in-out;
