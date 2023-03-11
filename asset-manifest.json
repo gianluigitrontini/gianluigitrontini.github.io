@@ -1,11 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.a85b9ae8.css",
-    "main.js": "/static/js/main.90e858bc.js",
-    "static/media/animated-logo.gif": "/static/media/animated-logo.b44be5723018a93a08ac.gif",
+    "main.css": "/static/css/main.c307e991.css",
+    "main.js": "/static/js/main.34b5c4c1.js",
     "static/media/rise-rosa-rage-logo.png": "/static/media/rise-rosa-rage-logo.1ee069376d3a2ce3c35c.png",
     "static/media/about-background.jpg": "/static/media/about-background.366a08f7b57d3c0eb145.jpg",
-    "static/media/uiSideImage.png": "/static/media/uiSideImage.3ba8b75276b750d51c18.png",
     "static/media/danilo-web-banner.png": "/static/media/danilo-web-banner.848faedfebc8a22ca034.png",
     "static/media/instagram-clone-banner.png": "/static/media/instagram-clone-banner.3f31053bec5292386c64.png",
     "static/media/entrelibros-banner.png": "/static/media/entrelibros-banner.c8d8398ddac59a5eedad.png",
@@ -18,19 +16,17 @@
     "static/media/verify-banner.png": "/static/media/verify-banner.29325fcbf7fbe5dd9506.png",
     "static/media/bakkano-banner.jpg": "/static/media/bakkano-banner.cfd169aaab2d943d8a65.jpg",
     "static/media/temporary-banner.png": "/static/media/temporary-banner.334943d78a467726da5e.png",
-    "static/media/fullstackSideImage.png": "/static/media/fullstackSideImage.9c3f62916255d2ad8dc5.png",
     "static/media/profileImage.jpg": "/static/media/profileImage.96bb4620a1ba37a7e38c.jpg",
     "static/media/carousel-logo.png": "/static/media/carousel-logo.cf04db4af01d5122ff87.png",
-    "static/media/frontendSideImage.png": "/static/media/frontendSideImage.06719b13395d2657634e.png",
     "static/media/rise-rosa-rage-banner.png": "/static/media/rise-rosa-rage-banner.833094a9dffe24508f61.png",
     "static/media/connector-logo.png": "/static/media/connector-logo.906474235903fe71330a.png",
     "static/media/verify-logo.png": "/static/media/verify-logo.977d536252341240bdfe.png",
     "index.html": "/index.html",
-    "main.a85b9ae8.css.map": "/static/css/main.a85b9ae8.css.map",
-    "main.90e858bc.js.map": "/static/js/main.90e858bc.js.map"
+    "main.c307e991.css.map": "/static/css/main.c307e991.css.map",
+    "main.34b5c4c1.js.map": "/static/js/main.34b5c4c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.a85b9ae8.css",
-    "static/js/main.90e858bc.js"
+    "static/css/main.c307e991.css",
+    "static/js/main.34b5c4c1.js"
   ]
 }
