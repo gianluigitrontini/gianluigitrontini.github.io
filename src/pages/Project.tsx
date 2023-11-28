@@ -1,14 +1,12 @@
 import { ReactNode, useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
-import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-
+import { ProjectInterface } from "../components/Homepage/Projects/Projects";
 import { CloseIcon, OpenLinkIcon } from "../components/utils/Icon";
 import { projects } from "../data";
 import useWindowSize from "../hooks/useWindowSize";
-import { ProjectInterface } from "../components/Homepage/Projects/Projects";
 
 export interface ProjectDescription {
   description: string;
