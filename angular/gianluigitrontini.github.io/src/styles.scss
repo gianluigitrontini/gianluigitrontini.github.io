@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "assets/styles/header.style.scss";
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1460px;
+}
+.container.sm {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+
+  @screen lg {
+    @apply px-12;
+  }
+}
