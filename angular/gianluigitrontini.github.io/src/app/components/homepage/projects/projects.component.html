@@ -1,0 +1,15 @@
+<section id="projects" class="flex flex-col container">
+    <h2 class="title text-left">
+        Progetti
+    </h2>
+
+    <div class="projects--wrapper">
+        @for (project of projects; track project.slug) {
+        @if (project.hidden === false) {
+        <a [href]="'projects/' + project.slug">
+            <app-project [project]="project" />
+        </a>
+        }
+        }
+    </div>
+</section>

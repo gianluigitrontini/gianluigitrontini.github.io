@@ -1,0 +1,42 @@
+#about {
+  min-height: 70vh;
+  position: relative;
+  .container {
+    z-index: 10;
+  }
+  span.gradient-text {
+    &.react {
+      background: linear-gradient(135deg, #38a5c4, #1291b4);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    &.angular {
+      background: linear-gradient(135deg, #f85822, #e83636);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    color: transparent !important;
+    font-weight: 800 !important;
+  }
+
+  &::after {
+    content: "";
+    z-index: 0;
+    width: 100%;
+    min-height: 70vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("/assets/about-background.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    opacity: 0.15;
+    @screen lg {
+      opacity: 0.15;
+    }
+  }
+}

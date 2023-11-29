@@ -1,0 +1,13 @@
+.technologies {
+  img {
+    max-width: 60px;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(1);
+    opacity: 0.5;
+    &:hover {
+      filter: none;
+
+      transform: scale(1.1);
+    }
+  }
+}

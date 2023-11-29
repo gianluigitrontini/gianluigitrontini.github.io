@@ -1,0 +1,7 @@
+<div class="technologies flex flex-wrap gap-16 justify-center my-16">
+    @for (icon of technologies; track icon.name) {
+    <img [src]="icon.url" [alt]="icon.name" [ngxTippy]="icon.name" [tippyProps]="{
+          placement: 'top'
+        }" />
+    }
+</div>

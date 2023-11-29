@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 @import "assets/styles/header.style.scss";
+@import "tippy.js/dist/tippy.css";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap");
 
 .container {
   width: 100%;
@@ -22,4 +24,39 @@
   @screen lg {
     @apply px-12;
   }
+}
+
+section {
+  @apply py-16;
+}
+
+section .title {
+  @apply mb-24;
+  font-size: 3rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  &:before {
+    position: absolute;
+    font-size: 5rem;
+    color: rgb(245, 245, 245);
+    top: -50%;
+    z-index: -1;
+  }
+}
+
+#about .title::before {
+  content: "About";
+}
+#contact .title::before {
+  content: "Contacts";
+}
+#projects .title::before {
+  content: "Projects";
 }
