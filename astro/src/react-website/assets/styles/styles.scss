@@ -1,0 +1,9 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+// Custom Styles
+@import '_global.scss';
+@import '_sections.scss';
+@import '_projects.scss';
+@import '_navigation.scss';
+@import '_contact.scss';

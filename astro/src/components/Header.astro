@@ -1,0 +1,100 @@
+---
+import { HamburgerIcon } from "../react-website/components/utils/Icon";
+
+const navigation = [
+    {
+      name: "About",
+    },
+    {
+      name: "Projects",
+    },
+    {
+      name: "Contact",
+    },
+  ];
+
+let isHamburgerOpen = false;
+---
+<script>
+const body = document.querySelector("body");
+let isHamburgerOpen = false;
+
+  isHamburgerOpen
+    ? body?.classList.add("overflow-y-hidden")
+    : body?.classList.remove("overflow-y-hidden");
+    
+    function handleClick () {
+    isHamburgerOpen = !isHamburgerOpen;
+  }
+  document?.getElementById("button")?.addEventListener("click", handleClick);
+
+  // get window size
+
+  const size = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+</script>
+
+<header>
+      <div class="container">
+        <div class="flex items-center justify-between w-full">
+          <div class="logo-box">
+            <img class="logo" src="images/animated-logo.gif" alt="" />
+          </div>
+
+
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-8">
+          {navigation.map((nav, i) => (
+            <li >
+              <a href={"#" + nav.name.toLowerCase()}>
+                <button 
+                  id="button"
+                  >
+                  {nav.name}
+                </button>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="md:hidden">
+        <HamburgerIcon
+                id="button"
+                className="w-8 h-8"
+        />
+        <div
+          class={`fixed top-0 left-0 right-0 bottom-0 flex-col items-center justify-center bg-white z-10 ${
+            isHamburgerOpen ? "flex" : "hidden"
+          }`}
+        >
+          <nav>
+            <ul class="flex flex-col gap-8 text-center text-4xl">
+              {navigation.map((nav, i) => (
+                <li >
+                  <a href={"#" + nav.name.toLowerCase()}>
+                    <button                 id="button"
+                    >
+                      {nav.name}
+                    </button>
+                  </a>
+                </li>
+              ))}
+              <li class="border-t-2 border-gray-500">
+                <button
+                  class="btn btn-outline text-2xl mt-8"
+                  id="button"
+
+                >
+                  Close
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      </div>
+    </header>
