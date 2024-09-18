@@ -1,15 +1,13 @@
 #contact {
   @apply pb-12;
-  .flex-wrapper {
-    @apply flex;
-    .contact--form-box {
-      @apply mx-4;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
+
+  .contact--form-box {
+    @apply mx-4;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -31,7 +29,7 @@
       display: inline-block;
       padding: 0 0.5rem;
       font-size: 0.85rem;
-      background-color: white;
+      background-color: var(--bg-color);
       top: -0.5rem;
       left: 0.5rem;
       position: absolute;
@@ -42,13 +40,16 @@
       display: block;
     }
   }
+
   textarea {
     position: relative;
     height: 120px;
     max-width: 100%;
   }
+
   input,
   textarea {
+    background: var(--bg-color);
     border: 1px solid #7d7d7d;
     padding: 0.5rem 0.75rem;
     padding-top: 1rem;

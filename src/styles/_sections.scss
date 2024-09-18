@@ -1,11 +1,19 @@
-#about .title::before {
-  content: "About";
-}
-#contact .title::before {
-  content: "Contacts";
-}
-#projects .title::before {
-  content: "Projects";
+.section-title {
+  font-size: 3rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  line-height: 1.2;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+  &:before {
+    position: absolute;
+    font-size: 5rem;
+    color: rgb(245, 245, 245);
+    top: -50%;
+    z-index: -1;
+  }
 }
 
 #hero {
@@ -59,9 +67,16 @@
 #about {
   min-height: 70vh;
   position: relative;
-  background-image: url("/images/about-background.jpg");
-  background-size: cover;
-  background-position: bottom right;
+  .background {
+    background-image: url("/images/about-background.jpg");
+    background-size: cover;
+    background-position: bottom right;
+  }
+
+  .background-overlay {
+    background: linear-gradient(to bottom, #f1f0e9 10%, transparent 80%),
+      linear-gradient(to top, #f1f0e9 10%, transparent 80%);
+  }
 
   span.gradient-text {
     &.react {
@@ -77,27 +92,5 @@
     }
 
     color: transparent !important;
-    font-weight: 800 !important;
-  }
-  .container {
-    background: linear-gradient(180deg, #f1f0e9 10%, transparent 80%),
-      linear-gradient(0deg, #f1f0e9 10%, transparent 80%);
-    padding: 10rem 0;
-  }
-
-  &::after {
-    // content: "";
-    z-index: 0;
-    width: 100%;
-    min-height: 70vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.15;
-    @screen lg {
-      opacity: 0.15;
-    }
   }
 }

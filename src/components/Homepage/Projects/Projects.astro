@@ -1,7 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import Section from "../../Section.astro";
-import { projects } from "../../../assets/data";
+// import { projects } from "../../../assets/data";
+const progetti = await getCollection("progetti");
 import Project from "../Projects/Project.astro";
+
+console.log(progetti);
 
 export interface ProjectInterface {
   name: string;
@@ -17,17 +21,19 @@ export interface ProjectInterface {
 }
 ---
 
-<Section id="projects" title="Projects">
-  <div class="projects--wrapper">
+<section id="projects">
+  <h2 class="container font-secondary my-4 mb-16 text-5xl">Projects</h2>
+
+  <div class="container projects--wrapper">
     {
-      projects.map(
-        (prj, i) =>
-          !prj.hidden && (
-            <a href={`progetti/${prj.slug}`}>
-              <Project project={prj} />
+      progetti.map(
+        (progetto, i) =>
+          progetto.data.hidden == false && (
+            <a href={`progetti/${progetto.slug}`}>
+              <Project project={progetto.data} />
             </a>
           )
       )
     }
   </div>
-</Section>
+</section>

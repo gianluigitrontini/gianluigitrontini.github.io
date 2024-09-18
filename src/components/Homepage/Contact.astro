@@ -5,8 +5,10 @@ import Section from "../Section.astro";
 import Form from "./Form.astro";
 ---
 
-<Section id="contact" cssClass="pt-0 mt-36">
-  <div class="flex-wrapper">
+<section id="contact" class="pt-0 mt-36">
+  <h2 class="container font-secondary my-4 mb-16 text-5xl">Contacts</h2>
+
+  <div class="container flex">
     <div class="contact--form-box lg:w-1/2">
       <Form />
     </div>
@@ -32,6 +34,7 @@ import Form from "./Form.astro";
               <Icon icon="GithubIcon" />
             </BlockWithIcon>
           </button>
+
           <button class="btn btn-outline">
             <BlockWithIcon
               url="https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/"
@@ -44,4 +47,4 @@ import Form from "./Form.astro";
       </div>
     </div>
   </div>
-</Section>
+</section>

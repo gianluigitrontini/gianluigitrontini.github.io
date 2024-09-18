@@ -10,14 +10,7 @@ const { id, cssClass = "", title = null, isSecondary = null } = Astro.props;
 ---
 
 <section id={id} class={` ${cssClass ? cssClass : ""}`}>
-  <div class="container">
-    {
-      title && !isSecondary && (
-        <h2 class={`${isSecondary ? "title-overlay" : "title text-left"}`}>
-          {title}
-        </h2>
-      )
-    }
-    <slot />
-  </div>
+  <h2 class="container font-secondary my-4 mb-16 text-5xl">{title}</h2>
+
+  <slot />
 </section>
