@@ -1,0 +1,13 @@
+---
+import { technologies } from "../../assets/data";
+---
+
+<div class="technologies flex flex-wrap gap-16 justify-center my-16">
+  {
+    technologies.map((icon, i) => (
+      // <Tippy key={i} content={icon.name} placement="top">
+      <img src={icon.url} alt={icon.name} />
+      // </Tippy>
+    ))
+  }
+</div>

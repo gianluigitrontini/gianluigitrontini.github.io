@@ -1,0 +1,53 @@
+---
+import Icon from "../../Icon.astro";
+
+export interface ProjectInterface {
+  name: string;
+  slug: string;
+  repoName: string;
+  description: string;
+  image: any;
+  logo?: string;
+  status: string;
+  linkToProject: string;
+  hasCoverImage: boolean;
+  hidden: boolean;
+}
+
+const { logo, name, linkToProject, description, hasCoverImage, image, status } =
+  Astro.props.project;
+---
+
+<div class="projects--item">
+  <div
+    class="flex items-center absolute z-50 top-2 right-2 text-white uppercase text-sm"
+  >
+    <span
+      class={`rounded-full inline-block w-2 h-2 shadow-lg mr-2 ${
+        status === "Active"
+          ? "bg-green-400"
+          : status === "In Progress"
+            ? "bg-yellow-400"
+            : status === "Demo"
+              ? "bg-blue-400"
+              : "bg-red-400"
+      }`}
+    >
+    </span>
+    {status}
+  </div>
+
+  {
+    !hasCoverImage && (
+      <h3 class="absolute top-[50%] left-[50%] text-center transform translate-y-[-50%] translate-x-[-50%] text-3xl text-black opacity-30 font-bold tracking-wider">
+        {name}
+      </h3>
+    )
+  }
+  <img src={image && image} alt={name} />
+
+  <button class="projects--info-overlay">
+    <h3 class="project--title font-bold">{name}</h3>
+    <p class="project--description">{description}</p>
+  </button>
+</div>

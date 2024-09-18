@@ -1,0 +1,47 @@
+---
+import BlockWithIcon from "../BlockWithIcon.astro";
+import Icon from "../Icon.astro";
+import Section from "../Section.astro";
+import Form from "./Form.astro";
+---
+
+<Section id="contact" cssClass="pt-0 mt-36">
+  <div class="flex-wrapper">
+    <div class="contact--form-box lg:w-1/2">
+      <Form />
+    </div>
+
+    <div class="contact--details justify-start mx-auto lg:w-1/2">
+      <div class="mx-auto lg:w-[325px] text-center">
+        <BlockWithIcon text="San Benedetto del Tronto, Italy">
+          <Icon icon="LocationIcon" />
+        </BlockWithIcon>
+
+        <BlockWithIcon text="gianluigitrontini@gmail.com">
+          <Icon icon="MailIcon" />
+        </BlockWithIcon>
+
+        <span class="subtitle text-left mx-auto mb-4">Find more on</span>
+
+        <div class="social--container gap-6">
+          <button class="btn btn-outline">
+            <BlockWithIcon
+              url="https://github.com/gianluigitrontini"
+              text="Github"
+            >
+              <Icon icon="GithubIcon" />
+            </BlockWithIcon>
+          </button>
+          <button class="btn btn-outline">
+            <BlockWithIcon
+              url="https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/"
+              text="Linkedin"
+            >
+              <Icon icon="LinkedinIcon" />
+            </BlockWithIcon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>

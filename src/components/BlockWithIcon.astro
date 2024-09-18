@@ -1,0 +1,22 @@
+---
+const { icon, text, url } = Astro.props;
+---
+
+<div class="block--icon gap-4">
+  {
+    url ? (
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        class="flex items-center gap-2"
+      >
+        <slot />
+        {text}
+      </a>
+    ) : (
+      <slot />
+    )
+  }
+  {!url && <p>{text}</p>}
+</div>

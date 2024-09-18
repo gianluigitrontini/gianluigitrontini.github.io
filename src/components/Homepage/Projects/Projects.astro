@@ -1,0 +1,33 @@
+---
+import Section from "../../Section.astro";
+import { projects } from "../../../assets/data";
+import Project from "../Projects/Project.astro";
+
+export interface ProjectInterface {
+  name: string;
+  slug: string;
+  repoName: string;
+  description: string;
+  image: any;
+  logo?: any;
+  status: string;
+  linkToProject: string;
+  hasCoverImage: boolean;
+  hidden: boolean;
+}
+---
+
+<Section id="projects" title="Projects">
+  <div class="projects--wrapper">
+    {
+      projects.map(
+        (prj, i) =>
+          !prj.hidden && (
+            <a href={`projects/${prj.slug}`}>
+              <Project project={prj} />
+            </a>
+          )
+      )
+    }
+  </div>
+</Section>
