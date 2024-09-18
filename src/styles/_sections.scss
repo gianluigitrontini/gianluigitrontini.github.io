@@ -59,6 +59,10 @@
 #about {
   min-height: 70vh;
   position: relative;
+  background-image: url("/images/about-background.jpg");
+  background-size: cover;
+  background-position: bottom right;
+
   span.gradient-text {
     &.react {
       background: linear-gradient(135deg, #38a5c4, #1291b4);
@@ -75,9 +79,14 @@
     color: transparent !important;
     font-weight: 800 !important;
   }
+  .container {
+    background: linear-gradient(180deg, #f1f0e9 10%, transparent 80%),
+      linear-gradient(0deg, #f1f0e9 10%, transparent 80%);
+    padding: 10rem 0;
+  }
 
   &::after {
-    content: "";
+    // content: "";
     z-index: 0;
     width: 100%;
     min-height: 70vh;
@@ -86,9 +95,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("/images/about-background.jpg");
-    background-size: cover;
-    background-position: bottom right;
     opacity: 0.15;
     @screen lg {
       opacity: 0.15;
