@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header.astro";
+import { Tooltips } from "astro-tooltips";
 import "../styles/styles.scss";
 ---
 
@@ -7,6 +7,13 @@ import "../styles/styles.scss";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Tooltips
+      interactive={false}
+      delay={[15, 15]}
+      placement="bottom"
+      arrow={false}
+    />
+
     <title>Gianluigi Trontini | Frontend Developer</title>
   </head>
   <body>

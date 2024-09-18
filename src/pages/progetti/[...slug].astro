@@ -7,7 +7,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 export const getStaticPaths = async () => {
   const progetti = await getCollection("progetti");
 
-  return progetti.map((progetto) => ({
+  return progetti.map((progetto: any) => ({
     params: {
       slug: progetto.slug,
     },
@@ -57,21 +57,23 @@ const { Content: MarkdownContent } = await progetto.render();
           }
 
           <div class="text-left w-full">
-            {
-              progetto.data.linkToProject ? (
-                <a
-                  href={progetto.data.linkToProject}
-                  class="inline-flex items-center text-xl font-medium"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {progetto.data.name}
-                  <Icon name="OpenLinkIcon" />
-                </a>
-              ) : (
-                <h3 class="text-xl">{progetto.data.name}</h3>
-              )
-            }
+            <span class="font-medium">
+              {
+                progetto.data.linkToProject ? (
+                  <a
+                    href={progetto.data.linkToProject}
+                    class=""
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <h3 class="text-xl">{progetto.data.name}</h3>
+                    <Icon name="OpenLinkIcon" />
+                  </a>
+                ) : (
+                  <h3 class="text-xl">{progetto.data.name}</h3>
+                )
+              }
+            </span>
 
             <p class="text-gray-500">{progetto.data.description}</p>
           </div>
