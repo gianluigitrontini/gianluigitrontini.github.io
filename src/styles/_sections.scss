@@ -59,9 +59,6 @@
 #about {
   min-height: 70vh;
   position: relative;
-  .container {
-    z-index: 10;
-  }
   span.gradient-text {
     &.react {
       background: linear-gradient(135deg, #38a5c4, #1291b4);

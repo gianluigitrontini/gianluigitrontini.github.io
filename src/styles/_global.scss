@@ -1,31 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
+// @font-face {
+//   font-family: "Graphik Regular";
+//   src: url("./fonts/Graphik-Regular.woff2") format("woff2");
+// }
+
+// @font-face {
+//   font-family: "Graphik Light";
+//   src: url("./fonts/Graphik-Light.woff2") format("woff2");
+// }
+
+// @font-face {
+//   font-family: "Graphik Medium";
+//   src: url("./fonts/Graphik-Medium.woff2") format("woff2");
+// }
+
+// .font-body {
+//   font-family: "Graphik Regular", sans-serif;
+// }
+// .font-bold {
+//   font-family: "Graphik Medium", sans-serif !important;
+//   font-weight: initial;
+// }
+// .font-light {
+//   font-family: "Graphik Light", sans-serif !important;
+//   font-weight: initial;
+// }
+
 @font-face {
-  font-family: "Graphik Regular";
-  src: url("./fonts/Graphik-Regular.woff2") format("woff2");
+  font-family: "SequelSansHeadline";
+  src: url("/fonts/SequelSansHeadlineRegular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SequelSansHeadline";
+  src: url("/fonts/SequelSansHeadlineRegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SequelSansHeadline";
+  src: url("/fonts/SequelSansHeadlineMedium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SequelSansHeadline";
+  src: url("/fonts/SequelSansHeadlineSemi.woff2") format("woff2");
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: "Graphik Light";
-  src: url("./fonts/Graphik-Light.woff2") format("woff2");
+  font-family: "SharpGroteskBook20";
+  src: url("/fonts/SharpGroteskBook20.woff2") format("woff2");
+  font-weight: 400;
 }
-
 @font-face {
-  font-family: "Graphik Medium";
-  src: url("./fonts/Graphik-Medium.woff2") format("woff2");
-}
-
-.font-body {
-  font-family: "Graphik Regular", sans-serif;
-}
-.font-bold {
-  font-family: "Graphik Medium", sans-serif !important;
-  font-weight: initial;
-}
-.font-light {
-  font-family: "Graphik Light", sans-serif !important;
-  font-weight: initial;
+  font-family: "SharpGroteskBook20";
+  src: url("/fonts/SharpGroteskBook20.woff2") format("woff2");
+  font-weight: 500;
 }
 
 * {
@@ -37,14 +70,25 @@
 
 html {
   font-size: 16px;
+
+  font-family:
+    "SequelSansHeadline",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "Graphik Regular", "Rubik", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -87,13 +131,11 @@ section .title {
 }
 
 .container {
+  @apply px-4 mx-auto;
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
   max-width: 1460px;
 }
+
 .container.sm {
   width: 100%;
   margin-right: auto;

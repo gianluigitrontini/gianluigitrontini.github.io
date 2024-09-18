@@ -1,18 +1,4 @@
-import Carousel from "../../public/images/projects/carousel-banner.png";
-import CarouselLogo from "../../public/images/projects/logos/carousel-logo.png";
-import Entrelibros from "../../public/images/projects/entrelibros-banner.png";
-import EntrelibrosLogo from "../../public/images/projects/logos/entrelibros-logo.png";
-import RiseRosaRage from "../../public/images/projects/rise-rosa-rage-banner.png";
-import RiseRosaRageLogo from "../../public/images/projects/logos/rise-rosa-rage-logo.png";
-import ConnectorLogo from "../../public/images/projects/logos/connector-logo.png";
-import VerifyLogo from "../../public/images/projects/logos/verify-logo.png";
-import Connector from "../../public/images/projects/connector-banner.png";
-import Verify from "../../public/images/projects/verify-banner.png";
-import DaniloWeb from "../../public/images/projects/danilo-web-banner.png";
-import QuietGuyWeb from "../../public/images/projects/thequietguy-banner.png";
-import InstagramClone from "../../public/images/projects/instagram-clone-banner.png";
-import Bakkano from "../../public/images/projects/bakkano-banner.jpg";
-import Temporary from "../../public/images/projects/temporary-banner.png";
+
 import type { ProjectInterface } from "../components/Homepage/Projects/Projects.astro";
 
 const projects: ProjectInterface[] = [
@@ -22,8 +8,8 @@ const projects: ProjectInterface[] = [
     repoName: "carousel-learning",
     description:
       "Carousel is an online tool that helps students to embed knowledge in their long-term memory. Developed with Aircury.",
-    image: Carousel.src,
-    logo: CarouselLogo.src,
+    image: "/images/projects/carousel-banner.png",
+    logo: "/images/projects/logos/carousel-logo.png",
     status: "Active",
     linkToProject: "https://carousel-learning.com",
     hasCoverImage: true,
@@ -35,8 +21,8 @@ const projects: ProjectInterface[] = [
     repoName: "entrelibros",
     description:
       "Find new adventures on paper; Recommend your favorite book to your friends; Do you remember that one they told you about? All this... and more!",
-    image: Entrelibros.src,
-    logo: EntrelibrosLogo.src,
+    image: "/images/projects/entrelibros-banner.png",
+    logo: "/images/projects/logos/entrelibros-logo.png",
     status: "Active",
     linkToProject: "https://entrelibros.net",
     hasCoverImage: true,
@@ -49,8 +35,8 @@ const projects: ProjectInterface[] = [
     description:
       "Global Socio-Political & Solidarity Graphics since the 60s. Developed with Aircury.",
     linkToProject: "",
-    image: RiseRosaRage.src,
-    logo: RiseRosaRageLogo.src,
+    image: "/images/projects/rise-rosa-rage-banner.png",
+    logo: "/images/projects/logos/rise-rosa-rage-logo.png",
     status: "In Progress",
     hasCoverImage: true,
     hidden: false
@@ -62,8 +48,8 @@ const projects: ProjectInterface[] = [
     linkToProject: "https://www.aircury.com/connector",
     description:
       "Make copies of source datasets and lift and shift that data into your own environment, with zero hassle and zero development time for you!",
-    image: Connector.src,
-    logo: ConnectorLogo.src,
+    image: "/images/projects/connector-banner.png",
+    logo: "/images/projects/logos/connector-logo.png",
     status: "Active",
     hasCoverImage: true,
     hidden: false
@@ -75,8 +61,8 @@ const projects: ProjectInterface[] = [
     linkToProject: "https://www.aircury.com/verify",
     description:
       "Aircury's school picker offers a fast and easy way for a user to select any English or Welsh school so that you can embed those details accurately in your product's database.",
-    image: Verify.src,
-    logo: VerifyLogo.src,
+    image: "/images/projects/verify-banner.png",
+    logo: "/images/projects/logos/verify-logo.png",
     status: "Active",
     hasCoverImage: true,
     hidden: false
@@ -88,7 +74,7 @@ const projects: ProjectInterface[] = [
     linkToProject: "https://gianluigitrontini.github.io/danilo-barzaghini-web/",
     description:
       "Danilo Barzaghini's multi-language personal website. Project from Fiverr.",
-    image: DaniloWeb.src,
+    image: "/images/projects/danilo-web-banner.png",
     status: "Demo",
     hasCoverImage: true,
     hidden: false
@@ -99,7 +85,7 @@ const projects: ProjectInterface[] = [
     repoName: "thequietguy-web",
     linkToProject: "https://gianluigitrontini.github.io/thequietguy-web/",
     description: "TheQuietGuy's portfolio website. Project from Fiverr.",
-    image: QuietGuyWeb.src,
+    image: "/images/projects/thequietguy-banner.png",
     status: "Active",
     hasCoverImage: true,
     hidden: false
@@ -112,7 +98,7 @@ const projects: ProjectInterface[] = [
       "https://github.com/gianluigitrontini/instagram_reactnative-firebase",
     description: "Instagram clone built with React Native and Firebase.",
     logo: "",
-    image: InstagramClone.src,
+    image: "/images/projects/instagram-clone-banner.png",
     status: "Demo",
     hidden: true,
     hasCoverImage: true,
@@ -125,7 +111,7 @@ const projects: ProjectInterface[] = [
       "https://github.com/gianluigitrontini/basic-ecommerce_react-node-mongodb",
     description:
       "Simple implementation of an ecommerce store with minor UI styling. Authentication, Cart functionality using Redux and products API built with Node.js and MongoDB.",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     logo: "",
     status: "Demo",
     hidden: true,
@@ -139,7 +125,7 @@ const projects: ProjectInterface[] = [
       "https://github.com/gianluigitrontini/social-network_react-mongodb",
     description:
       "A kind of Facebook but for University. Just like Facebook was, but in 2021. React + Node + MongoDB.",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     logo: "",
     status: "In Progress",
     hidden: true,
@@ -152,7 +138,7 @@ const projects: ProjectInterface[] = [
     linkToProject: "https://github.com/gianluigitrontini/bakkano/",
     description:
       "A landing page for selling Pinsa products to food businesses.",
-    image: Bakkano.src,
+    image: "/images/projects/bakkano-banner.jpg",
     logo: "",
     status: "In Progress",
     hasCoverImage: true,
@@ -164,7 +150,7 @@ const projects: ProjectInterface[] = [
     repoName: "escape-passport",
     linkToProject: "https://github.com/gianluigitrontini",
     description: "An Escape Rooms search web app.",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     logo: "",
     status: "In Progress",
     hasCoverImage: false,
@@ -178,7 +164,7 @@ const projects: ProjectInterface[] = [
     description:
       "A platform for promoting healthy habits developed with the ASL TO3 (Piemonte). Developed with NBS.",
     logo: "",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     status: "Active",
     hasCoverImage: false,
     hidden: false
@@ -191,7 +177,7 @@ const projects: ProjectInterface[] = [
     description:
       "Mobile apps suite for medical professionals. Smart4Med, Smart4Care, Smart4Hospital. Code updates & redesign. Developed with NBS.",
     logo: "",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     status: "Active",
     hasCoverImage: false,
     hidden: false
@@ -203,7 +189,7 @@ const projects: ProjectInterface[] = [
     linkToProject: "https://github.com/gianluigitrontini",
     description:
       "Mobile app for medical professionals. Active in Veneto, Piemonte, Sardegna, Valle d'Aosta regions & the province of Trento. Code updates & redesign. Developed with NBS.",
-    image: Temporary.src,
+    image: "/images/projects/temporary-banner.png",
     logo: "",
     status: "Active",
     hasCoverImage: false,

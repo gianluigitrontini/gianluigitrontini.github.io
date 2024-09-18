@@ -5,15 +5,18 @@ import Contact from "../components/Homepage/Contact.astro";
 import Hero from "../components/Homepage/Hero.astro";
 import Projects from "../components/Homepage/Projects/Projects.astro";
 import Technologies from "../components/Homepage/Technologies.astro";
-import Layout from "../layouts/Layout.astro";
+import HeaderLayout from "../layouts/HeaderLayout.astro";
+import Layout from "../layouts/MainLayout.astro";
 ---
 
 <Layout>
-  <Hero />
-  <About />
-  <Technologies />
-  <Projects />
-  <Contact />
-  <Footer />
+  <HeaderLayout>
+    <Hero />
+    <About />
+    <Technologies />
+    <Projects />
+    <Contact />
+    <Footer />
+  </HeaderLayout>
 </Layout>
 <!-- <Homepage client:load /> -->

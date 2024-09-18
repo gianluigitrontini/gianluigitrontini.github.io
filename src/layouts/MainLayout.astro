@@ -1,0 +1,50 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/styles.scss";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gianluigi Trontini | Frontend Developer</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "SequelSansHeadline";
+    src: url("/fonts/SequelSansHeadlineRegular.woff2") format("woff2");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "SequelSansHeadline";
+    src: url("/fonts/SequelSansHeadlineRegularItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "SequelSansHeadline";
+    src: url("/fonts/SequelSansHeadlineMedium.woff2") format("woff2");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "SequelSansHeadline";
+    src: url("/fonts/SequelSansHeadlineSemi.woff2") format("woff2");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "SharpGroteskBook20";
+    src: url("/fonts/SharpGroteskBook20.woff2") format("woff2");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "SharpGroteskBook20";
+    src: url("/fonts/SharpGroteskBook20.woff2") format("woff2");
+    font-weight: 500;
+  }
+</style>

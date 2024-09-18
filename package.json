@@ -23,7 +23,6 @@
     "react-router-dom": "^6.26.2",
     "react-scroll": "^1.8.9",
     "react-tippy": "^1.4.0",
-    "remark-gfm": "^4.0.0",
     "sass": "^1.79.1",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.6.2"

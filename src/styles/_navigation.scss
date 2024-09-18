@@ -95,10 +95,6 @@ header .container {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
   .logo-box {
     max-width: 130px;
     position: relative;
@@ -130,7 +126,6 @@ header .container {
     button {
       font-weight: 400;
       color: rgb(75, 75, 75);
-      text-transform: uppercase;
       cursor: pointer;
 
       &:hover {
