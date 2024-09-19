@@ -1,5 +1,6 @@
 ---
 import { technologies } from "../../assets/data";
+
 const { expanded } = Astro.props;
 ---
 
@@ -16,18 +17,16 @@ const { expanded } = Astro.props;
     {
       expanded == true && (
         <div class="container flex flex-col items-center gap-16">
-          {Object.keys(technologies).map((key: string) => (
+          {Object.entries(technologies).map(([key, value]: [string, any[]]) => (
             <div>
               <h3 class="font-medium mb-4">{key}</h3>
               <div class="flex gap-4 lg:gap-8 justify-center flex-wrap">
-                {technologies[key].map(
-                  (icon: { name: string; url: string }) => (
-                    <div class="flex flex-col items-center">
-                      <img src={icon.url} alt={icon.name} class="h-16" />
-                      <p>{icon.name}</p>
-                    </div>
-                  )
-                )}
+                {value.map((icon: { name: string; url: string }) => (
+                  <div class="flex flex-col items-center">
+                    <img src={icon.url} alt={icon.name} class="h-16" />
+                    <p>{icon.name}</p>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

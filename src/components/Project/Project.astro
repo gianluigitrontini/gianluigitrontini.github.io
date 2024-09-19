@@ -14,7 +14,6 @@ export interface ProjectInterface {
   hidden: boolean;
 }
 
-const slug = Astro.params.slug;
 const { progetto } = Astro.props;
 const { Content } = await progetto.render();
 

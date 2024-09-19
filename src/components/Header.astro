@@ -22,7 +22,7 @@ const navigation = [
       <nav class="hidden md:block">
         <ul class="flex items-center gap-8">
           {
-            navigation.map((nav, i) => (
+            navigation.map((nav) => (
               <li>
                 <a href={"#" + nav.name.toLowerCase()}>
                   <button>{nav.name}</button>
@@ -59,7 +59,7 @@ const navigation = [
           <nav>
             <ul class="flex flex-col gap-8 text-center text-4xl">
               {
-                navigation.map((nav, i) => (
+                navigation.map((nav) => (
                   <li>
                     <a
                       href={"#" + nav.name.toLowerCase()}

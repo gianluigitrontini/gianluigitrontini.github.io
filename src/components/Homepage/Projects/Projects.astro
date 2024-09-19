@@ -23,7 +23,7 @@ export interface ProjectInterface {
   <div class="container projects--wrapper">
     {
       progetti.map(
-        (progetto, i) =>
+        (progetto) =>
           progetto.data.hidden == false && (
             <a href={`progetti/${progetto.slug}`}>
               <Project project={progetto.data} />

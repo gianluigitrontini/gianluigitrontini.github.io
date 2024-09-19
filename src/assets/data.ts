@@ -1,6 +1,16 @@
 
 import type { ProjectInterface } from "../components/Homepage/Projects/Projects.astro";
 
+export interface TechnologyInterface {
+  name: string;
+  url: string;
+}
+
+// Define the interface for the entire object
+interface Technologies {
+  [category: string]: TechnologyInterface[];
+}
+
 const projects: ProjectInterface[] = [
   {
     name: "Carousel Learning",
@@ -197,7 +207,7 @@ const projects: ProjectInterface[] = [
   },
 ];
 
-const technologies = {
+const technologies: Technologies = {
   "Design": [
     {
       name: "Figma",

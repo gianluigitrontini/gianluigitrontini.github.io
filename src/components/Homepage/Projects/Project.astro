@@ -1,6 +1,4 @@
 ---
-import Icon from "../../Icon.astro";
-
 export interface ProjectInterface {
   name: string;
   slug: string;
@@ -14,8 +12,7 @@ export interface ProjectInterface {
   hidden: boolean;
 }
 
-const { logo, name, linkToProject, description, hasCoverImage, image, status } =
-  Astro.props.project;
+const { project: progetto } = Astro.props;
 ---
 
 <div class="projects--item">
@@ -24,30 +21,30 @@ const { logo, name, linkToProject, description, hasCoverImage, image, status } =
   >
     <span
       class={`rounded-full inline-block w-2 h-2 shadow-lg mr-2 ${
-        status === "Active"
+        progetto.status === "Active"
           ? "bg-green-400"
-          : status === "In Progress"
+          : progetto.status === "In Progress"
             ? "bg-yellow-400"
-            : status === "Demo"
+            : progetto.status === "Demo"
               ? "bg-blue-400"
               : "bg-red-400"
       }`}
     >
     </span>
-    {status}
+    {progetto.status}
   </div>
 
   {
-    !hasCoverImage && (
+    !progetto.hasCoverImage && (
       <h3 class="absolute top-[50%] left-[50%] text-center transform translate-y-[-50%] translate-x-[-50%] text-3xl text-black opacity-30 font-bold tracking-wider">
-        {name}
+        {progetto.name}
       </h3>
     )
   }
-  <img src={image && image} alt={name} />
+  <img src={progetto.image} alt={progetto.name} />
 
   <button class="projects--info-overlay">
-    <h3 class="project--title font-bold">{name}</h3>
-    <p class="project--description">{description}</p>
+    <h3 class="project--title font-bold">{progetto.name}</h3>
+    <p class="project--description">{progetto.description}</p>
   </button>
 </div>
