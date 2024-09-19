@@ -90,55 +90,6 @@
 
 // End Hamburger Toggle
 
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  .logo-box {
-    max-width: 130px;
-    position: relative;
-    .logo {
-      z-index: 2;
-      max-width: 100%;
-    }
-  }
-  .nav--desktop {
-    display: block;
-    ul {
-      display: flex;
-      li {
-        display: flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        &:last-child {
-          padding-right: 0;
-        }
-        button {
-          font-size: 0.85rem;
-        }
-      }
-    }
-  }
-
-  nav ul li {
-    list-style: none;
-    button {
-      font-weight: 400;
-      color: rgb(75, 75, 75);
-      cursor: pointer;
-
-      &:hover {
-        color: rgb(20, 20, 20);
-      }
-    }
-  }
-
-  .mobile-menu--container {
-    display: none;
-  }
-}
-
 .hamburger-fixed-mobile {
   position: fixed;
   right: 1rem;

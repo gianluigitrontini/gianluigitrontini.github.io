@@ -12,11 +12,15 @@ import Layout from "../layouts/MainLayout.astro";
 <Layout>
   <HeaderLayout>
     <Hero />
-    <Technologies />
+    <Technologies expanded={false} />
+    <!-- <div class="my-24"></div> -->
     <About />
+    <!-- <div class="my-24"></div> -->
+    <Technologies expanded={true} />
+    <!-- <div class="my-36"></div> -->
     <Projects />
+    <!-- <div class="my-36"></div> -->
     <Contact />
     <Footer />
   </HeaderLayout>
 </Layout>
-<!-- <Homepage client:load /> -->

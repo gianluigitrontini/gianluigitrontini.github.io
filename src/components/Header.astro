@@ -54,19 +54,23 @@ const navigation = [
 
         <div
           id="menu"
-          class={`fixed top-0 left-0 right-0 bottom-0 flex-col items-center justify-center bg-white z-10 hidden`}
+          class="fixed h-screen inset-0 flex-col items-center justify-center bg-white z-50 hidden"
         >
           <nav>
             <ul class="flex flex-col gap-8 text-center text-4xl">
               {
                 navigation.map((nav, i) => (
                   <li>
-                    <a href={"#" + nav.name.toLowerCase()}>
+                    <a
+                      href={"#" + nav.name.toLowerCase()}
+                      class="btn-toggle-menu"
+                    >
                       <button>{nav.name}</button>
                     </a>
                   </li>
                 ))
               }
+
               <li class="border-t-2 border-gray-500">
                 <button class="btn-toggle-menu btn btn-outline text-2xl mt-8">
                   Close

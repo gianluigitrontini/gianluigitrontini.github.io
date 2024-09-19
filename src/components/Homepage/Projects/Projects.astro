@@ -1,11 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Section from "../../Section.astro";
-// import { projects } from "../../../assets/data";
-const progetti = await getCollection("progetti");
 import Project from "../Projects/Project.astro";
-
-console.log(progetti);
+const progetti = await getCollection("progetti");
 
 export interface ProjectInterface {
   name: string;
@@ -21,8 +17,8 @@ export interface ProjectInterface {
 }
 ---
 
-<section id="projects">
-  <h2 class="container font-secondary my-4 mb-16 text-5xl">Projects</h2>
+<section id="projects" class="py-12">
+  <h2 class="container font-secondary mb-20 text-5xl text-center">Projects</h2>
 
   <div class="container projects--wrapper">
     {

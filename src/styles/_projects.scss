@@ -10,6 +10,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
 .projects--item {
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
@@ -88,7 +89,7 @@ a {
   height: 100%;
 }
 
-// Project Page
+// Project Page - Styling content generated from Markdown
 #projects-description {
   text-align: left;
   h1 {

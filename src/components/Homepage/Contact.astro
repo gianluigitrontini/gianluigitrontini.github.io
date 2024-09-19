@@ -1,49 +1,45 @@
 ---
-import BlockWithIcon from "../BlockWithIcon.astro";
 import Icon from "../Icon.astro";
-import Section from "../Section.astro";
 import Form from "./Form.astro";
 ---
 
-<section id="contact" class="pt-0 mt-36">
-  <h2 class="container font-secondary my-4 mb-16 text-5xl">Contacts</h2>
+<section id="contact" class="py-24">
+  <h2 class="container font-secondary mb-16 text-5xl text-center">Contacts</h2>
 
-  <div class="container flex">
-    <div class="contact--form-box lg:w-1/2">
+  <div class="container flex flex-col lg:flex-row gap-8">
+    <div class="lg:w-1/2">
       <Form />
     </div>
 
-    <div class="contact--details justify-start mx-auto lg:w-1/2">
-      <div class="mx-auto lg:w-[325px] text-center">
-        <BlockWithIcon text="San Benedetto del Tronto, Italy">
-          <Icon icon="LocationIcon" />
-        </BlockWithIcon>
+    <div>
+      <div class="flex items-center gap-4 p-2">
+        <Icon icon="LocationIcon" />
+        <div>San Benedetto del Tronto, Italy</div>
+      </div>
 
-        <BlockWithIcon text="gianluigitrontini@gmail.com">
-          <Icon icon="MailIcon" />
-        </BlockWithIcon>
+      <div class="flex items-center gap-4 p-2">
+        <Icon icon="LinkedinIcon" />
+        <div>gianluigitrontini@gmail.com</div>
+      </div>
 
-        <span class="subtitle text-left mx-auto mb-4">Find more on</span>
+      <span class="block font-medium text-center lg:text-left mx-auto my-4">
+        Find more on
+      </span>
 
-        <div class="social--container gap-6">
-          <button class="btn btn-outline">
-            <BlockWithIcon
-              url="https://github.com/gianluigitrontini"
-              text="Github"
-            >
-              <Icon icon="GithubIcon" />
-            </BlockWithIcon>
+      <div class="flex gap-4 justify-center lg:justify-start">
+        <a href="https://github.com/gianluigitrontini">
+          <button class="flex items-center gap-2 border-2 border-black p-2">
+            <Icon icon="GithubIcon" />
+            <div>Github</div>
           </button>
+        </a>
 
-          <button class="btn btn-outline">
-            <BlockWithIcon
-              url="https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/"
-              text="Linkedin"
-            >
-              <Icon icon="LinkedinIcon" />
-            </BlockWithIcon>
+        <a href="https://www.linkedin.com/in/gianluigi-trontini-9b5a0b103/">
+          <button class="flex items-center gap-2 border-2 border-black p-2">
+            <Icon icon="LinkedinIcon" />
+            <div>Linkedin</div>
           </button>
-        </div>
+        </a>
       </div>
     </div>
   </div>
