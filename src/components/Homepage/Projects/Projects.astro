@@ -8,12 +8,14 @@ const progetti = res.reverse().sort((a, b) => b.data.year - a.data.year);
 const groupedProjects = new Map<string, typeof progetti>();
 
 progetti.forEach((progetto) => {
-  const year = progetto.data.year_label;
+  if (progetto.data.hidden == false) {
+    const year = progetto.data.year_label;
 
-  if (!groupedProjects.has(year)) {
-    groupedProjects.set(year, []);
+    if (!groupedProjects.has(year)) {
+      groupedProjects.set(year, []);
+    }
+    groupedProjects.get(year)?.push(progetto);
   }
-  groupedProjects.get(year)?.push(progetto);
 });
 
 export interface ProjectInterface {

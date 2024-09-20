@@ -9,7 +9,7 @@ linkToProject: "https://carousel-learning.com"
 hidden: false
 tech_stack: ["html", "css", "tailwind", "react", "javascript", "git"]
 type: "Web Application"
-year: 2021
+year: 2022
 year_label: "2021/2022"
 ---
 

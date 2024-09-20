@@ -9,7 +9,7 @@ status: "Active"
 hidden: false
 tech_stack: ["symfony", "html", "css", "tailwind", "twig"]
 type: "Website"
-year: 2021
+year: 2022
 year_label: "2021/2022"
 ---
 
