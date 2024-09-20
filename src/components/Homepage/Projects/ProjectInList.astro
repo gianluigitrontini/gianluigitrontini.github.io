@@ -30,7 +30,7 @@ const { project: progetto } = Astro.props;
       </p>
       <h3 class="font-medium text-2xl">{progetto.data.name}</h3>
       <p class="">{progetto.data.description}</p>
-      <div class="flex flex-wrap items-center gap-2 mt-auto">
+      <div class="flex flex-wrap items-center gap-2 mt-4 lg:mt-auto">
         {
           progetto.data.tech_stack.map((tech: string) => (
             <span class="bg-[#f4f3ed] border border-[#d7d7d2] rounded-full px-2 py-1 text-xs uppercase">
