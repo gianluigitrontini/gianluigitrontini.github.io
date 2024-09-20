@@ -2,10 +2,7 @@
 const { project: progetto } = Astro.props;
 ---
 
-<a
-  href={`progetti/${progetto.slug}`}
-  class="sticky-project bg-[#f4f3ed] border border-[#d7d7d2] rounded-xl"
->
+<a href={`progetti/${progetto.slug}`} class="bg-[#f4f3ed] z-10 rounded-xl">
   <div
     class="w-full relative flex flex-col lg:flex-row gap-8 p-4 min-h-[400px]"
   >

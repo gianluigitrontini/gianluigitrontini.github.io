@@ -19,7 +19,7 @@ tech_stack:
     "git",
   ]
 type: "Web App + Mobile App"
-year: 2024
+year: 2023
 year_label: "2023/2024"
 ---
 

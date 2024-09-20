@@ -6,7 +6,9 @@ import Form from "./Form.astro";
 <section id="contact" class="py-24">
   <h2 class="container font-secondary mb-16 text-5xl text-center">Contacts</h2>
 
-  <div class="mx-auto max-w-5xl px-2 flex flex-col lg:flex-row gap-8">
+  <div
+    class="bg-white bg-opacity-20 p-2 lg:p-12 rounded-lg mx-auto max-w-5xl px-2 flex flex-col lg:flex-row gap-8"
+  >
     <div class="lg:w-1/2">
       <Form />
     </div>
@@ -18,8 +20,10 @@ import Form from "./Form.astro";
       </div>
 
       <div class="flex items-center gap-4 p-2">
-        <Icon icon="LinkedinIcon" />
-        <div>gianluigitrontini@gmail.com</div>
+        <Icon icon="MailIcon" />
+        <a href="mailto:gianluigitrontini@gmail.com" class="underline">
+          gianluigitrontini@gmail.com
+        </a>
       </div>
 
       <span class="block font-medium text-center lg:text-left mx-auto my-4">

@@ -41,13 +41,13 @@ export interface ProjectInterface {
           <h3 class="font-secondary sticky top-24 text-3xl font-bold bg-[var(--bg-color)] self-start pr-32">
             {year}
           </h3>
+
           {projects.map(
             (progetto) =>
               progetto.data.hidden == false && (
-                <Fragment>
+                <div class="sticky-project bg-[#f4f3ed] rounded-xl">
                   <ProjectInList project={progetto} />
-                  {/* <Project project={progetto.data} /> */}
-                </Fragment>
+                </div>
               )
           )}
         </Fragment>

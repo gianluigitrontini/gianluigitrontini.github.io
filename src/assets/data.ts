@@ -87,11 +87,6 @@ const technologies: Technologies = {
       name: "Expo",
       url: "/images/icons/expo.png",
     },
-
-    {
-      name: "Firebase",
-      url: "/images/icons/firebase.png",
-    },
     {
       name: "Kotlin",
       url: "/images/icons/kotlin.png",
