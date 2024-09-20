@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Project from "../Projects/Project.astro";
+import ProjectInList from "../Projects/ProjectInList.astro";
 const progetti = await getCollection("progetti");
 
 export interface ProjectInterface {
@@ -20,16 +21,58 @@ export interface ProjectInterface {
 <section id="projects" class="py-12">
   <h2 class="container font-secondary mb-20 text-5xl text-center">Projects</h2>
 
-  <div class="container projects--wrapper">
+  <!-- <div class="container projects--wrapper"> -->
+  <div class="container flex flex-col gap-4 lg:gap-12">
     {
       progetti.map(
         (progetto) =>
           progetto.data.hidden == false && (
-            <a href={`progetti/${progetto.slug}`}>
-              <Project project={progetto.data} />
-            </a>
+            <Fragment>
+              <ProjectInList project={progetto.data} />
+              {/* <Project project={progetto.data} /> */}
+            </Fragment>
           )
       )
     }
   </div>
+  <!-- </div> -->
 </section>
+
+<style is:global>
+  .sticky-project {
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+  }
+
+  .scaled {
+    transform: scale(0.95); /* Adjust scale as needed */
+    opacity: 0.25;
+  }
+</style>
+
+<script>
+  document.addEventListener("scroll", () => {
+    const projects = document.querySelectorAll(".sticky-project");
+
+    projects.forEach((project, index) => {
+      const projectTop = project.getBoundingClientRect().top;
+
+      if (projectTop < project.clientHeight + 100) {
+        if (index > 0) {
+          projects[index - 1].classList.add("scaled");
+
+          if (projectTop < 200) {
+            projects[index - 1].classList.add("!opacity-0");
+          } else {
+            projects[index - 1].classList.remove("!opacity-0");
+          }
+        }
+      } else {
+        if (index > 0) {
+          projects[index - 1].classList.remove("scaled");
+        }
+      }
+    });
+  });
+</script>
