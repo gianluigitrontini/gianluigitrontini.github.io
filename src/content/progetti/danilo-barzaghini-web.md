@@ -18,6 +18,8 @@ tech_stack:
     "wordpress (headless)",
   ]
 type: "Website"
+year: 2023
+year_label: "2023"
 ---
 
 # Danilo Barzaghini's multi-language Personal Website

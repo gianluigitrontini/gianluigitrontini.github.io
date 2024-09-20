@@ -1,7 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 import ProjectInList from "../Projects/ProjectInList.astro";
-const progetti = await getCollection("progetti");
+const res = await getCollection("progetti");
+const progetti = res.reverse().sort((a, b) => b.data.year - a.data.year);
+
+// Group projects by year using Map
+const groupedProjects = new Map<string, typeof progetti>();
+
+progetti.forEach((progetto) => {
+  const year = progetto.data.year_label;
+
+  if (!groupedProjects.has(year)) {
+    groupedProjects.set(year, []);
+  }
+  groupedProjects.get(year)?.push(progetto);
+});
 
 export interface ProjectInterface {
   name: string;
@@ -21,21 +34,30 @@ export interface ProjectInterface {
 
   <div class="mx-auto max-w-5xl px-2 flex flex-col gap-4 lg:gap-8">
     {
-      progetti.map(
-        (progetto) =>
-          progetto.data.hidden == false && (
-            <Fragment>
-              <ProjectInList project={progetto} />
-              {/* <Project project={progetto.data} /> */}
-            </Fragment>
-          )
-      )
+      Array.from(groupedProjects.entries()).map(([year, projects]) => (
+        <Fragment>
+          <h3 class="font-secondary sticky top-24 text-3xl font-bold bg-[var(--bg-color)] self-start pr-32">
+            {year}
+          </h3>
+          {projects.map(
+            (progetto) =>
+              progetto.data.hidden == false && (
+                <Fragment>
+                  <ProjectInList project={progetto} />
+                  {/* <Project project={progetto.data} /> */}
+                </Fragment>
+              )
+          )}
+        </Fragment>
+      ))
     }
   </div>
 </section>
 
 <style is:global>
   .sticky-project {
+    @apply sticky top-36;
+
     transition:
       transform 0.5s ease,
       opacity 0.5s ease;

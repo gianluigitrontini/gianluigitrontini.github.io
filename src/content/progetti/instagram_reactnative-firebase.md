@@ -10,6 +10,8 @@ hidden: true
 tech_stack:
   ["html", "css", "javascript", "tailwind", "react native", "firebase", "git"]
 type: "Full Stack Application"
+year: 2021
+year_label: "2021"
 ---
 
 # Instagram clone using React Native + Firebase

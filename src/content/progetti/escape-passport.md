@@ -9,6 +9,8 @@ status: "In Progress"
 hidden: false
 tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
 type: "Web Application"
+year: 2022
+year_label: "2022"
 ---
 
 # Escape Passport

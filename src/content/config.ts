@@ -15,6 +15,8 @@ const progettiCollection = defineCollection({
         hidden: z.boolean(),
         tech_stack: z.array(z.string()),
         type: z.string(),
+        year: z.number(),
+        year_label: z.string(),
     }),
 });
 

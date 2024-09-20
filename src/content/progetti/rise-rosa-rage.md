@@ -9,6 +9,8 @@ status: "In Progress"
 hidden: false
 tech_stack: ["html", "css", "javascript", "tailwind", "twig", "react", "git"]
 type: "Website"
+year: 2022
+year_label: "2022"
 ---
 
 # Rise Rosa Rage

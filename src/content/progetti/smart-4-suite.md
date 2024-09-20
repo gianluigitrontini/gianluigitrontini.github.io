@@ -21,6 +21,8 @@ tech_stack:
     "git",
   ]
 type: "Mobile Application"
+year: 2024
+year_label: "2023/2024"
 ---
 
 # Stesura in corso...

@@ -20,6 +20,8 @@ tech_stack:
     "mongodb",
   ]
 type: "Full Stack Application"
+year: 2021
+year_label: "2021"
 ---
 
 # Simple Ecommerce + API with React, Node & MongoDB
