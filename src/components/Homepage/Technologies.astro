@@ -16,7 +16,7 @@ const { expanded } = Astro.props;
   <div class="technologies text-center">
     {
       expanded == true && (
-        <div class="container !max-w-4xl flex flex-col items-center gap-16 bg-white bg-opacity-20 p-12 rounded-xl">
+        <div class="mx-2 md:mx-auto max-w-5xl flex flex-col items-center gap-16 bg-white bg-opacity-20 p-2 lg:p-12 rounded-xl">
           {Object.entries(technologies).map(([key, value]: [string, any[]]) => (
             <div>
               <h3 class="font-medium mb-4">{key}</h3>

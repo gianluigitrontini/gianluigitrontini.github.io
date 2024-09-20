@@ -1,6 +1,5 @@
 ---
 name: "Instagram Clone"
-slug: "instagram-clone"
 repoName: "instagram_reactnative-firebase"
 linkToProject: "https://github.com/gianluigitrontini/instagram_reactnative-firebase"
 description: "Instagram clone built with React Native and Firebase."
@@ -8,7 +7,9 @@ logo: ""
 image: "/images/projects/instagram-clone-banner.png"
 status: "Demo"
 hidden: true
-hasCoverImage: true
+tech_stack:
+  ["html", "css", "javascript", "tailwind", "react native", "firebase", "git"]
+type: "Full Stack Application"
 ---
 
 # Instagram clone using React Native + Firebase

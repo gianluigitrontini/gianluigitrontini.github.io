@@ -1,14 +1,14 @@
 ---
 name: "EntreLibros"
-slug: "entrelibros"
 repoName: "entrelibros"
 description: "Find new adventures on paper; Recommend your favorite book to your friends; Do you remember that one they told you about? All this... and more!"
 image: "/images/projects/entrelibros-banner.png"
 logo: "/images/projects/logos/entrelibros-logo.png"
 status: "Active"
 linkToProject: "https://entrelibros.net"
-hasCoverImage: true
 hidden: false
+tech_stack: ["html", "css", "tailwind", "twig", "javascript", "git"]
+type: "Web Application"
 ---
 
 # Entrelibros

@@ -1,55 +1,62 @@
 ---
-export interface ProjectInterface {
-  name: string;
-  slug: string;
-  repoName: string;
-  description: string;
-  image: any;
-  logo?: string;
-  status: string;
-  linkToProject: string;
-  hasCoverImage: boolean;
-  hidden: boolean;
-}
-
 const { project: progetto } = Astro.props;
 ---
 
 <a
   href={`progetti/${progetto.slug}`}
-  class="sticky sticky-project top-24 bg-[var(--bg-color)] border border-[#d7d7d2] rounded-xl"
+  class="sticky sticky-project top-16 lg:top-24 bg-[#f4f3ed] border border-[#d7d7d2] rounded-xl"
 >
-  <div class="w-full relative flex flex-col lg:flex-row gap-8 p-4">
-    <div class="w-full lg:w-1/2">
+  <div
+    class="w-full relative flex flex-col lg:flex-row gap-8 p-4 min-h-[400px]"
+  >
+    <div class="w-full lg:w-1/2 flex flex-col">
       <div class="flex items-center uppercase text-sm mb-4">
         <span
           class={`rounded-full inline-block w-2 h-2 shadow-lg mr-2 ${
-            progetto.status === "Active"
+            progetto.data.status === "Active"
               ? "bg-green-400"
-              : progetto.status === "In Progress"
+              : progetto.data.status === "In Progress"
                 ? "bg-yellow-400"
-                : progetto.status === "Demo"
+                : progetto.data.status === "Demo"
                   ? "bg-blue-400"
                   : "bg-red-400"
           }`}
         >
         </span>
-        {progetto.status}
+        {progetto.data.status}
       </div>
-
-      <h3 class="font-bold">{progetto.name}</h3>
-      <p class="">{progetto.description}</p>
+      <p class="text-[#189bc6] font-medium text-sm uppercase tracking-wide">
+        {progetto.data.type}
+      </p>
+      <h3 class="font-medium text-2xl">{progetto.data.name}</h3>
+      <p class="">{progetto.data.description}</p>
+      <div class="flex flex-wrap items-center gap-2 mt-auto">
+        {
+          progetto.data.tech_stack.map((tech: string) => (
+            <span class="bg-[#f4f3ed] border border-[#d7d7d2] rounded-full px-2 py-1 text-xs uppercase">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
     </div>
 
     <div class="relative w-full lg:w-1/2">
       {
-        progetto.hasCoverImage == false && (
+        progetto.data.image == "" && (
           <h3 class="absolute top-[50%] left-[50%] text-center transform translate-y-[-50%] translate-x-[-50%] text-3xl text-black opacity-30 font-bold tracking-wider">
-            {progetto.name}
+            {progetto.data.name}
           </h3>
         )
       }
-      <img src={progetto.image} alt={progetto.name} />
+
+      <img
+        src={progetto.data.image != ""
+          ? progetto.data.image
+          : "/images/projects/temporary-banner.png"}
+        alt={progetto.data.name}
+        class="w-full h-full object-cover rounded-xl object-left"
+      />
     </div>
   </div>
 </a>

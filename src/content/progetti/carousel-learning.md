@@ -1,14 +1,14 @@
 ---
 name: "Carousel Learning"
-slug: "carousel-learning"
 repoName: "carousel-learning"
 description: "Carousel is an online tool that helps students to embed knowledge in their long-term memory. Developed with Aircury."
 image: "/images/projects/carousel-banner.png"
 logo: "/public/images/projects/logos/carousel-logo.png"
 status: "Active"
 linkToProject: "https://carousel-learning.com"
-hasCoverImage: true
 hidden: false
+tech_stack: ["html", "css", "tailwind", "react", "javascript", "git"]
+type: "Web Application"
 ---
 
 # Carousel Learning

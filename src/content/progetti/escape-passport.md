@@ -1,14 +1,14 @@
 ---
 name: "Escape Passport"
-slug: "escape-passport"
 repoName: "escape-passport"
 linkToProject: "https://github.com/gianluigitrontini"
 description: "An Escape Rooms search web app."
-image: "/images/projects/temporary-banner.png"
+image: ""
 logo: ""
 status: "In Progress"
-hasCoverImage: false
 hidden: false
+tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
+type: "Web Application"
 ---
 
 # Escape Passport

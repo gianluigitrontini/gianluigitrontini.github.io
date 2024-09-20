@@ -1,14 +1,25 @@
 ---
 name: "ECommerce API"
-slug: "ecommerce-api"
 repoName: "basic-ecommerce_react-node-mongodb"
 linkToProject: "https://github.com/gianluigitrontini/basic-ecommerce_react-node-mongodb"
 description: "Simple implementation of an ecommerce store with minor UI styling. Authentication, Cart functionality using Redux and products API built with Node.js and MongoDB."
-image: "/images/projects/temporary-banner.png"
+image: ""
 logo: ""
 status: "Demo"
 hidden: true
-hasCoverImage: false
+tech_stack:
+  [
+    "html",
+    "css",
+    "tailwind",
+    "react",
+    "redux",
+    "javascript",
+    "git",
+    "nodejs",
+    "mongodb",
+  ]
+type: "Full Stack Application"
 ---
 
 # Simple Ecommerce + API with React, Node & MongoDB

@@ -1,14 +1,23 @@
 ---
 name: "Danilo Barzaghini - Website"
-slug: "danilo-web"
 repoName: "danilo-barzaghini-web"
 linkToProject: "https://gianluigitrontini.github.io/danilo-barzaghini-web/"
 description: "Danilo Barzaghini's multi-language personal website. Project from Fiverr."
 image: "/images/projects/danilo-web-banner.png"
 logo: ""
 status: "Demo"
-hasCoverImage: true
 hidden: false
+tech_stack:
+  [
+    "html",
+    "css",
+    "tailwind",
+    "nextjs",
+    "javascript",
+    "git",
+    "wordpress (headless)",
+  ]
+type: "Website"
 ---
 
 # Danilo Barzaghini's multi-language Personal Website

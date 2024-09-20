@@ -8,7 +8,6 @@ export interface ProjectInterface {
   logo?: string;
   status: string;
   linkToProject: string;
-  hasCoverImage: boolean;
   hidden: boolean;
 }
 
@@ -35,13 +34,18 @@ const { project: progetto } = Astro.props;
   </div>
 
   {
-    !progetto.hasCoverImage && (
+    progetto.image == "" && (
       <h3 class="absolute top-[50%] left-[50%] text-center transform translate-y-[-50%] translate-x-[-50%] text-3xl text-black opacity-30 font-bold tracking-wider">
         {progetto.name}
       </h3>
     )
   }
-  <img src={progetto.image} alt={progetto.name} />
+  <img
+    src={progetto.image != ""
+      ? progetto.image
+      : "/images/projects/temporary-banner.png"}
+    alt={progetto.name}
+  />
 
   <button class="projects--info-overlay">
     <h3 class="project--title font-bold">{progetto.name}</h3>

@@ -1,14 +1,14 @@
 ---
 name: "Bakkano"
-slug: "bakkano-landing-page"
 repoName: "bakkano"
 linkToProject: "https://github.com/gianluigitrontini/bakkano/"
 description: "A landing page for selling Pinsa products to food businesses."
 image: "/images/projects/bakkano-banner.jpg"
 logo: ""
 status: "In Progress"
-hasCoverImage: true
 hidden: false
+tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
+type: "Website"
 ---
 
 # Bakkano

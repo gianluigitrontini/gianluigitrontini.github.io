@@ -13,7 +13,6 @@ export interface ProjectInterface {
   logo?: any;
   status: string;
   linkToProject: string;
-  hasCoverImage: boolean;
   hidden: boolean;
 }
 ---
@@ -21,21 +20,19 @@ export interface ProjectInterface {
 <section id="projects" class="py-12">
   <h2 class="container font-secondary mb-20 text-5xl text-center">Projects</h2>
 
-  <!-- <div class="container projects--wrapper"> -->
-  <div class="container flex flex-col gap-4 lg:gap-12">
+  <div class="mx-auto max-w-5xl px-2 flex flex-col gap-4 lg:gap-8">
     {
       progetti.map(
         (progetto) =>
           progetto.data.hidden == false && (
             <Fragment>
-              <ProjectInList project={progetto.data} />
+              <ProjectInList project={progetto} />
               {/* <Project project={progetto.data} /> */}
             </Fragment>
           )
       )
     }
   </div>
-  <!-- </div> -->
 </section>
 
 <style is:global>
@@ -58,7 +55,7 @@ export interface ProjectInterface {
     projects.forEach((project, index) => {
       const projectTop = project.getBoundingClientRect().top;
 
-      if (projectTop < project.clientHeight + 100) {
+      if (projectTop < project.clientHeight) {
         if (index > 0) {
           projects[index - 1].classList.add("scaled");
 

@@ -12,8 +12,9 @@ const progettiCollection = defineCollection({
         logo: z.string(),
         status: z.enum(['Active', 'In Progress', 'Demo']),
         linkToProject: z.string(),
-        hasCoverImage: z.boolean(),
-        hidden: z.boolean()
+        hidden: z.boolean(),
+        tech_stack: z.array(z.string()),
+        type: z.string(),
     }),
 });
 
