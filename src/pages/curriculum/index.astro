@@ -1,12 +1,11 @@
 ---
-import PdfGenerator from "../../components/PdfGenerator.astro";
 import HeaderLayout from "../../layouts/HeaderLayout.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
   <HeaderLayout>
-    <PdfGenerator isPage={true} />
+    <!-- <PdfGenerator client:only isPage={true} /> -->
   </HeaderLayout>
 </MainLayout>
 

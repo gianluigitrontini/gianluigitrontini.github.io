@@ -9,11 +9,8 @@ const professionalExperiences = res
 const { isPage = false } = Astro.props;
 ---
 
-<data-holder
-  data-experiences={JSON.stringify(professionalExperiences)}
-  data-isPage={isPage}
->
-  {!isPage && <button id="download-pdf">Download CV</button>}
+<data-holder data-experiences={JSON.stringify(professionalExperiences)}
+  >{!isPage && <button id="download-pdf">Download CV</button>}
 </data-holder>
 
 <script>
