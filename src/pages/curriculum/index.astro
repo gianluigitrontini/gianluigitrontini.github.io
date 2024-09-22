@@ -1,19 +1,18 @@
 ---
+import PdfGeneratorWrapper from "../../components/PdfGeneratorWrapper.astro";
 import HeaderLayout from "../../layouts/HeaderLayout.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
   <HeaderLayout>
-    <!-- <PdfGenerator client:only isPage={true} /> -->
+    <PdfGeneratorWrapper showPdfViewer={true} />
   </HeaderLayout>
 </MainLayout>
-
-<div id="pdfContainer" class="mx-auto w-[100vw]"></div>
 
 <style is:global>
   iframe {
     width: 100vw;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 150px);
   }
 </style>

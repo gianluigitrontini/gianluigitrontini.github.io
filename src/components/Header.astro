@@ -1,6 +1,4 @@
 ---
-import PdfGenerator from "./PdfGenerator.astro";
-
 const navigation = [
   {
     name: "About",
@@ -34,9 +32,9 @@ const navigation = [
               </li>
             ))
           }
-          <li>
-            <PdfGenerator />
-          </li>
+          <!-- <li>
+            <PdfGeneratorWrapper />
+          </li> -->
         </ul>
       </nav>
 
@@ -78,9 +76,9 @@ const navigation = [
                 ))
               }
 
-              <li>
-                <PdfGenerator />
-              </li>
+              <!-- <li>
+                <PdfGeneratorWrapper />
+              </li> -->
 
               <li class="border-t-2 border-gray-500">
                 <button class="btn-toggle-menu btn btn-outline text-2xl mt-8">

@@ -1,0 +1,14 @@
+---
+import PdfGenerator from "./PdfGenerator.tsx";
+import { getCollection } from "astro:content";
+
+const { showPdfViewer = false } = Astro.props;
+
+const res = await getCollection("professionalExperience");
+---
+
+<PdfGenerator
+  professionalExperiences={res}
+  showPdfViewer={showPdfViewer}
+  client:only="react"
+/>

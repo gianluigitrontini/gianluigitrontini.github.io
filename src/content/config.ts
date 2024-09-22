@@ -28,7 +28,7 @@ const professionalExperienceCollection = defineCollection({
         dates: z.string(),
         bulletPoints: z.array(z.string()),
         technologies: z.array(z.string()),
-        date: z.string().transform((str) => new Date(str)),
+        date: z.string(),
     }),
 });
 
