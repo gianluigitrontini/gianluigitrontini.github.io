@@ -19,6 +19,6 @@ tech_stack:
     "git",
   ]
 type: "Website"
-year: 2024
-year_label: "2023/2024"
+date: "2024-12-01"
+year_label: "2024"
 ---

@@ -18,7 +18,7 @@ tech_stack:
     "wordpress (headless)",
   ]
 type: "Website"
-year: 2023
+date: "2023-01-01"
 year_label: "2023"
 ---
 

@@ -1,4 +1,6 @@
 ---
+import PdfGenerator from "./PdfGenerator.astro";
+
 const navigation = [
   {
     name: "About",
@@ -16,7 +18,9 @@ const navigation = [
   <div class="max-w-5xl mx-auto px-2">
     <div class="flex items-center justify-between w-full">
       <div class="logo-box">
-        <img class="w-24" src="/images/animated-logo.gif" alt="" />
+        <a href="/">
+          <img class="w-24" src="/images/animated-logo.gif" alt="" />
+        </a>
       </div>
 
       <nav class="hidden md:block">
@@ -30,6 +34,9 @@ const navigation = [
               </li>
             ))
           }
+          <li>
+            <PdfGenerator />
+          </li>
         </ul>
       </nav>
 
@@ -70,6 +77,10 @@ const navigation = [
                   </li>
                 ))
               }
+
+              <li>
+                <PdfGenerator />
+              </li>
 
               <li class="border-t-2 border-gray-500">
                 <button class="btn-toggle-menu btn btn-outline text-2xl mt-8">

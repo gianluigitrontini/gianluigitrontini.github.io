@@ -20,7 +20,7 @@ tech_stack:
     "git",
   ]
 type: "Mobile Application"
-year: 2023
+date: "2024-01-01"
 year_label: "2023/2024"
 ---
 

@@ -9,6 +9,6 @@ status: "Active"
 hidden: false
 tech_stack: ["html", "css", "javascript", "wordpress"]
 type: "Website"
-year: 2024
+date: "2024-12-01"
 year_label: "2024"
 ---

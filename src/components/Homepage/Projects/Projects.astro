@@ -1,21 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 import ProjectInList from "../Projects/ProjectInList.astro";
-const res = await getCollection("progetti");
-const progetti = res.reverse().sort((a, b) => b.data.year - a.data.year);
+const res = await getCollection("progetti", ({ data }: { data: any }) => {
+  return data.hidden == false;
+});
+
+const progetti = res
+  .reverse()
+  .sort((a: any, b: any) => b.data.date - a.data.date);
 
 // Group projects by year using Map
 const groupedProjects = new Map<string, typeof progetti>();
 
-progetti.forEach((progetto) => {
-  if (progetto.data.hidden == false) {
-    const year = progetto.data.year_label;
+progetti.forEach((progetto: any) => {
+  const year = progetto.data.year_label;
 
-    if (!groupedProjects.has(year)) {
-      groupedProjects.set(year, []);
-    }
-    groupedProjects.get(year)?.push(progetto);
+  if (!groupedProjects.has(year)) {
+    groupedProjects.set(year, []);
   }
+  groupedProjects.get(year)?.push(progetto);
 });
 
 export interface ProjectInterface {
@@ -37,20 +40,20 @@ export interface ProjectInterface {
   <div class="mx-auto max-w-5xl px-2 flex flex-col gap-4 lg:gap-8">
     {
       Array.from(groupedProjects.entries()).map(([year, projects]) => (
-        <Fragment>
-          <h3 class="font-secondary sticky top-24 text-3xl font-bold bg-[var(--bg-color)] self-start pr-32">
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <h3 class=" sticky top-20 font-secondary text-3xl font-bold self-start z-10">
             {year}
           </h3>
 
           {projects.map(
-            (progetto) =>
+            (progetto: any) =>
               progetto.data.hidden == false && (
-                <div class="sticky-project bg-[#f4f3ed] rounded-xl">
+                <div class="sticky-project top-36 bg-[#f4f3ed] rounded-xl shadow-xl">
                   <ProjectInList project={progetto} />
                 </div>
               )
           )}
-        </Fragment>
+        </div>
       ))
     }
   </div>

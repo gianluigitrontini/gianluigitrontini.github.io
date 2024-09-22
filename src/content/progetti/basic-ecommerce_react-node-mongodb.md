@@ -20,7 +20,7 @@ tech_stack:
     "mongodb",
   ]
 type: "Full Stack Application"
-year: 2021
+date: "2021-01-01"
 year_label: "2021"
 ---
 

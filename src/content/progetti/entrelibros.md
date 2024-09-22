@@ -9,7 +9,7 @@ linkToProject: "https://entrelibros.net"
 hidden: false
 tech_stack: ["html", "css", "tailwind", "twig", "javascript", "git"]
 type: "Web Application"
-year: 2022
+date: "2022-01-01"
 year_label: "2022"
 ---
 

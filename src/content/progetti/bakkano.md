@@ -9,7 +9,7 @@ status: "In Progress"
 hidden: false
 tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
 type: "Website"
-year: 2023
+date: "2023-01-01"
 year_label: "2023"
 ---
 
