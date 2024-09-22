@@ -29,7 +29,13 @@ const PdfGenerator = ({
     },
   };
 
-  const generatePdf = ({ showPdfViewer }: { showPdfViewer: boolean }) => {
+  const generatePdf = ({
+    showPdfViewer = false,
+    downloadFile = false,
+  }: {
+    showPdfViewer?: boolean;
+    downloadFile?: boolean;
+  }) => {
     const professionalExperience = experiences.map(
       (experience: any, i: number) => {
         // Generate the structure for PDF
@@ -184,30 +190,30 @@ const PdfGenerator = ({
       },
     };
 
-    // const pdfDoc = pdfMake.createPdf(dd);
+    const pdfDoc = pdfMake.createPdf(dd);
 
     // Download the PDF
-
-    // {
-    //   showPdfViewer == false && pdfDoc.download("CV_Gianluigi_TRONTINI.pdf");
-    // }
+    {
+      downloadFile == true && pdfDoc.download("CV_Gianluigi_TRONTINI.pdf");
+    }
 
     // Show the PDF in the viewer (only if current page is "curriculum")
-    // {
-    //   showPdfViewer == true &&
-    //     pdfDoc.getDataUrl((dataUrl: string) => {
-    //       const targetElement = document.querySelector("#pdfContainer");
-    //       if (!targetElement?.firstChild) {
-    //         const iframe = document.createElement("iframe");
-    //         iframe.src = dataUrl;
-    //         targetElement?.appendChild(iframe);
-    //       }
-    //     });
-    // }
+    {
+      showPdfViewer == true &&
+        pdfDoc.getDataUrl((dataUrl: string) => {
+          const targetElement = document.querySelector("#pdfContainer");
+          if (!targetElement?.firstChild) {
+            const iframe = document.createElement("iframe");
+            iframe.src = dataUrl;
+            targetElement?.appendChild(iframe);
+          }
+        });
+    }
   };
 
   useEffect(() => {
-    showPdfViewer == true && generatePdf({ showPdfViewer });
+    showPdfViewer == true &&
+      generatePdf({ showPdfViewer, downloadFile: false });
   }, []);
 
   return (
@@ -216,7 +222,7 @@ const PdfGenerator = ({
         <button
           id="download-pdf"
           className="border-2 border-black p-2 mx-auto"
-          onClick={() => generatePdf({ showPdfViewer })}
+          onClick={() => generatePdf({ downloadFile: true })}
         >
           Download CV
         </button>
