@@ -1,9 +1,10 @@
 // 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 // 2. Define a `type` and `schema` for each collection
 const progettiCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/progetti" }),
     schema: z.object({
         name: z.string(),
         repoName: z.string(),
@@ -21,7 +22,7 @@ const progettiCollection = defineCollection({
 });
 
 const professionalExperienceCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/professionalExperience" }),
     schema: z.object({
         role: z.string(),
         company: z.string(),

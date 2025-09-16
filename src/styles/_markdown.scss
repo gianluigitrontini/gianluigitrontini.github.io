@@ -1,0 +1,110 @@
+.markdown {
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    line-height: 1.2;
+    color: #111;
+  }
+
+  h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Paragraphs */
+  p {
+    margin: 1rem 0;
+  }
+
+  /* Links */
+  a {
+    color: #2563eb; /* Tailwind blue-600 */
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #1d4ed8; /* Tailwind blue-700 */
+    text-decoration: underline;
+  }
+
+  /* Lists */
+  ul,
+  ol {
+    list-style: unset !important;
+    margin: 1rem 0 1rem 2rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  code {
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #d1d5db; /* Tailwind gray-300 */
+    padding-left: 1rem;
+    color: #6b7280; /* Tailwind gray-500 */
+    font-style: italic;
+    margin: 1rem 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  th,
+  td {
+    border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f9fafb; /* Tailwind gray-50 */
+    font-weight: 600;
+  }
+
+  /* Horizontal rule */
+  hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0;
+  }
+}

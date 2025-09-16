@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import ProjectInList from "../Projects/ProjectInList.astro";
+import ProjectCardContent from "../Projects/ProjectCardContent.astro";
 const res = await getCollection("progetti", ({ data }: { data: any }) => {
   return data.hidden == false;
 });
@@ -11,7 +11,6 @@ const progetti = res
 
 // Group projects by year using Map
 const groupedProjects = new Map<string, typeof progetti>();
-
 progetti.forEach((progetto: any) => {
   const year = progetto.data.year_label;
 
@@ -20,18 +19,6 @@ progetti.forEach((progetto: any) => {
   }
   groupedProjects.get(year)?.push(progetto);
 });
-
-export interface ProjectInterface {
-  name: string;
-  slug: string;
-  repoName: string;
-  description: string;
-  image: any;
-  logo?: any;
-  status: string;
-  linkToProject: string;
-  hidden: boolean;
-}
 ---
 
 <section id="projects" class="py-12">
@@ -46,10 +33,10 @@ export interface ProjectInterface {
           </h3>
 
           {projects.map(
-            (progetto: any) =>
+            (progetto) =>
               progetto.data.hidden == false && (
                 <div class="sticky-project top-36 bg-[#f4f3ed] rounded-xl shadow-xl">
-                  <ProjectInList project={progetto} />
+                  <ProjectCardContent project={progetto} />
                 </div>
               )
           )}
@@ -79,13 +66,24 @@ export interface ProjectInterface {
     const projects = document.querySelectorAll(".sticky-project");
 
     projects.forEach((project, index) => {
-      const projectTop = project.getBoundingClientRect().top;
+      const projectTop = project.getBoundingClientRect().top; // Distance from top of viewport of each project
 
       if (projectTop < project.clientHeight) {
+        // When the project is near the top of the viewport
         if (index > 0) {
-          projects[index - 1].classList.add("scaled");
+          projects[index - 1].classList.add(
+            "scale-95",
+            "opacity-25",
+            "sticky",
+            "top-36",
+            "transition-transform",
+            "transition-opacity",
+            "duration-500",
+            "ease-in-out"
+          );
 
-          if (projectTop < 200) {
+          if (projectTop < project.clientHeight / 2) {
+            // Adjust threshold as needed
             projects[index - 1].classList.add("!opacity-0");
           } else {
             projects[index - 1].classList.remove("!opacity-0");
@@ -93,7 +91,17 @@ export interface ProjectInterface {
         }
       } else {
         if (index > 0) {
-          projects[index - 1].classList.remove("scaled");
+          projects[index - 1].classList.remove(
+            "scale-95",
+            "opacity-25",
+            "sticky",
+            "top-36",
+            "transition-transform",
+            "transition-opacity",
+            "duration-500",
+            "ease-in-out",
+            "!opacity-0"
+          );
         }
       }
     });

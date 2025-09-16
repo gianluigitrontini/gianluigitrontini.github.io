@@ -1,7 +1,7 @@
 ---
 name: "Promozione della Salute - ASL TO3"
 repoName: "promozione-della-salute"
-linkToProject: "https://github.com/gianluigitrontini"
+linkToProject: "https://www.promozionedellasalute.it/home"
 description: "A platform for promoting healthy habits developed with the ASL TO3 (Piemonte). Developed with NBS."
 logo: ""
 image: ""
