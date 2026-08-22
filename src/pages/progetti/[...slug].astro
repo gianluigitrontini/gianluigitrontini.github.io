@@ -27,11 +27,12 @@ const { Content: MarkdownContent } = await render(progetto);
         <a href={"/#projects"}>
           <span class="my-4 block uppercase underline">Back to Homepage</span>
         </a>
+
         {
           progetto.data.logo && (
             <img
               src={progetto.data.logo}
-              class="mr-auto max-w-[12rem] h-20 object-contain"
+              class="mr-auto max-w-[12rem] h-16 object-contain my-4"
               alt=""
             />
           )
@@ -39,7 +40,8 @@ const { Content: MarkdownContent } = await render(progetto);
 
         <div class="text-left w-full">
           <span class="font-medium">
-            <h3 class="text-xl">{progetto.data.name}</h3>
+            <h3 class="text-2xl mb-2">{progetto.data.name}</h3>
+
             {
               progetto.data.linkToProject && (
                 <a
@@ -58,6 +60,7 @@ const { Content: MarkdownContent } = await render(progetto);
         </div>
       </div>
     </div>
+
     <div class="order-1 lg:w-2/3 h-full overflow-auto">
       <div class="max-w-xl p-4 mx-auto">
         {/* Project Content */}
