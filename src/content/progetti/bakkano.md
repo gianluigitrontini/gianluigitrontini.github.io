@@ -7,6 +7,7 @@ image: "/images/projects/bakkano-banner.jpg"
 logo: ""
 status: "In Progress"
 hidden: false
+tier: "other"
 tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
 type: "Website"
 date: "2023-01-01"

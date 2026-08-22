@@ -5,13 +5,19 @@ const res = await getCollection("progetti", ({ data }: { data: any }) => {
   return data.hidden == false;
 });
 
-const progetti = res
-  .reverse()
-  .sort((a: any, b: any) => b.data.date - a.data.date);
+const byDateDesc = (a: any, b: any) => b.data.date - a.data.date;
 
-// Group projects by year using Map
-const groupedProjects = new Map<string, typeof progetti>();
-progetti.forEach((progetto: any) => {
+const featured = res
+  .filter((p: any) => p.data.tier === "featured")
+  .sort(byDateDesc);
+const secondary = res
+  .filter((p: any) => p.data.tier === "secondary")
+  .sort(byDateDesc);
+const other = res.filter((p: any) => p.data.tier === "other").sort(byDateDesc);
+
+// Group featured projects by year using Map
+const groupedProjects = new Map<string, typeof featured>();
+featured.forEach((progetto: any) => {
   const year = progetto.data.year_label;
 
   if (!groupedProjects.has(year)) {
@@ -32,18 +38,56 @@ progetti.forEach((progetto: any) => {
             {year}
           </h3>
 
-          {projects.map(
-            (progetto) =>
-              progetto.data.hidden == false && (
-                <div class="sticky-project top-36 bg-[#f4f3ed] rounded-xl shadow-xl">
-                  <ProjectCardContent project={progetto} />
-                </div>
-              )
-          )}
+          {projects.map((progetto) => (
+            <div class="sticky-project top-36 bg-[#f4f3ed] rounded-xl shadow-xl">
+              <ProjectCardContent project={progetto} />
+            </div>
+          ))}
         </div>
       ))
     }
   </div>
+
+  {
+    secondary.length > 0 && (
+      <div class="mx-auto max-w-5xl px-2 mt-24">
+        <h3 class="font-secondary text-3xl font-bold text-center mb-12">
+          More Projects
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {secondary.map((progetto) => (
+            <div class="bg-[#f4f3ed] rounded-xl shadow-lg">
+              <ProjectCardContent project={progetto} compact />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  {
+    other.length > 0 && (
+      <div class="mx-auto max-w-5xl px-2 mt-20 text-center">
+        <h3 class="font-secondary text-2xl font-bold mb-6">Other Work</h3>
+        <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+          {other.map((progetto) => (
+            <li>
+              <a
+                href={
+                  progetto.data.linkToProject || `progetti/${progetto.id}`
+                }
+                target={progetto.data.linkToProject ? "_blank" : undefined}
+                rel={progetto.data.linkToProject ? "noreferrer" : undefined}
+                class="font-medium underline"
+              >
+                {progetto.data.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 </section>
 
 <style is:global>

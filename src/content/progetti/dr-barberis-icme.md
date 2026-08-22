@@ -2,11 +2,12 @@
 name: "Dr. Barberis & ICME Studio"
 repoName: ""
 linkToProject: ""
-description: "Two elegant WordPress websites for a cosmetic surgeon and his aesthetic medicine studio in Milan and Turin — developed from client-provided designs with a focus on sophistication, responsiveness, and professional presentation."
+description: "Two WordPress sites for a cosmetic surgeon and his aesthetic medicine studio (Milan and Turin), built from client-provided designs. I focused on a polished, trustworthy presentation appropriate for a medical/aesthetic audience, fully responsive across devices."
 image: ""
 logo: ""
 status: "Active"
 hidden: false
+tier: "secondary"
 tech_stack: ["html", "css", "javascript", "wordpress"]
 type: "Website"
 date: "2024-12-01"

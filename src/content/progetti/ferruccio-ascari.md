@@ -2,11 +2,12 @@
 name: "Ferruccio Ascari - Artist Portfolio"
 repoName: ""
 linkToProject: ""
-description: "Official website for Milan-based visual artist Ferruccio Ascari — developed with Nextjs and Wordpress (CMS), featuring a dynamic portfolio and thematic explorations."
+description: "Portfolio site for Milan-based visual artist Ferruccio Ascari, built with Next.js and a headless WordPress CMS so the artist can manage exhibitions and thematic collections independently. I focused on a fast, image-heavy frontend without sacrificing performance."
 image: ""
 logo: ""
 status: "Active"
 hidden: false
+tier: "secondary"
 tech_stack:
   [
     "html",

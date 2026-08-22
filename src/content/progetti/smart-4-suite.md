@@ -1,12 +1,13 @@
 ---
 name: "Smart4 Mobile Apps Suite"
 repoName: "smart-4-suite"
-linkToProject: "https://github.com/gianluigitrontini"
-description: "Smart4Care, Smart4Med, and Smart4Hospital are healthcare apps designed to streamline communication and management between patients, doctors, and hospitals. I contributed to both development and UI improvements, focusing on scalability, usability, and system integration. Developed with NBS."
+linkToProject: ""
+description: "A suite of three healthcare apps (Smart4Care, Smart4Med, Smart4Hospital) used by hospitals and private clinics to manage communication between patients, doctors, and care teams. As frontend/mobile developer at NBS, I built and maintained cross-platform features in Ionic/Angular/Capacitor, with native iOS work in Swift where the hybrid layer wasn't enough — improving day-to-day usability for clinical staff while helping the suite scale across a growing number of healthcare facilities."
 logo: ""
 image: ""
 status: "Active"
 hidden: false
+tier: "featured"
 tech_stack:
   [
     "html",

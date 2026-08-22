@@ -6,7 +6,8 @@ linkToProject: ""
 image: "/images/projects/rise-rosa-rage-banner.png"
 logo: "/images/projects/logos/rise-rosa-rage-logo.png"
 status: "In Progress"
-hidden: false
+hidden: true
+tier: "other"
 tech_stack: ["html", "css", "javascript", "tailwind", "twig", "react", "git"]
 type: "Website"
 date: "2022-01-01"

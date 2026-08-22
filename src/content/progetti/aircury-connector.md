@@ -6,7 +6,8 @@ description: "Make copies of source datasets and lift and shift that data into y
 image: "/images/projects/connector-banner.png"
 logo: "/images/projects/logos/connector-logo.png"
 status: "Active"
-hidden: false
+hidden: true
+tier: "secondary"
 tech_stack: ["symfony", "html", "css", "tailwind", "twig"]
 type: "Website"
 date: "2022-01-01"

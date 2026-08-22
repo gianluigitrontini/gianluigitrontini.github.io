@@ -7,6 +7,7 @@ logo: ""
 image: "/images/projects/instagram-clone-banner.png"
 status: "Demo"
 hidden: true
+tier: "other"
 tech_stack:
   ["html", "css", "javascript", "tailwind", "react native", "firebase", "git"]
 type: "Full Stack Application"

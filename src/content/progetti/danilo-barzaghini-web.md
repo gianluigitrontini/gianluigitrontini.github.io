@@ -7,6 +7,7 @@ image: "/images/projects/danilo-web-banner.png"
 logo: ""
 status: "Demo"
 hidden: false
+tier: "other"
 tech_stack:
   [
     "html",

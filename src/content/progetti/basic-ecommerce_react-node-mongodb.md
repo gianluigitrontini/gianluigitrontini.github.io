@@ -7,6 +7,7 @@ image: ""
 logo: ""
 status: "Demo"
 hidden: true
+tier: "other"
 tech_stack:
   [
     "html",

@@ -39,19 +39,17 @@ const { Content: MarkdownContent } = await render(progetto);
 
         <div class="text-left w-full">
           <span class="font-medium">
+            <h3 class="text-xl">{progetto.data.name}</h3>
             {
-              progetto.data.linkToProject ? (
+              progetto.data.linkToProject && (
                 <a
-                  href={progetto.data.linkToProject}
-                  class=""
+                  href={`${progetto.data.linkToProject}`}
                   target="_blank"
-                  rel="noreferrer"
+                  class="my-4 inline-block font-medium text-[#189bc6]"
                 >
-                  <h3 class="text-xl">{progetto.data.name}</h3>
-                  <Icon name="OpenLinkIcon" />
+                  Go to live project
+                  <span class="inline-block ml-1">→</span>
                 </a>
-              ) : (
-                <h3 class="text-xl">{progetto.data.name}</h3>
               )
             }
           </span>

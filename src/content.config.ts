@@ -14,6 +14,7 @@ const progettiCollection = defineCollection({
         status: z.enum(['Active', 'In Progress', 'Demo']),
         linkToProject: z.string(),
         hidden: z.boolean(),
+        tier: z.enum(['featured', 'secondary', 'other']),
         tech_stack: z.array(z.string()),
         type: z.string(),
         date: z.string().transform((str) => new Date(str)),

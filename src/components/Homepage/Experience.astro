@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+
+const parseExperienceDate = (value: string) => {
+  const [day, month, year] = value.split("-");
+  return new Date(`${year}-${month}-${day}`).getTime();
+};
+
+const experiences = (await getCollection("professionalExperience")).sort(
+  (a, b) => parseExperienceDate(b.data.date) - parseExperienceDate(a.data.date)
+);
+---
+
+<section id="experience" class="py-12">
+  <h2 class="container font-secondary mb-20 text-5xl text-center">Experience</h2>
+
+  <div class="mx-auto max-w-3xl px-2 flex flex-col gap-8">
+    {
+      experiences.map((experience) => (
+        <div class="bg-white bg-opacity-60 rounded-xl p-6 lg:p-8 shadow-default text-left">
+          <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-2">
+            <h3 class="text-xl font-medium">{experience.data.role}</h3>
+            <span class="text-sm uppercase tracking-wide text-gray-500 whitespace-nowrap">
+              {experience.data.dates}
+            </span>
+          </div>
+          <p class="text-[#189bc6] font-medium mb-4">{experience.data.company}</p>
+          <ul class="flex flex-col gap-2 mb-4">
+            {experience.data.bulletPoints.map((point) => (
+              <li class="flex gap-2 text-sm lg:text-base">
+                <span aria-hidden="true">→</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            {experience.data.technologies.map((tech) => (
+              <span class="bg-[#f4f3ed] border border-[#d7d7d2] rounded-full px-2 py-1 text-xs uppercase">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

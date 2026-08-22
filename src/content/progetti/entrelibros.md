@@ -1,12 +1,13 @@
 ---
 name: "EntreLibros"
 repoName: "entrelibros"
-description: "A Spanish alternative to Goodreads — built with Twig and Symfony, connecting readers to discover and share books with friends."
+description: "A Spanish alternative to Goodreads for discovering and sharing books with friends, built with Symfony and Twig. Handled core frontend templating and user-facing features for the reading/social layer of the platform."
 image: "/images/projects/entrelibros-banner.png"
 logo: "/images/projects/logos/entrelibros-logo.png"
 status: "Active"
 linkToProject: "https://entrelibros.net"
 hidden: false
+tier: "secondary"
 tech_stack: ["html", "css", "tailwind", "twig", "javascript", "git"]
 type: "Web Application"
 date: "2022-01-01"

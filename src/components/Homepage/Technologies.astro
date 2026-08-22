@@ -38,24 +38,28 @@ const { expanded } = Astro.props;
       expanded == false && (
         <div class="scroll-container">
           <div class="scroll-content">
-            {Object.keys(technologies).map((key: string) =>
-              technologies[key].map((icon: { name: string; url: string }) => (
-                <img
-                  src={icon.url}
-                  alt={icon.name}
-                  class="h-16 w-16 inline-block mx-12"
-                />
-              ))
-            )}
-            {Object.keys(technologies).map((key: string) =>
-              technologies[key].map((icon: { name: string; url: string }) => (
-                <img
-                  src={icon.url}
-                  alt={icon.name}
-                  class="h-16 w-16 inline-block mx-12"
-                />
-              ))
-            )}
+            <div class="inline-block">
+              {Object.keys(technologies).map((key: string) =>
+                technologies[key].map((icon: { name: string; url: string }) => (
+                  <img
+                    src={icon.url}
+                    alt={icon.name}
+                    class="h-16 w-16 inline-block mx-12"
+                  />
+                ))
+              )}
+            </div>
+            <div class="inline-block" aria-hidden="true">
+              {Object.keys(technologies).map((key: string) =>
+                technologies[key].map((icon: { name: string; url: string }) => (
+                  <img
+                    src={icon.url}
+                    alt=""
+                    class="h-16 w-16 inline-block mx-12"
+                  />
+                ))
+              )}
+            </div>
           </div>
         </div>
       )

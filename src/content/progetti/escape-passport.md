@@ -6,7 +6,8 @@ description: "An Escape Rooms search web app."
 image: ""
 logo: ""
 status: "In Progress"
-hidden: false
+hidden: true
+tier: "other"
 tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
 type: "Web Application"
 date: "2022-01-01"
