@@ -1,13 +1,14 @@
 ---
 name: "Bakkano"
 repoName: "bakkano"
-linkToProject: "https://github.com/gianluigitrontini/bakkano/"
+linkToProject: ""
+linkToDemo: "https://github.com/gianluigitrontini/bakkano/"
 description: "Landing page for showcasing and selling fresh Pinsa products to food businesses — highlights products, communicates B2B value, and provides an easy contact flow."
 image: "/images/projects/bakkano-banner.jpg"
 logo: ""
 status: "In Progress"
 hidden: false
-tier: "other"
+tier: "secondary"
 tech_stack: ["html", "css", "tailwind", "nextjs", "javascript", "git"]
 type: "Website"
 date: "2023-01-01"

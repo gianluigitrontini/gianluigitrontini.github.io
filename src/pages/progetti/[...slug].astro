@@ -54,6 +54,18 @@ const { Content: MarkdownContent } = await render(progetto);
                 </a>
               )
             }
+            {
+              progetto.data.linkToDemo && (
+                <a
+                  href={`${progetto.data.linkToDemo}`}
+                  target="_blank"
+                  class="my-4 inline-block font-medium text-[#189bc6]"
+                >
+                  Go to live demo
+                  <span class="inline-block ml-1">→</span>
+                </a>
+              )
+            }
           </span>
 
           <p class="text-gray-500">{progetto.data.description}</p>

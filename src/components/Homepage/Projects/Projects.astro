@@ -34,7 +34,7 @@ featured.forEach((progetto: any) => {
     {
       Array.from(groupedProjects.entries()).map(([year, projects]) => (
         <div class="flex flex-col gap-4 lg:gap-8">
-          <h3 class=" sticky top-20 font-secondary text-3xl font-bold self-start z-10">
+          <h3 class=" sticky top-20 font-secondary text-3xl font-bold self-start z-10 py-4">
             {year}
           </h3>
 
@@ -73,9 +73,7 @@ featured.forEach((progetto: any) => {
           {other.map((progetto) => (
             <li>
               <a
-                href={
-                  progetto.data.linkToProject || `progetti/${progetto.id}`
-                }
+                href={progetto.data.linkToProject || `progetti/${progetto.id}`}
                 target={progetto.data.linkToProject ? "_blank" : undefined}
                 rel={progetto.data.linkToProject ? "noreferrer" : undefined}
                 class="font-medium underline"
@@ -123,7 +121,7 @@ featured.forEach((progetto: any) => {
             "transition-transform",
             "transition-opacity",
             "duration-500",
-            "ease-in-out"
+            "ease-in-out",
           );
 
           if (projectTop < project.clientHeight / 2) {
@@ -144,7 +142,7 @@ featured.forEach((progetto: any) => {
             "transition-opacity",
             "duration-500",
             "ease-in-out",
-            "!opacity-0"
+            "!opacity-0",
           );
         }
       }

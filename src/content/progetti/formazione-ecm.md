@@ -1,9 +1,9 @@
 ---
 name: "Formazione ECM"
 repoName: "formazione-ecm"
-linkToProject: ""
+linkToProject: "https://apps.apple.com/it/developer/nbs-s-r-l/id877666938"
 description: "Continuing-education mobile app for licensed medical professionals, active across five Italian regions (Veneto, Piemonte, Sardegna, Valle d'Aosta, and the province of Trento). I owned ongoing maintenance and redesign work — fixing critical UX friction points, resolving longstanding bugs, and shipping updates across iOS (Xcode) and Android (Android Studio) — while keeping a live, regulated-industry user base stable through the transition and earning consistently positive feedback from healthcare professionals."
-image: ""
+image: "/images/projects/ecm-banner.png"
 logo: ""
 status: "Active"
 hidden: false

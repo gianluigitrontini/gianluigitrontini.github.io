@@ -7,7 +7,7 @@ logo: "/public/images/projects/logos/carousel-logo.png"
 status: "Active"
 linkToProject: "https://carousel-learning.com"
 hidden: false
-tier: "secondary"
+tier: "featured"
 tech_stack: ["html", "css", "tailwind", "react", "javascript", "git"]
 type: "Web Application"
 date: "2022-01-01"
@@ -31,4 +31,4 @@ I led the **interface design and development**, building on UX suggestions from 
 
 Throughout the project, I **refactored the codebase**, removed bugs, and optimized the user experience, ensuring responsiveness, scalability, and performance. The platform now has a solid user base and has received consistently positive feedback for its usability and educational effectiveness.
 
-While the source code cannot be publicly shared, demos and further details are available on Carousel’s [YouTube Channel](https://www.youtube.com/@CarouselLearning) and [Twitter](https://twitter.com/CarouselLearn). Carousel continues to evolve, making a meaningful impact in UK classrooms and demonstrating how thoughtful design and robust development can enhance learning outcomes.
+While the source code cannot be publicly shared, demos and further details are available on Carousel’s [YouTube Channel](https://www.youtube.com/@carousellearning2977) and [X](https://x.com/Carousel_Learn). Carousel continues to evolve, making a meaningful impact in UK classrooms and demonstrating how thoughtful design and robust development can enhance learning outcomes.

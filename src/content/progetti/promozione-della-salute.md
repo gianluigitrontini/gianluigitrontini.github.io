@@ -4,7 +4,7 @@ repoName: "promozione-della-salute"
 linkToProject: "https://www.promozionedellasalute.it/home"
 description: "A public-health platform built for ASL TO3 (Piemonte's regional health authority) to promote healthy habits across the population it serves. As part of the NBS team, I worked on the Angular/Ionic web and mobile experience, contributing to a live, government-backed product used by residents across the region."
 logo: ""
-image: ""
+image: "/images/projects/promosalute-banner.png"
 status: "Active"
 hidden: false
 tier: "featured"

@@ -1,13 +1,14 @@
 ---
 name: "Danilo Barzaghini - Website"
 repoName: "danilo-barzaghini-web"
-linkToProject: "https://gianluigitrontini.github.io/danilo-barzaghini-web/"
+linkToProject: ""
+linkToDemo: "https://gianluigitrontini.github.io/danilo-barzaghini-web/"
 description: "Danilo Barzaghini's multi-language personal website. Responsive landing page for a freelance writer — client–provided design, developed with a focus on performance and usability. Project from Fiverr."
 image: "/images/projects/danilo-web-banner.png"
 logo: ""
 status: "Demo"
 hidden: false
-tier: "other"
+tier: "secondary"
 tech_stack:
   [
     "html",
