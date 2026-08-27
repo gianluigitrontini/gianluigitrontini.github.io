@@ -7,14 +7,16 @@ const parseExperienceDate = (value: string) => {
 };
 
 const experiences = (await getCollection("professionalExperience")).sort(
-  (a, b) => parseExperienceDate(b.data.date) - parseExperienceDate(a.data.date)
+  (a, b) => parseExperienceDate(b.data.date) - parseExperienceDate(a.data.date),
 );
 ---
 
 <section id="experience" class="py-12">
-  <h2 class="container font-secondary mb-20 text-5xl text-center">Experience</h2>
+  <h2 class="container font-secondary mb-20 text-5xl text-center">
+    Experience
+  </h2>
 
-  <div class="mx-auto max-w-3xl px-2 flex flex-col gap-8">
+  <div class="mx-auto max-w-5xl px-2 flex flex-col gap-8">
     {
       experiences.map((experience) => (
         <div class="bg-white bg-opacity-60 rounded-xl p-6 lg:p-8 shadow-default text-left">
@@ -24,7 +26,9 @@ const experiences = (await getCollection("professionalExperience")).sort(
               {experience.data.dates}
             </span>
           </div>
-          <p class="text-[#189bc6] font-medium mb-4">{experience.data.company}</p>
+          <p class="text-[#189bc6] font-medium mb-4">
+            {experience.data.company}
+          </p>
           <ul class="flex flex-col gap-2 mb-4">
             {experience.data.bulletPoints.map((point) => (
               <li class="flex gap-2 text-sm lg:text-base">

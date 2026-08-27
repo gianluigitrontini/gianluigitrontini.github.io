@@ -1,7 +1,7 @@
 ---
 role: "Frontend Developer & Mobile App Developer"
 company: "NBS (On-site & Remote, Italy)"
-dates: "March 2022 - Present"
+dates: "March 2022 - June 2026"
 bulletPoints:
   [
     "Refactored and optimized 8+ healthcare apps, transitioning from Cordova to Capacitor, improving performance and scalability.",

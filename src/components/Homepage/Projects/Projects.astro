@@ -104,48 +104,92 @@ featured.forEach((progetto: any) => {
 </style>
 
 <script>
-  document.addEventListener("scroll", () => {
-    const projects = document.querySelectorAll(".sticky-project");
+  const items: NodeListOf<HTMLElement> =
+    document.querySelectorAll(".sticky-project");
+  const STICKY_OFFSET = 150; // must match CSS `top` value
+  const HIDE_THRESHOLD = 0.75; // opacity below which we consider it "settled/hidden"
 
-    projects.forEach((project, index) => {
-      const projectTop = project.getBoundingClientRect().top; // Distance from top of viewport of each project
+  let ticking = false;
 
-      if (projectTop < project.clientHeight) {
-        // When the project is near the top of the viewport
-        if (index > 0) {
-          projects[index - 1].classList.add(
-            "scale-95",
-            "opacity-25",
-            "sticky",
-            "top-36",
-            "transition-transform",
-            "transition-opacity",
-            "duration-500",
-            "ease-in-out",
-          );
+  // only the "settled" state classes — keep transition-* on the elements
+  // permanently in your markup/CSS so the animation always has something to interpolate from
+  const settledClasses = ["scale-95", "top-36"];
 
-          if (projectTop < project.clientHeight / 2) {
-            // Adjust threshold as needed
-            projects[index - 1].classList.add("!opacity-0");
-          } else {
-            projects[index - 1].classList.remove("!opacity-0");
-          }
-        }
-      } else {
-        if (index > 0) {
-          projects[index - 1].classList.remove(
-            "scale-95",
-            "opacity-25",
-            "sticky",
-            "top-36",
-            "transition-transform",
-            "transition-opacity",
-            "duration-500",
-            "ease-in-out",
-            "!opacity-0",
-          );
-        }
+  function updateOpacities() {
+    for (let i = 0; i < items.length - 1; i++) {
+      const current: HTMLElement = items[i];
+      const next = items[i + 1];
+      const nextTop = next.getBoundingClientRect().top;
+
+      const FADE_DISTANCE = current.clientHeight * 0.75;
+      const distance = nextTop - STICKY_OFFSET;
+
+      let opacity = 1;
+      if (distance < FADE_DISTANCE) {
+        opacity = Math.max(0, Math.min(1, distance / FADE_DISTANCE));
       }
-    });
-  });
+
+      const isSettled = opacity <= HIDE_THRESHOLD;
+
+      current.style.opacity = opacity.toString();
+      if (isSettled) {
+        current.classList.add(...settledClasses);
+      } else {
+        current.classList.remove(...settledClasses);
+      }
+    }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(updateOpacities);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  updateOpacities();
+  // ---
+  // projects.forEach((project, index) => {
+  //   const projectTop = project.getBoundingClientRect().top; // Distance from top of viewport of each project
+
+  //   if (projectTop < project.clientHeight) {
+  //     // When the project is near the top of the viewport
+  //     if (index > 0) {
+  //       projects[index - 1].classList.add(
+  //         "scale-95",
+  //         "opacity-25",
+  //         "sticky",
+  //         "top-36",
+  //         "transition-transform",
+  //         "transition-opacity",
+  //         "duration-500",
+  //         "ease-in-out",
+  //       );
+
+  //       if (projectTop < project.clientHeight / 2) {
+  //         // Adjust threshold as needed
+  //         projects[index - 1].classList.add("!opacity-0");
+  //       } else {
+  //         projects[index - 1].classList.remove("!opacity-0");
+  //       }
+  //     }
+  //   } else {
+  //     if (index > 0) {
+  //       projects[index - 1].classList.remove(
+  //         "scale-95",
+  //         "opacity-25",
+  //         "sticky",
+  //         "top-36",
+  //         "transition-transform",
+  //         "transition-opacity",
+  //         "duration-500",
+  //         "ease-in-out",
+  //         "!opacity-0",
+  //       );
+  //     }
+  //   }
+  // });
+  // });
 </script>
