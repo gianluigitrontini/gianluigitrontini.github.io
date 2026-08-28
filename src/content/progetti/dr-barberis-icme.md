@@ -6,7 +6,7 @@ description: "Two WordPress sites for a cosmetic surgeon and his aesthetic medic
 image: ""
 logo: ""
 status: "Active"
-hidden: false
+hidden: true
 tier: "secondary"
 tech_stack: ["html", "css", "javascript", "wordpress"]
 type: "Website"
