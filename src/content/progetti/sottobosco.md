@@ -2,7 +2,7 @@
 name: "Sottobosco - Ecommerce per prodotti locali"
 repoName: ""
 linkToProject: "https://sottoboscocoop.it"
-description: "An ecommerce marketplace connecting consumers directly with local, organic producers, built to promote sustainable and conscious consumption. I built the storefront on WordPress/WooCommerce with a custom Tailwind-based design system, balancing a fast, clean shopping experience with the flexibility a small cooperative team needed to manage products, vendors, and educational content themselves."
+description: "An ecommerce marketplace connecting consumers directly with local, organic producers, built to promote sustainable and conscious consumption. I built the storefront on WordPress/WooCommerce, integrating multi-vendor management, balancing a fast, clean shopping experience with the flexibility a small cooperative team needed to manage products, vendors, and educational content themselves."
 image: "/images/projects/sottobosco-banner.png"
 logo: "/images/projects/logos/sottobosco-logo.png"
 status: "Active"

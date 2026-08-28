@@ -21,14 +21,23 @@ const experiences = (await getCollection("professionalExperience")).sort(
       experiences.map((experience) => (
         <div class="bg-white bg-opacity-60 rounded-xl p-6 lg:p-8 shadow-default text-left">
           <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-2">
-            <h3 class="text-xl font-medium">{experience.data.role}</h3>
-            <span class="text-sm uppercase tracking-wide text-gray-500 whitespace-nowrap">
-              {experience.data.dates}
-            </span>
+            <div class="flex flex-col">
+              <h3 class="text-xl font-medium">{experience.data.role}</h3>
+              <p class="text-[#189bc6] font-medium mb-4">
+                {experience.data.company}
+              </p>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm uppercase tracking-wide text-gray-500 whitespace-nowrap">
+                {experience.data.dates}
+              </span>
+
+              <span class="font-secondary text-lg font-semibold text-[#189bc6] whitespace-nowrap">
+                {experience.data.duration}
+              </span>
+            </div>
           </div>
-          <p class="text-[#189bc6] font-medium mb-4">
-            {experience.data.company}
-          </p>
+
           <ul class="flex flex-col gap-2 mb-4">
             {experience.data.bulletPoints.map((point) => (
               <li class="flex gap-2 text-sm lg:text-base">

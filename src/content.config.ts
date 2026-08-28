@@ -29,6 +29,7 @@ const professionalExperienceCollection = defineCollection({
         role: z.string(),
         company: z.string(),
         dates: z.string(),
+        duration: z.optional(z.string()),
         bulletPoints: z.array(z.string()),
         technologies: z.array(z.string()),
         date: z.string(),

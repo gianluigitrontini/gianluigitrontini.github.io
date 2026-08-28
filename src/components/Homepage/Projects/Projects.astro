@@ -35,7 +35,7 @@ featured.forEach((progetto: any) => {
       Array.from(groupedProjects.entries()).map(([year, projects]) => (
         <div class="flex flex-col gap-4 lg:gap-8">
           <h3 class=" sticky top-20 font-secondary text-3xl font-bold self-start z-10 py-4">
-            {year}
+            Since {year}
           </h3>
 
           {projects.map((progetto) => (
@@ -150,46 +150,4 @@ featured.forEach((progetto: any) => {
 
   window.addEventListener("scroll", onScroll, { passive: true });
   updateOpacities();
-  // ---
-  // projects.forEach((project, index) => {
-  //   const projectTop = project.getBoundingClientRect().top; // Distance from top of viewport of each project
-
-  //   if (projectTop < project.clientHeight) {
-  //     // When the project is near the top of the viewport
-  //     if (index > 0) {
-  //       projects[index - 1].classList.add(
-  //         "scale-95",
-  //         "opacity-25",
-  //         "sticky",
-  //         "top-36",
-  //         "transition-transform",
-  //         "transition-opacity",
-  //         "duration-500",
-  //         "ease-in-out",
-  //       );
-
-  //       if (projectTop < project.clientHeight / 2) {
-  //         // Adjust threshold as needed
-  //         projects[index - 1].classList.add("!opacity-0");
-  //       } else {
-  //         projects[index - 1].classList.remove("!opacity-0");
-  //       }
-  //     }
-  //   } else {
-  //     if (index > 0) {
-  //       projects[index - 1].classList.remove(
-  //         "scale-95",
-  //         "opacity-25",
-  //         "sticky",
-  //         "top-36",
-  //         "transition-transform",
-  //         "transition-opacity",
-  //         "duration-500",
-  //         "ease-in-out",
-  //         "!opacity-0",
-  //       );
-  //     }
-  //   }
-  // });
-  // });
 </script>

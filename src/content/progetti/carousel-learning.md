@@ -1,7 +1,7 @@
 ---
 name: "Carousel Learning"
 repoName: "carousel-learning"
-description: "Full-featured EdTech platform for UK classrooms, with a teacher dashboard and interactive student quizzes, used by over 20,000 teachers. Working with Aircury, I refactored core UI for performance and scalability, shipping a responsive, accessible React frontend."
+description: "Full-featured EdTech platform for UK classrooms, with a teacher dashboard and interactive student quizzes, used by over 20,000 teachers and 600+ schools. Working with Aircury, I created the core UI for both the web-app and the initial landing page, shipping a responsive, accessible React frontend."
 image: "/images/projects/carousel-banner.png"
 logo: "/public/images/projects/logos/carousel-logo.png"
 status: "Active"

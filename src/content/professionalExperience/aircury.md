@@ -2,6 +2,7 @@
 role: "Frontend Developer & UI/UX Designer"
 company: "Aircury (Remote, Spain)"
 dates: "March 2020 - June 2021"
+duration: "1+ years"
 bulletPoints:
   [
     "Designed and developed the user interface for Carousel Learning, an ed-tech platform used by over 20,000 teachers in the UK.",
